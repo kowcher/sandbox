@@ -1,12 +1,10 @@
 ## Testing mediacast embed
 
-You can use the [editor on GitHub](https://github.com/kowcher/sandbox/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+This is what I tried:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1.	Visit the media page: https://mediacast.smu.edu.sg/media/Advice+for+students/0_6sj8ua7s
+2.	Under Actions, select “Add to Playlist” and create a new playlist
+3.	After that, visit: https://mediacast.smu.edu.sg/my-playlists, select playlist and click on ‘Embed’
 
 ```markdown
 
