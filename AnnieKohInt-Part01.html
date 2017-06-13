@@ -1,0 +1,874 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>
+F-Family</title>
+<script>
+
+/* Table CSS selector */
+
+csstableselector = {
+  init: function() {
+    if (!document.getElementsByTagName) return;  
+
+    forEach(document.getElementsByName('CSSSelector'), function(selector) {
+        csstableselector.addSelectEvent(selector);
+    });
+  },
+
+  addSelectEvent: function(selector) {
+	dean_addEvent(selector,"change", function(e) {
+		document.getElementById('TableGenerator').className = this.value;
+	});
+  }
+}
+
+/* Images Control */
+
+var aspectRatio = 1;
+
+controlimage = {
+  init: function() {
+    if (!document.getElementsByTagName) return;  
+
+    forEach(document.getElementsByTagName('img'), function(image) {
+        controlimage.adjustWidthAndHeight(image);
+    });
+  },
+
+  adjustWidthAndHeight: function(image) {
+    if (image.height>100)
+    { 
+      aspectRatio = image.height/image.width;
+      image.height = 100;
+      image.width = 100/aspectRatio;
+    }
+	   
+    if (image.width>150) 
+    { 
+      aspectRatio = image.height/image.width;
+      image.width = 150;
+      image.height = image.width*aspectRatio;
+    }
+  }
+}
+ 
+ 
+
+/* Table Sorting */
+var stIsIE = /*@cc_on!@*/false;
+
+sorttable = {
+  init: function() {
+    /* quit if this function has already been called */
+    if (arguments.callee.done) return;
+    /* flag this function so we don't do the same thing twice */
+    arguments.callee.done = true;
+    /* kill the timer */
+    if (_timer) clearInterval(_timer);
+
+    if (!document.createElement || !document.getElementsByTagName) return;
+
+    sorttable.DATE_RE = /^(\d\d?)[\/\.-](\d\d?)[\/\.-]((\d\d)?\d\d)$/;
+
+    forEach(document.getElementsByTagName('table'), function(table) {
+        sorttable.makeSortable(table);
+    });
+
+  },
+
+  makeSortable: function(table) {
+    if (table.getElementsByTagName('thead').length == 0) {
+      /* table doesn't have a tHead. Since it should have, create one and
+         put the first table row in it. */
+      the = document.createElement('thead');
+      the.appendChild(table.rows[0]);
+      table.insertBefore(the,table.firstChild);
+    }
+    /* Safari doesn't support table.tHead, sigh */
+    if (table.tHead == null) table.tHead = table.getElementsByTagName('thead')[0];
+	
+    if (table.tHead.rows.length != 1) return; 
+    /* can't cope with two header rows
+     Sorttable v1 put rows with a class of "sortbottom" at the bottom (as
+     "total" rows, for example). This is B&R, since what you're supposed
+     to do is put them in a tfoot. So, if there are sortbottom rows,
+     for backwards compatibility, move them to tfoot (creating it if needed). */
+    sortbottomrows = [];
+    for (var i=0; i<table.rows.length; i++) {
+      if (table.rows[i].className.search(/\bsortbottom\b/) != -1) {
+        sortbottomrows[sortbottomrows.length] = table.rows[i];
+      }
+    }
+    if (sortbottomrows) {
+      if (table.tFoot == null) {
+        /* table doesn't have a tfoot. Create one. */
+        tfo = document.createElement('tfoot');
+        table.appendChild(tfo);
+      }
+      for (var i=0; i<sortbottomrows.length; i++) {
+        tfo.appendChild(sortbottomrows[i]);
+      }
+      delete sortbottomrows;
+    }
+
+    /* work through each column and calculate its type */
+    headrow = table.tHead.rows[0].cells;
+    for (var i=0; i<headrow.length; i++) {
+      /* manually override the type with a sorttable_type attribute */
+      if (!headrow[i].className.match(/\bsorttable_nosort\b/)) { /* skip this col */
+        mtch = headrow[i].className.match(/\bsorttable_([a-z0-9]+)\b/);
+        if (mtch) { override = mtch[1]; }
+	      if (mtch && typeof sorttable["sort_"+override] == 'function') {
+	        headrow[i].sorttable_sortfunction = sorttable["sort_"+override];
+	      } else {
+	        headrow[i].sorttable_sortfunction = sorttable.guessType(table,i);
+	      }
+	      /* make it clickable to sort */
+	      headrow[i].sorttable_columnindex = i;
+	      headrow[i].sorttable_tbody = table.tBodies[0];
+	      dean_addEvent(headrow[i],"click", sorttable.innerSortFunction = function(e) {
+
+          if (this.className.search(/\bsorttable_sorted\b/) != -1) {
+            /* if we're already sorted by this column, just
+             reverse the table, which is quicker */
+            sorttable.reverse(this.sorttable_tbody);
+            this.className = this.className.replace('sorttable_sorted',
+                                                    'sorttable_sorted_reverse');
+            this.removeChild(document.getElementById('sorttable_sortfwdind'));
+            sortrevind = document.createElement('span');
+            sortrevind.id = "sorttable_sortrevind";
+            sortrevind.innerHTML = stIsIE ? '&nbsp<font face="webdings">5</font>' : '&nbsp;&#x25B4;';
+            this.appendChild(sortrevind);
+            return;
+          }
+          if (this.className.search(/\bsorttable_sorted_reverse\b/) != -1) {
+            /* if we're already sorted by this column in reverse, just
+             re-reverse the table, which is quicker */
+            sorttable.reverse(this.sorttable_tbody);
+            this.className = this.className.replace('sorttable_sorted_reverse',
+                                                    'sorttable_sorted');
+            this.removeChild(document.getElementById('sorttable_sortrevind'));
+            sortfwdind = document.createElement('span');
+            sortfwdind.id = "sorttable_sortfwdind";
+            sortfwdind.innerHTML = stIsIE ? '&nbsp<font face="webdings">6</font>' : '&nbsp;&#x25BE;';
+            this.appendChild(sortfwdind);
+            return;
+          }
+
+          /* remove sorttable_sorted classes */
+          theadrow = this.parentNode;
+          forEach(theadrow.childNodes, function(cell) {
+            if (cell.nodeType == 1) { /* an element */
+              cell.className = cell.className.replace('sorttable_sorted_reverse','');
+              cell.className = cell.className.replace('sorttable_sorted','');
+            }
+          });
+          sortfwdind = document.getElementById('sorttable_sortfwdind');
+          if (sortfwdind) { sortfwdind.parentNode.removeChild(sortfwdind); }
+          sortrevind = document.getElementById('sorttable_sortrevind');
+          if (sortrevind) { sortrevind.parentNode.removeChild(sortrevind); }
+
+          this.className += ' sorttable_sorted';
+          sortfwdind = document.createElement('span');
+          sortfwdind.id = "sorttable_sortfwdind";
+          sortfwdind.innerHTML = stIsIE ? '&nbsp<font face="webdings">6</font>' : '&nbsp;&#x25BE;';
+          this.appendChild(sortfwdind);
+
+	        /* build an array to sort. This is a Schwartzian transform thing,
+	         i.e., we "decorate" each row with the actual sort key,
+	         sort based on the sort keys, and then put the rows back in order
+	         which is a lot faster because you only do getInnerText once per row */
+	        row_array = [];
+	        col = this.sorttable_columnindex;
+	        rows = this.sorttable_tbody.rows;
+	        for (var j=0; j<rows.length; j++) {
+				row_array[row_array.length] = [sorttable.getInnerText(rows[j].cells[col]), rows[j]];
+	        }
+	        /* If you want a stable sort, uncomment the following line 
+	        sorttable.shaker_sort(row_array, this.sorttable_sortfunction);
+	        and comment out this one */
+	        row_array.sort(this.sorttable_sortfunction);
+
+	        tb = this.sorttable_tbody;
+	        for (var j=0; j<row_array.length; j++) {
+			  if ((j+1)%2==0){
+				  row_array[j][1].className = 'nth-child-even';
+			  }else{
+				  row_array[j][1].className = 'nth-child-odd';
+			  }
+
+			  tb.appendChild(row_array[j][1]);
+	        }
+
+	        delete row_array;
+	      });
+	    }
+    }
+  },
+
+  guessType: function(table, column) {
+    /* guess the type of a column based on its first non-blank row */
+    sortfn = sorttable.sort_alpha;
+
+	if(table.tBodies[0].rows.length > 0){
+		sortfn = sorttable.getType(table, 0, column);
+	}
+
+    for (var i=1; i<table.tBodies[0].rows.length; i++) {
+		if (sortfn !=  sorttable.getType(table, i, column))
+		{
+			return sorttable.sort_alpha;
+		}
+    }
+
+    return sortfn;
+  },
+
+  getType: function (table, row, column)
+  {
+	 sortfn = sorttable.sort_alpha;
+     text = sorttable.getInnerText(table.tBodies[0].rows[row].cells[column]);
+     if (text != '') {
+        if (text.match(/^-?[£$¤]?[\d,.]+%?$/)) {
+          return sorttable.sort_numeric;
+        }
+        /* check for a date: dd/mm/yyyy or dd/mm/yy
+         can have / or . or - as separator
+         can be mm/dd as well */
+        possdate = text.match(sorttable.DATE_RE)
+        if (possdate) {
+          /* looks like a date */
+          first = parseInt(possdate[1]);
+          second = parseInt(possdate[2]);
+          if (first > 12) {
+            /* definitely dd/mm */
+            return sorttable.sort_ddmm;
+          } else if (second > 12) {
+            return sorttable.sort_mmdd;
+          } else {
+            /* looks like a date, but we can't tell which, so assume
+             that it's dd/mm (English imperialism!) and keep looking */
+            sortfn = sorttable.sort_ddmm;
+          }
+        }
+      }	
+
+	  return sortfn;
+  },
+
+  getInnerText: function(node) {
+    /* gets the text we want to use for sorting for a cell.
+     strips leading and trailing whitespace.
+     this is *not* a generic getInnerText function; it's special to sorttable.
+     for example, you can override the cell text with a customkey attribute.
+     it also gets .value for <input> fields. */
+
+    if (!node) return "";
+
+    hasInputs = (typeof node.getElementsByTagName == 'function') &&
+                 node.getElementsByTagName('input').length;
+
+    if (node.getAttribute("sorttable_customkey") != null) {
+      return node.getAttribute("sorttable_customkey");
+    }
+    else if (typeof node.textContent != 'undefined' && !hasInputs) {
+      return node.textContent.replace(/^\s+|\s+$/g, '');
+    }
+    else if (typeof node.innerText != 'undefined' && !hasInputs) {
+      return node.innerText.replace(/^\s+|\s+$/g, '');
+    }
+    else if (typeof node.text != 'undefined' && !hasInputs) {
+      return node.text.replace(/^\s+|\s+$/g, '');
+    }
+    else {
+      switch (node.nodeType) {
+        case 3:
+          if (node.nodeName.toLowerCase() == 'input') {
+            return node.value.replace(/^\s+|\s+$/g, '');
+          }
+        case 4:
+          return node.nodeValue.replace(/^\s+|\s+$/g, '');
+          break;
+        case 1:
+        case 11:
+          var innerText = '';
+          for (var i = 0; i < node.childNodes.length; i++) {
+            innerText += sorttable.getInnerText(node.childNodes[i]);
+          }
+          return innerText.replace(/^\s+|\s+$/g, '');
+          break;
+        default:
+          return '';
+      }
+    }
+  },
+
+  reverse: function(tbody) {
+    /* reverse the rows in a tbody */
+    newrows = [];
+    for (var i=0; i<tbody.rows.length; i++) {
+      newrows[newrows.length] = tbody.rows[i];
+    }
+    for (var i=newrows.length-1; i>=0; i--) {
+       tbody.appendChild(newrows[i]);
+    }
+    delete newrows;
+  },
+
+  /* sort functions
+     each sort function takes two parameters, a and b
+     you are comparing a[0] and b[0] */
+
+  sort_numeric: function(a,b) {
+    aa = parseFloat(a[0].replace(/[^0-9.-]/g,''));
+    if (isNaN(aa)) aa = 0;
+    bb = parseFloat(b[0].replace(/[^0-9.-]/g,''));
+    if (isNaN(bb)) bb = 0;
+    return aa-bb;
+  },
+  sort_alpha: function(a,b) {
+	a0_lc = a[0].toLowerCase();
+	b0_lc = b[0].toLowerCase();
+
+    if (a0_lc==b0_lc) return 0;
+    if (a0_lc<b0_lc) return -1;
+    return 1;
+  },
+  sort_ddmm: function(a,b) {
+    mtch = a[0].match(sorttable.DATE_RE);
+    y = mtch[3]; m = mtch[2]; d = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt1 = y+m+d;
+    mtch = b[0].match(sorttable.DATE_RE);
+    y = mtch[3]; m = mtch[2]; d = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt2 = y+m+d;
+    if (dt1==dt2) return 0;
+    if (dt1<dt2) return -1;
+    return 1;
+  },
+  sort_mmdd: function(a,b) {
+    mtch = a[0].match(sorttable.DATE_RE);
+    y = mtch[3]; d = mtch[2]; m = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt1 = y+m+d;
+    mtch = b[0].match(sorttable.DATE_RE);
+    y = mtch[3]; d = mtch[2]; m = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt2 = y+m+d;
+    if (dt1==dt2) return 0;
+    if (dt1<dt2) return -1;
+    return 1;
+  },
+
+  shaker_sort: function(list, comp_func) {
+    /* A stable sort function to allow multi-level sorting of data
+     see: http://en.wikipedia.org/wiki/Cocktail_sort */
+    var b = 0;
+    var t = list.length - 1;
+    var swap = true;
+
+    while(swap) {
+        swap = false;
+        for(var i = b; i < t; ++i) {
+            if ( comp_func(list[i], list[i+1]) > 0 ) {
+                var q = list[i]; list[i] = list[i+1]; list[i+1] = q;
+                swap = true;
+            }
+        } /* for */
+        t--;
+
+        if (!swap) break;
+
+        for(var i = t; i > b; --i) {
+            if ( comp_func(list[i], list[i-1]) < 0 ) {
+                var q = list[i]; list[i] = list[i-1]; list[i-1] = q;
+                swap = true;
+            }
+        } /* for */
+        b++;
+
+    } /* while(swap) */
+  }
+}
+
+/* ******************************************************************
+   Supporting functions: bundled here to avoid depending on a library
+   ****************************************************************** */
+
+/* for Mozilla/Opera9 */
+if (document.addEventListener) {
+    document.addEventListener("DOMContentLoaded", sorttable.init, false);
+    document.addEventListener("DOMContentLoaded", controlimage.init, false);
+    document.addEventListener("DOMContentLoaded", csstableselector.init, false);
+}
+
+/* for Internet Explorer */
+/*@cc_on @*/
+/*@if (@_win32)
+    document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+    var script = document.getElementById("__ie_onload");
+    script.onreadystatechange = function() {
+        if (this.readyState == "complete") {
+            sorttable.init(); // call the onload handler
+	    controlimage.init();
+	    csstableselector.init();
+        }
+    };
+/*@end @*/
+
+/* for Safari */
+if (/WebKit/i.test(navigator.userAgent)) { /* sniff */
+    var _timer = setInterval(function() {
+        if (/loaded|complete/.test(document.readyState)) {
+            sorttable.init(); /* call the onload handler */
+	    controlimage.init();
+	    csstableselector.init();
+        }
+    }, 10);
+}
+
+/* for other browsers */
+window.onload = function (){
+    sorttable.init();
+    controlimage.init();
+    csstableselector.init();
+};
+
+
+function dean_addEvent(element, type, handler) {
+	if (element.addEventListener) {
+		element.addEventListener(type, handler, false);
+	} else {
+		/* assign each event handler a unique ID */
+		if (!handler.$$guid) handler.$$guid = dean_addEvent.guid++;
+		/* create a hash table of event types for the element */
+		if (!element.events) element.events = {};
+		/* create a hash table of event handlers for each element/event pair */
+		var handlers = element.events[type];
+		if (!handlers) {
+			handlers = element.events[type] = {};
+			/* store the existing event handler (if there is one) */
+			if (element["on" + type]) {
+				handlers[0] = element["on" + type];
+			}
+		}
+		/* store the event handler in the hash table */
+		handlers[handler.$$guid] = handler;
+		/* assign a global event handler to do all the work */
+		element["on" + type] = handleEvent;
+	}
+};
+/* a counter used to create unique IDs */
+dean_addEvent.guid = 1;
+
+function removeEvent(element, type, handler) {
+	if (element.removeEventListener) {
+		element.removeEventListener(type, handler, false);
+	} else {
+		/* delete the event handler from the hash table */
+		if (element.events && element.events[type]) {
+			delete element.events[type][handler.$$guid];
+		}
+	}
+};
+
+function handleEvent(event) {
+	var returnValue = true;
+	/* grab the event object (IE uses a global event object) */
+	event = event || fixEvent(((this.ownerDocument || this.document || this).parentWindow || window).event);
+	/* get a reference to the hash table of event handlers */
+	var handlers = this.events[event.type];
+	/* execute each event handler */
+	for (var i in handlers) {
+		this.$$handleEvent = handlers[i];
+		if (this.$$handleEvent(event) === false) {
+			returnValue = false;
+		}
+	}
+	return returnValue;
+};
+
+function fixEvent(event) {
+	/* add W3C standard event methods */
+	event.preventDefault = fixEvent.preventDefault;
+	event.stopPropagation = fixEvent.stopPropagation;
+	return event;
+};
+fixEvent.preventDefault = function() {
+	this.returnValue = false;
+};
+fixEvent.stopPropagation = function() {
+  this.cancelBubble = true;
+}
+
+/* Dean's forEach: http://dean.edwards.name/base/forEach.js
+
+	forEach, version 1.0
+	Copyright 2006, Dean Edwards
+	License: http://www.opensource.org/licenses/mit-license.php
+*/
+
+/* array-like enumeration */
+if (!Array.forEach) { /* mozilla already supports this */
+	Array.forEach = function(array, block, context) {
+		for (var i = 0; i < array.length; i++) {
+			block.call(context, array[i], i, array);
+		}
+	};
+}
+
+/* generic enumeration */
+Function.prototype.forEach = function(object, block, context) {
+	for (var key in object) {
+		if (typeof this.prototype[key] == "undefined") {
+			block.call(context, object[key], key, object);
+		}
+	}
+};
+
+/* character enumeration */
+String.forEach = function(string, block, context) {
+	Array.forEach(string.split(""), function(chr, index) {
+		block.call(context, chr, index, string);
+	});
+};
+
+/* globally resolve forEach enumeration */
+var forEach = function(object, block, context) {
+	if (object) {
+		var resolve = Object; /* default */
+		if (object instanceof Function) {
+			/* functions have a "length" property */
+			resolve = Function;
+		} else if (object.forEach instanceof Function) {
+			/* the object implements a custom forEach method so use that */
+			object.forEach(block, context);
+			return;
+		} else if (typeof object == "string") {
+			/* the object is a string */
+			resolve = String;
+		} else if (typeof object.length == "number") {
+			/* the object is array-like */
+			resolve = Array;
+		}
+		resolve.forEach(object, block, context);
+	}
+};
+
+</script>
+<style type="text/css">
+
+.Template_Gray {
+	margin:0px;
+	padding:0px;
+	width:1700px;
+	box-shadow: 0px 10px 5px #888888;
+	border:1px solid #ffffff;
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+
+.Template_Gray table {
+	width:100%;
+	max-height:100%;
+	margin:0px;padding:0px;
+	border-collapse:collapse;
+	table-layout:fixed;
+}
+
+
+.Template_Gray tr:hover td {
+	background-color:#afcaeb;
+}
+
+.Template_Gray td{
+	vertical-align:middle;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:11px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#666666;
+	word-break:break-all;
+	word-wrap:break-word;
+}
+
+.Template_Gray th{
+	vertical-align:middle;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:11px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#000000;
+}
+
+.Template_Gray pre{
+	font-size:11px;	
+	font-family:Arial;
+	font-weight:bold;
+	color:#666666;
+	white-space:pre-wrap;/*css-3*/ 
+	white-space:-moz-pre-wrap;/*Mozilla,since1999*/ 
+	white-space:-pre-wrap;/*Opera4-6*/ 
+	white-space:-o-pre-wrap;/*Opera7*/ 
+	word-wrap:break-word;/*InternetExplorer5.5+*/
+}
+
+.Template_Gray .width_200{
+	width:200px;
+}
+
+.Template_Gray .width_150{
+	width:150px;
+}
+
+.Template_Gray .width_100{
+	width:100px;
+}
+
+.Template_Gray .width_50{
+	width:50px;
+}
+
+/* For IE7,8,9 */
+.Template_Gray tr.nth-child-odd {
+	background-color:#eeeeee; 
+}
+
+.Template_Gray tr.nth-child-even { 
+	background-color:#ffffff; 
+}
+
+.Template_Gray tr.header th{
+	background:-o-linear-gradient(bottom, #ffffff 5%, #ffffff 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #ffffff 100% );		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff");
+	background: -o-linear-gradient(top,#ffffff,ffffff);
+	background-color:#ffffff;
+	border:0px solid #ffffff;
+	text-align:center;
+	border-width:0px 0px 0px 0px;
+	font-size:14px;
+	font-family:Arial;
+	border-bottom:1px solid #000000;
+	color:#746666;
+}
+
+.Template_Gray tr.header:hover th{
+	background:-o-linear-gradient(bottom, #ffffff 5%, #ffffff 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #ffffff 100% );		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff");
+	background: -o-linear-gradient(top,#ffffff,ffffff);
+	background-color:#ffffff;
+}
+
+/* For IE7,8,9 */
+
+.Template_Blue {
+	margin:0px;
+	padding:0px;
+	width:1700px;
+	box-shadow: 0px 10px 5px #888888;
+	border:1px solid #ffffff;
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+
+.Template_Blue table {
+	width:100%;
+	max-height:100%;
+	margin:0px;padding:0px;
+	border-collapse:collapse;
+	table-layout:fixed;
+}
+
+
+.Template_Blue tr:hover td {
+	background-color:#afcaeb;
+}
+
+.Template_Blue td{
+	vertical-align:middle;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:11px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#666666;
+	word-break:break-all;
+	word-wrap:break-word;
+}
+
+.Template_Blue th{
+	vertical-align:middle;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:11px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#000000;
+}
+
+.Template_Blue pre{
+	font-size:11px;	
+	font-family:Arial;
+	font-weight:bold;
+	color:#666666;
+	white-space:pre-wrap;/*css-3*/ 
+	white-space:-moz-pre-wrap;/*Mozilla,since1999*/ 
+	white-space:-pre-wrap;/*Opera4-6*/ 
+	white-space:-o-pre-wrap;/*Opera7*/ 
+	word-wrap:break-word;/*InternetExplorer5.5+*/
+}
+
+.Template_Blue .width_200{
+	width:200px;
+}
+
+.Template_Blue .width_150{
+	width:150px;
+}
+
+.Template_Blue .width_100{
+	width:100px;
+}
+
+.Template_Blue .width_50{
+	width:50px;
+}
+
+/* For IE7,8,9 */
+.Template_Blue tr.nth-child-odd {
+	background-color:#daeef3; 
+}
+
+.Template_Blue tr.nth-child-even { 
+	background-color:#ffffff; 
+}
+
+.Template_Blue tr.header th{
+	background:-o-linear-gradient(bottom, #ffffff 5%, #ffffff 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #ffffff 100% );		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff");
+	background: -o-linear-gradient(top,#ffffff,ffffff);
+	background-color:#ffffff;
+	border:0px solid #ffffff;
+	text-align:center;
+	border-width:0px 0px 0px 0px;
+	font-size:14px;
+	font-family:Arial;
+	border-bottom:1px solid #000000;
+	color:#746666;
+}
+
+.Template_Blue tr.header:hover th{
+	background:-o-linear-gradient(bottom, #ffffff 5%, #ffffff 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #ffffff 100% );		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff");
+	background: -o-linear-gradient(top,#ffffff,ffffff);
+	background-color:#ffffff;
+}
+
+/* For IE7,8,9 */
+
+</style>
+</head>
+<body>
+<select name="CSSSelector">
+  <option value="Template_Gray" style="background-color:#eeeeee;">Template_Gray</option>
+  <option value="Template_Blue" style="background-color:#daeef3;">Template_Blue</option>
+</select>
+<div id="TableGenerator" class="Template_Gray">
+<!-- Start of Marker List -->
+<!-- 
+We Support the following tags at present for exporting markers.
+{ASSETNAME} : name of asset
+{BIN} :	bin of asset	
+{THUMBNAILIMAGE} : thumbnail image of marker
+{MARKERNAME} : name of marker
+{DESCRIPTION} : description of marker
+{IN} : in point of marker
+{OUT} : out point of marker
+{DURATION} : duration of marker
+{MARKERTYPE} : type of marker
+{FILEPATH} : file path of current asset
+{TAGS} : tags of current marker
+
+Attention: Start tag and end tag of table should be placed on separated line.
+-->
+<table>
+<tr class="header"><th class="width_200">Asset Name  </th><th class="width_100">Bin</th><th class="width_150">Thumbnail Image</th><th class="width_100">Marker Name</th><th class="width_200">Description</th><th class="width_100">In</th><th class="width_100">Out</th><th class="width_100">Duration</th><th class="width_100">Marker Type</th><th class="width_200">File Path</th><th>Tags</th></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb_Name and designation_2017-06-13-09-33-45-1687121.jpg"/></td><td><pre>Name and designation</pre></td><td><pre>I&apos;m Professor Annie Koh </pre></td><td>01:19:33:16</td><td>01:19:45:16</td><td>00:00:12:00</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb_Tell us more about what you do_2017-06-13-09-33-45-1692142.jpg"/></td><td><pre>Tell us more about what you do</pre></td><td><pre>I like to call myself the academic entrepreneur. So, many of the things that I do in SMU, other than teaching finance-related courses, is to set up new centres, new ideas, new programmes, new tracks. In the last 17 years, I forgot to take account, but I&apos;m quite sure it&apos;s slightly more than 5 different institutes and centres. But this recent academic directorship of two - ITI and BFI, that are my latest pet projects, and I&apos;m spending a lot of time looking at teaching, engagement, as well as designing programmes, and of course, research, in the two areas.</pre></td><td>01:19:51:13</td><td>01:20:33:26</td><td>00:00:42:13</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb_Describe research_2017-06-13-09-33-45-1692143.jpg"/></td><td><pre>Describe research</pre></td><td><pre>As a professor with a discipline in finance, most of our early research is very much finance-related. So I&apos;ve been doing things in alternative investments, I&apos;ve been looking at things on risk management, that forms a large part of my faculty input, in terms of research.</pre></td><td>01:20:39:07</td><td>01:20:52:07</td><td>00:00:13:00</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb_Current Research - BFI_2017-06-13-09-33-45-1692144.jpg"/></td><td><pre>Current Research - BFI</pre></td><td><pre>In the last 5 years we have noticed that family owned businesses are actually very challenged, because they are going through transition. They will come to me as a Professor of Finance, looking at issues related to the sustainability of the family business, sustainability of wealth. Of course that&apos;s very much something I&apos;m close to. But when you look at family-owned enterprises, it&apos;s not just about the money. So we are starting to see that a lot of them are challenged about looking at things like family dynamics, and how to transfer not just the wealth, but the business from one generation to another. And that has again piqued my interest in working with other faculty, because it is a very inter-disciplinary project. We have actually been able to do a couple of great research in this area of understanding family-owned enterprises.</pre></td><td>01:20:58:24</td><td>01:21:52:08</td><td>00:00:53:14</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb_Q. How would you describe the meaning impact of your research on Singapore, industry/theworld?_2017-06-13-09-33-45-1697145.jpg"/></td><td><pre>Q. How would you describe the meaning impact of your research on Singapore, industry/theworld?</pre></td><td><pre></pre></td><td>01:21:53:05</td><td>01:21:59:24</td><td>00:00:06:19</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-1697146.jpg"/></td><td><pre></pre></td><td><pre>I think we have to go a little bit further than talking about impact. First we have to talk about the vision and mission, of why we actually started Business Families Institute.</pre></td><td>01:22:00:15</td><td>01:22:08:21</td><td>00:00:08:06</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb_Vision and Mission_2017-06-13-09-33-45-1697147.jpg"/></td><td><pre>Vision and Mission</pre></td><td><pre>As early as 2010, many of our business families have started realizing, no point running a business just based on bottom line, because if you look at quarterly figures only and not build sustainability, you don&apos;t have the purpose.</pre></td><td>01:22:09:23</td><td>01:22:24:26</td><td>00:00:15:03</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-1697148.jpg"/></td><td><pre></pre></td><td><pre>So we became very interested after the global financial crisis, to look at what is it about business families that make them so special. Why is it that there are families that are 50 year old, and have 4th generation, and yet they can continue to survive. So there must be some pros in family-owned businesses that make them so unique, and they can drive change and yet build sustainability.</pre></td><td>01:22:26:01</td><td>01:22:50:15</td><td>00:00:24:14</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-1697149.jpg"/></td><td><pre></pre></td><td><pre>That to me is also very impactful because Singapore is only 50 years old, and as we look at the next 50, we also want to ask ourselves, how do we transform the skills of our generation, how do we build sustainable singapore-branded companies? Can be owned, or not owned directly by Singaporeans, but they have an impact on society.</pre></td><td>01:22:52:09</td><td>01:23:16:08</td><td>00:00:23:29</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-16971410.jpg"/></td><td><pre></pre></td><td><pre>If you look at the data, most of our SMEs are family owned, and SMEs actually contribute to 50% of our GDP and two thirds of the employment. So they are very impactful drivers of change and drivers of growth. So how can a business school and a management university not pay attention to this very important area?</pre></td><td>01:23:16:08</td><td>01:23:38:27</td><td>00:00:22:19</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17021511.jpg"/></td><td><pre></pre></td><td><pre>And it&apos;s not just Singapore, it&apos;s actually whole of ASEAN. In our first research that we looked at succession, we were shocked that two-thirds of the families will be encountering succession in the next 5 years, and that data told us they have not started planning.
+ </pre></td><td>01:23:40:28</td><td>01:23:59:19</td><td>00:00:18:21</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb_Impetus for BFI_2017-06-13-09-33-45-17021512.jpg"/></td><td><pre>Impetus for BFI</pre></td><td><pre>So the urgency of sharing best practices, having a community of business families come together, not just to learn from faculty, but to also learn from each other. That became very important so by 2012, we have the blessings of our senior management, and they said &quot;Please go ahead&quot; and we set up Business Families Institute.  </pre></td><td>01:24:00:11</td><td>01:24:22:06</td><td>00:00:21:25</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17021513.jpg"/></td><td><pre></pre></td><td><pre>So I would say that the impact is not about the &quot;now&quot;, the impact is about the future. We are going to create enterprises that would be very proud of the fact that they are family owned, have great values and are building sustainability so that they can become a driver for growth, and ensure Singapore&apos;s continual value and growth in the next 50 years.</pre></td><td>01:24:22:10</td><td>01:24:47:20</td><td>00:00:25:10</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb_Implications_2017-06-13-09-33-45-17021514.jpg"/></td><td><pre>Implications</pre></td><td><pre>They need to make planning and preperation part of their sustainability. And I think because we are very Asian, the culture takes over, many Asian families think that Don&apos;t bring the issue up about succession. When I&apos;m not around, the children would have been so well brought up, they will be able to manage on their own.</pre></td><td>01:25:04:04</td><td>01:25:28:27</td><td>00:00:24:23</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17021515.jpg"/></td><td><pre></pre></td><td><pre>That&apos;s the aspiration of every family but you cannot leave it to chance.</pre></td><td>01:25:30:20</td><td>01:25:35:15</td><td>00:00:04:25</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb_ _2017-06-13-09-33-45-17071716.jpg"/></td><td><pre> </pre></td><td><pre>So the data and the research has convinced us that planning must start now even when your next generation may not even be ready. Because you must also prepare the rest of the business to accept that the CEO, may or may not be a family member.</pre></td><td>01:25:36:24</td><td>01:25:52:22</td><td>00:00:15:28</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17071717.jpg"/></td><td><pre></pre></td><td><pre> And so we are very excited, in the last 2 years, we have actually had a gift from Deloitte, and the research is helping us tremendously. We had a survey about succession, the 2nd survey was about family governance. Many business schools know about business governance, know about how to form a board, and have the right way, no conflict between control and the  management, and the chairman and the CEO must be separate roles, etc, all those are great corporate governance practices. But not every family member is in the business, but every family must be united on their ownership structure and how they want to lead the business going forward.</pre></td><td>01:25:53:19</td><td>01:26:32:29</td><td>00:00:39:10</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17071718.jpg"/></td><td><pre></pre></td><td><pre>So, we have started a lot of wonderful cases that showed us family governance must come first, before you talk about business governance. This has also guided the way we have named our Institute. We did not name ourselves as &apos;Family business Institute&apos;, I think FBI would not be something that people would want to join. What we have named is Business Families Institute. The word is on &apos;Family&apos;. Your business can transform, your business can change, your business can go to domestic markets, ecommerce, or even globally, but the families stay in business. The family ownership, the ownership structure.</pre></td><td>01:26:38:27</td><td>01:27:18:20</td><td>00:00:39:23</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17071719.jpg"/></td><td><pre></pre></td><td><pre>How do you set up the rules on which family member is allowed to come into the business?</pre></td><td>01:27:22:19</td><td>01:27:27:03</td><td>00:00:04:14</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17121820.jpg"/></td><td><pre></pre></td><td><pre>You must also be as fair to non-family as family members, because no one family has monopoly on talent.</pre></td><td>01:27:29:07</td><td>01:27:29:14</td><td>00:00:00:07</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17121821.jpg"/></td><td><pre></pre></td><td><pre>So with all those surveys, we are now starting into the 3rd year where we are writing cases. And we have recently launched 2 great cases, and because this is not just about Singapore, this is about ASEAN and ASIA.</pre></td><td>01:27:39:28</td><td>01:27:51:25</td><td>00:00:11:27</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17121822.jpg"/></td><td><pre></pre></td><td><pre>So we have launched our first case in Myanmar - an emerging market - but they have leapfrogged many of our developed countries. They have actually learned about the best practices and are they are incorporating it into both their family and into their business, and so we thought that we  can learn about developing world and how they have got it right.
+ </pre></td><td>01:27:51:29</td><td>01:28:12:24</td><td>00:00:20:25</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17121823.jpg"/></td><td><pre></pre></td><td><pre>Because a lot of us (ASEAN) share many things in common, the values that knit the families together, that seemingly is a very common set of values.</pre></td><td>01:28:13:03</td><td>01:28:22:00</td><td>00:00:08:27</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17121824.jpg"/></td><td><pre></pre></td><td><pre>This has allowed us to also write a 2nd case, launched in Sinagpore, just 2 weeks ago, and it&apos;s about the YCH family. A lot of people may not realize it, but they are a 52 yr old company and going through their 4th generation being engaged - not necessarily being directly in the business as yet - because the 3rd generation team are still very much in control and very much in the management team</pre></td><td>01:28:22:27</td><td>01:28:50:09</td><td>00:00:27:12</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17172125.jpg"/></td><td><pre></pre></td><td><pre>So I think the research really has given us the fodder and material, for helping us, hopefully, in the future, to run a family business programme to also introduce the material into our classrooms, and to even engage other enterprises outside of the country, in the East, in the West, to share the learning together, so that we build the thought leadership where we sit right now in Singapore.</pre></td><td>01:28:50:27</td><td>01:29:21:02</td><td>00:00:30:05</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb_When did your interest in this area start?_2017-06-13-09-33-45-17172126.jpg"/></td><td><pre>When did your interest in this area start?</pre></td><td><pre>I think for many researchers, a lot of the interest to do research may come from our discipline, so finance is definitely my discipline. But for many of us, a lot of the interest also comes from way back.
+</pre></td><td>01:29:28:12</td><td>01:29:44:19</td><td>00:00:16:07</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17172127.jpg"/></td><td><pre></pre></td><td><pre>My mum actually is from a family business, my grandfather migrated from South China to Malaysia, and he is an entrepreneur, so he started enterprises there. Unfortunately, he doesn&apos;t have a insitute like BFI around. So for him, when he passed away, he didn&apos;t make a will. And when you don&apos;t have a will, the state takes over, and the state takes over by saying everybody should have equal share. So my wonderful grandfather had 3 official wives, so there are many mouths to feed. Eventually they had to monetize the whole estate so that everybody gets equal share.</pre></td><td>01:29:45:04</td><td>01:30:25:16</td><td>00:00:40:12</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17172128.jpg"/></td><td><pre></pre></td><td><pre>...because nobody wanted to say that &quot;We preserve the business and only let the elder uncle and his family run the business&quot;. To them, they rather have the funding now, than to wait for the dividends, and the interest, and the profits.</pre></td><td>01:30:25:25</td><td>01:30:39:15</td><td>00:00:13:20</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17172129.jpg"/></td><td><pre></pre></td><td><pre>So the sustainability of a business sometimes requires you to make difficult decisions. Like not everybody should have equal share, the most capable person should be the one to lead, and all the other family members must be willing to wait for a longer term return on investment, but to be fully behind the family owned enterprise to ensure that it succeeds.</pre></td><td>01:30:39:19</td><td>01:31:04:16</td><td>00:00:24:27</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17222330.jpg"/></td><td><pre></pre></td><td><pre>These are the kind of conversations that families should sit together, closed door, and have a chance to hear each other out. If this is the way in which we want to grow your business in your family.</pre></td><td>01:31:07:11</td><td>01:31:19:27</td><td>00:00:12:16</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17222331.jpg"/></td><td><pre></pre></td><td><pre>I think those are the things that makes it so unique, because such a program is never taught in any standard business school curriculum.</pre></td><td>01:31:20:27</td><td>01:31:28:20</td><td>00:00:07:23</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17222332.jpg"/></td><td><pre></pre></td><td><pre>So having the Business Families Institute, allows us to curate, come together, and come up with a set of programmes and courses,that we can also use, not just for family members, but also for advisors.</pre></td><td>01:31:29:02</td><td>01:31:42:29</td><td>00:00:13:27</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-odd"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17222333.jpg"/></td><td><pre></pre></td><td><pre>Because many times you don&apos;t listen to themembers of your family, you hear best when it comes from someone neutral, outside the family, who could lend light and reasoning to the things that you are going through.</pre></td><td>01:31:44:09</td><td>01:31:57:19</td><td>00:00:13:10</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+<tr class="nth-child-even"><td><pre>C0029.MP4</pre></td><td><pre></pre></td><td><img src="./images/C0029.MP4thumb__2017-06-13-09-33-45-17222334.jpg"/></td><td><pre></pre></td><td><pre>So, the BFI mission is not just on the demand side of the business families, looking to us for guidance, but we also have a set of courses where we teach advisors to families what it&apos;s like to work in a family enterprise.</pre></td><td>01:31:59:25</td><td>01:32:15:10</td><td>00:00:15:15</td><td><pre>Comment</pre></td><td><pre>E:\Documents\Projects\WMT005 - Research Videos AtoZ\Working files\F - Family\Footage\Interview - 31May2017\C0029.MP4</pre></td><td><pre></pre></td></tr>
+</table>
+<!-- End of Marker List -->
+</div>	
+
+</body>
+</html>	
+
