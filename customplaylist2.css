@@ -6,7 +6,11 @@
 }
 */
 .playlistAPI .chapterBox{
-	height: 200px !important;
+	height: 100px !important;
+}
+.playlistAPI .k-thumb {
+	width: 100px;
+	height: 50px;
 }
 .playlistAPI .k-chapters-container .k-duration {
 	float: left !important;
@@ -24,4 +28,10 @@
 .playlistAPI .k-views-container {
 	font-size: 10px !important;
 	color: #8A704C;
+}
+.playlistAPI .k-description-container {
+	margin-left: 2px;
+	margin-top: 2px;
+	font-size: 12px;
+	width:150px;
 }
