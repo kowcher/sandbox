@@ -17,15 +17,7 @@
 https://cdnapisec.kaltura.com/index.php/extwidget/preview/partner_id/1990051/uiconf_id/43402632/entry_id/0_30n3jo8h/embed/dynamic
 
 <hr>
-		<!-- Outer div defines maximum space the player can take -->
-<div style="width: 60%;display: inline-block;position: relative;"> 
-	<!--  inner pusher div defines aspect ratio: in this case 16:9 ~ 56.25% -->
-	<div id="dummy" style="margin-top: 56.25%;"></div>
-	<!--  the player embed target, set to take up available absolute space   -->
-	<div id="kaltura_player_1542165941" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:solid thin black;">
-	</div>
-</div>
-	
+	<p>Test player 1</p>
 	<script src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402632/partner_id/1990051"></script>
 <div id="kaltura_player_1542165941" style="width: 800px; height: 600px;" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
 <span itemprop="name" content="SMU Research"></span>
@@ -43,22 +35,13 @@ kWidget.embed({
   "uiconf_id": 43402632,
   "flashvars": {
     "playlistAPI.kpl0Id": "0_2x67wp9p"
-	          "IframeCustomPluginCss1": "customSkin.css"
   },
   "cache_st": 1542165941
 });
 </script>
 	
 	<hr>
-	
-	<!-- Outer div defines maximum space the player can take -->
-<div style="width: 60%;display: inline-block;position: relative;"> 
-	<!--  inner pusher div defines aspect ratio: in this case 16:9 ~ 56.25% -->
-	<div id="dummy" style="margin-top: 56.25%;"></div>
-	<!--  the player embed target, set to take up available absolute space   -->
-	<div id="kaltura_player_1542167609" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:solid thin black;">
-	</div>
-</div>
+	<p>Test Player 2</p>
 	<script src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43416582/partner_id/1990051"></script>
 <div id="kaltura_player_1542167609" style="width: 1134px; height: 500px;" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
 <span itemprop="name" content="SMU Research: Tackling Societal Challenges"></span>
@@ -81,6 +64,32 @@ kWidget.embed({
 });
 </script>
 	
+	<hr>
+	
+	<p>Test Player 1: Using Kaltura's suggested <a href="http://player.kaltura.com/docs/responsive">responsive embed</a></p>
+	<!-- Outer div defines maximum space the player can take -->
+<div style="width: 60%;display: inline-block;position: relative;"> 
+	<!--  inner pusher div defines aspect ratio: in this case 16:9 ~ 56.25% -->
+	<div id="dummy" style="margin-top: 56.25%;"></div>
+	<!--  the player embed target, set to take up available absolute space   -->
+	<div id="kaltura_player_1542165941" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:-36px;border:solid thin black;">
+	</div>
+</div>
+	<script>
+kWidget.embed({
+  "targetId": "kaltura_player_1542165941",
+  "wid": "_1990051",
+  "uiconf_id": 43402632,
+  "flashvars": {
+    "playlistAPI.kpl0Id": "0_2x67wp9p"
+  },
+  "cache_st": 1542165941
+});
+</script>
+	
+	<hr>
+	
+	<p>Test Player 2: Using Kaltura's suggested <a href="http://player.kaltura.com/docs/responsive">responsive embed</a></p>
 	<!-- Outer div defines maximum space the player can take -->
 <div style="width: 60%;display: inline-block;position: relative;"> 
 	<!--  inner pusher div defines aspect ratio: in this case 16:9 ~ 56.25% -->
