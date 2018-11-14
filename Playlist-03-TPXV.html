@@ -80,5 +80,26 @@ kWidget.embed({
   "cache_st": 1542167609
 });
 </script>
+	
+	<!-- Outer div defines maximum space the player can take -->
+<div style="width: 60%;display: inline-block;position: relative;"> 
+	<!--  inner pusher div defines aspect ratio: in this case 16:9 ~ 56.25% -->
+	<div id="dummy" style="margin-top: 56.25%;"></div>
+	<!--  the player embed target, set to take up available absolute space   -->
+	<div id="kaltura_player_1542167609" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:-36px;border:solid thin black;">
+	</div>
+</div>
+<script>
+kWidget.embed({
+  "targetId": "kaltura_player_1542167609",
+  "wid": "_1990051",
+  "uiconf_id": 43416582,
+  "flashvars": {
+    "playlistAPI.kpl0Id": "0_2x67wp9p"
+  },
+  "cache_st": 1542167609
+});
+</script>
+	
 
 </body>
