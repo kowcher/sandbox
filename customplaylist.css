@@ -25,3 +25,6 @@
 	font-size: 10px !important;
 	color: #8A704C;
 }
+.playlistAPI .k-scroll .k-next {
+	opacity: 50;
+}
