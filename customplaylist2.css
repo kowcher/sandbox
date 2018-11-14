@@ -9,8 +9,9 @@
 	height: 100px !important;
 }
 .playlistAPI .k-thumb {
-	width: 100px;
-	height: 50px;
+	float: right !important;
+	width: 100px !important;
+	height: 50px !important;
 }
 .playlistAPI .k-chapters-container .k-duration {
 	float: left !important;
@@ -23,7 +24,7 @@
 	margin-left: 2px !important;
 	margin-top: 54px !important;
 	font-size: 12px !important;
-	width: 50px !important;
+	width: 250px !important;
 }
 .playlistAPI .k-views-container {
 	font-size: 10px !important;
