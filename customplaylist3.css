@@ -25,14 +25,14 @@
 	height: 49px !important;
 }
 .playlistAPI .k-chapters-container .k-title-container {
-	font-family: "Oswald", sans-serif !important;
 	font-size: 0.7em !important;
 	letter-spacing: 0.8px !important;
-	font-weight: bold !important;
 	text-transform: uppercase !important;
 	color: #aaaaaa;
 }
 .playlistAPI .k-chapters-container .k-title-container .k-title{
+	font-family: "Oswald", sans-serif !important;
+	font-weight: bold !important;
 	overflow: visible;
 	white-space: wrap;
 	text-overflow: ellipsis;
