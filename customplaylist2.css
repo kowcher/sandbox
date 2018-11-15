@@ -28,8 +28,8 @@
 }
 .playlistAPI .k-views-container {
 	font-size: 10px !important;
-	color: #8A704C;
+	color: #8A704C !important;
 }
 .playlistAPI .k-description-container {
-	font-size: 10px !important;
+	font-size: 12px !important;
 }
