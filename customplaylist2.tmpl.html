@@ -34,13 +34,21 @@
             var views = mediaItem.views;
             %>
 	        <div class="k-views-container">
-                <span class="k-views" title="<%=views%>">views: <%=views%></span>
+                <span class="k-views" title="<%=views%>">Views: <%=views%></span>
 	        </div>
             <% if( meta.includeMediaItemDuration) { %>
             <span class="k-duration">
                 <!--div class="icon-time"></div-->
                 <span><%=mediaItem.durationDisplay%></span>
             </span>
+		    <div class="k-views-container">
+                <span class="k-views" title="<%=views%>">Views: <%=views%></span>
+	        </div>
+		   
+		<div class="k-description-container">
+			<span class="k-description" title="<%=Description%>">Description:<%=Description%></span>
+		</div>
+			    
             <% } %>
         </div>
     </li>
