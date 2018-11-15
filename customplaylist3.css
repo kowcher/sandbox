@@ -13,15 +13,26 @@
 	width: 86px !important;
 	height: 49px !important;
 }
-.playlistAPI .k-chapters-container .k-duration {
-	color: white !important;
-	text-shadow: 2px 2px black !important;
-}
 .playlistAPI .k-title-container {
 font-size: 1em !important;
-font-family: 'Open Sans', sans-serif !important;
-	style: bold !important;
+font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
+	font-weight: bold !important;
 }
+.playlistAPI .k-chapters-container .k-description-container {
+	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
+	font-weight: 300 !important;
+	line-height: 13px !important;
+}
+.playlistAPI .k-chapters-container .k-description {
+	display: block;
+	color: #888888;
+	font-size: 0.9em;
+}
+.playlistAPI .k-chapters-container .k-duration {
+	color: white !important;
+	text-shadow: 1px 1px black;
+}
+
 .playlistAPI .k-views-container {
 	font-size: 1em !important;
 	color: #8A704C;
@@ -29,3 +40,4 @@ font-family: 'Open Sans', sans-serif !important;
 .playlistAPI .k-chapters-container .k-scroll {
 	opacity: 100 !important;
 }
+
