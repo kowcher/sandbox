@@ -25,6 +25,7 @@
 .playlistAPI .k-chapters-container .k-title-container .k-title{
 	overflow: visible !important;
 	white-space: wrap !important;
+	text-transform: uppercase !important;
 	text-overflow: ellipsis;
 	padding-top: 1px;
 	padding-bottom: 2px;
@@ -33,7 +34,7 @@
 .playlistAPI .k-chapters-container .k-description-container {
 	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
 	font-weight: 500 !important;
-	line-height: 20px !important;
+	line-height: 20px;
 }
 .playlistAPI .k-chapters-container .k-description {
 	display: block;
