@@ -20,6 +20,7 @@
 .playlistAPI .k-title-container {
 font-size: 1em !important;
 font-family: 'Open Sans', sans-serif !important;
+	style: bold !important;
 }
 .playlistAPI .k-views-container {
 	font-size: 1em !important;
