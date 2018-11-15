@@ -18,13 +18,14 @@
 	text-shadow: 2px 2px black !important;
 }
 .playlistAPI .k-title-container {
-	font-size: 1.5em !important;
+	font-size: 1em !important;
 	width: 150px !important;
 }
 .playlistAPI .k-views-container {
 	font-size: 1em !important;
 	color: #8A704C;
 }
-.playlistAPI .k-scroll .k-next {
+.playlistAPI .k-chapters-container .k-scroll {
 	opacity: 50 !important;
+	z-index: 1 !important;
 }
