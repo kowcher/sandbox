@@ -12,7 +12,7 @@
 }
 
 .playlistAPI .k-chapters-container {
-	font: normal 13px 'Oswald' sans-serif !important;
+	font: normal 13px "Oswald" sans-serif !important;
 	position: relative;
 	display: block;
 }
@@ -25,7 +25,7 @@
 	height: 49px !important;
 }
 .playlistAPI .k-chapters-container .k-title-container {
-	font-family: 'Oswald', sans-serif !important;
+	font-family: "Oswald", sans-serif !important;
 	font-size: 0.9em !important;
 	letter-spacing: 0.8px !important;
 	margin-left: 100px;
@@ -36,7 +36,7 @@
 	text-transform: uppercase !important;
 }
 .playlistAPI .k-chapters-container .k-title-container .k-title{
-	font-family: 'Oswald', sans-serif !important;
+	font-family: "Oswald", sans-serif !important;
 	overflow: visible;
 	white-space: wrap;
 	text-overflow: ellipsis;
