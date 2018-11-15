@@ -1,0 +1,52 @@
+<p>SC Tab 1</p>
+             </div>
+<div class="row">
+embed-responsive-4by3
+    <div class="embed-responsive embed-responsive-4by3">
+      <iframe  class="embed-responsive-item"src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402862/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1542013383&flashvars[playlistAPI.kpl0Id]=0_2x67wp9p"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+    </div>
+</div>
+<div class="row">
+ embed-responsive-16by9
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe  class="embed-responsive-item" src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402862/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1542013383&flashvars[playlistAPI.kpl0Id]=0_2x67wp9p"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+    </div>
+</div>
+<div class="fac-profile-row row" data-loaded="0"></div>
+        </div>
+    </div>	
+     <div class="tab-pane text-left" id="resp-tab2">
+        <div class="col-md-12 sc-items" style="background-color:#f6f6f6;">
+            <div class="row text-center">
+<p>SC Tab 2</p>
+             </div>
+             <div class="fac-profile-row row" data-loaded="0"></div>
+        </div>
+    </div>	
+     <div class="tab-pane text-left" id="resp-tab3">
+        <div class="col-md-12 sc-items" style="background-color:#f6f6f6;">
+            <div class="row text-center">
+<p>SC Tab 3</p>
+             </div>
+             <div class="fac-profile-row row" data-loaded="0"></div>
+        </div>
+    </div>	
+     <div class="tab-pane text-left" id="resp-tab4">
+        <div class="col-md-12 sc-items" style="background-color:#f6f6f6;">
+            <div class="row text-center">
+<p>SC Tab 4</p>
+             </div>
+             <div class="fac-profile-row row" data-loaded="0"></div>
+
+        </div>
+    </div>	
+     <div class="tab-pane text-left" id="resp-tab5">
+        <div class="col-md-12 sc-items" style="background-color:#f6f6f6;">
+            <div class="row text-center">
+<p>SC Tab 5</p>
+             </div>
+             <div class="fac-profile-row row" data-loaded="0"></div>
+
+        </div>
+    </div>	
+    </div>
