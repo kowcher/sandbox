@@ -45,8 +45,12 @@
                 <span class="k-views" title="<%=views%>">Views: <%=views%></span>
 	        </div>
 		   
+		<%
+		   var itemDesc = mediaItem.description;
+		   %>
+			    
 		<div class="k-description-container">
-			<span class="k-description" title="<%=mediaItem.description%>"></span>
+			<span class="k-description" title="<%=itemDesc%>"><%=itemDesc%></span>
 		</div>
 			    
             <% } %>
