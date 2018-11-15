@@ -21,11 +21,11 @@
 	padding-right: 30px;
 	font-weight: normal;
 	color: #aaaaaa;
+	text-transform: uppercase !important;
 }
 .playlistAPI .k-chapters-container .k-title-container .k-title{
-	overflow: visible !important;
-	white-space: wrap !important;
-	text-transform: uppercase !important;
+	overflow: visible;
+	white-space: wrap;
 	text-overflow: ellipsis;
 	padding-top: 1px;
 	padding-bottom: 2px;
