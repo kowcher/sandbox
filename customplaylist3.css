@@ -14,13 +14,13 @@
 	height: 49px !important;
 }
 .playlistAPI .k-chapters-container .k-title-container {
-	font-family: "Oswald", sans-serif !important;
-	font-size: 1em !important;
+	font-family: 'Oswald', sans-serif !important;
+	font-size: 0.9em !important;
 	letter-spacing: 0.8px !important;
 	margin-left: 100px;
 	display: block;
 	padding-right: 30px;
-	font-weight: 600 !important;
+	font-weight: bold !important;
 	color: #aaaaaa;
 	text-transform: uppercase !important;
 }
@@ -34,13 +34,14 @@
 }
 .playlistAPI .k-chapters-container .k-description-container {
 	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
-	font-weight: 300 !important;
+	font-weight: normal !important;
 	line-height: 20px;
 }
 .playlistAPI .k-chapters-container .k-description {
 	display: block;
 	color: #888888;
 	font-size: 0.9em;
+	letter-spacing: 0em !important;
 }
 
 .playlistAPI .k-chapters-container .k-duration {
