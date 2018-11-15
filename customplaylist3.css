@@ -17,15 +17,10 @@
 	color: white !important;
 	text-shadow: 2px 2px black !important;
 }
-.playlistAPI .k-title-container {
-	font-size: 1em !important;
-	font-family: 'Roboto Slab', serif !important;
-}
 .playlistAPI .k-views-container {
 	font-size: 1em !important;
 	color: #8A704C;
 }
 .playlistAPI .k-chapters-container .k-scroll {
-	opacity: 50 !important;
-	z-index: 1 !important;
+	opacity: 100 !important;
 }
