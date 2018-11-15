@@ -26,17 +26,13 @@
 }
 .playlistAPI .k-chapters-container .k-title-container {
 	font-family: "Oswald", sans-serif !important;
-	font-size: 0.9em !important;
+	font-size: 0.7em !important;
 	letter-spacing: 0.8px !important;
-	margin-left: 100px;
-	display: block;
-	padding-right: 30px;
-	font-weight: 300 !important;
-	color: #aaaaaa;
+	font-weight: bold !important;
 	text-transform: uppercase !important;
+	color: #aaaaaa;
 }
 .playlistAPI .k-chapters-container .k-title-container .k-title{
-	font-family: "Oswald", sans-serif !important;
 	overflow: visible;
 	white-space: wrap;
 	text-overflow: ellipsis;
@@ -46,7 +42,7 @@
 }
 .playlistAPI .k-chapters-container .k-description-container {
 	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
-	font-weight: bold !important;
+	font-weight: bold;
 	line-height: 20px;
 }
 .playlistAPI .k-chapters-container .k-description {
