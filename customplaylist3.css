@@ -5,6 +5,17 @@
 	top: 5px !important;
 }
 */
+.onpagePlaylistInterface {
+	font: normal 13px 'Open Sans', Calibri, Arial, sans-serif !important;
+	background-color: #151C55 !important;
+	color: #ffffff !important;
+}
+
+.playlistAPI .k-chapters-container {
+	font: normal 13px 'Oswald' sans-serif !important;
+	position: relative;
+	display: block;
+}
 .playlistAPI .chapterBox{
 	height: 200px !important;
 }
