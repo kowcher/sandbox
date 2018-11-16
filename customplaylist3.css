@@ -8,10 +8,10 @@
 
 .playlistAPI .k-thumb {
 	width: 86px !important;
-	height: 49px !important;
+	height: 48px !important;
 }
 .playlistAPI .k-chapters-container .k-title-container .k-title{
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-family: 'Oswald', sans-serif !important;
 	font-weight: 300 !important;
 }
