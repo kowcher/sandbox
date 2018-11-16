@@ -1,0 +1,1397 @@
+
+<!DOCTYPE html>                                                                                                       
+<!--[if lt IE 7]> <html class="ie6 ie" lang="en" dir="ltr" ng-controller="SMUController"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 ie" lang="en" dir="ltr" ng-controller="SMUController"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 ie" lang="en" dir="ltr" ng-controller="SMUController"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9 ie" lang="en" dir="ltr" ng-controller="SMUController"> <![endif]-->
+<!--[if !IE]> --> <html lang="en" dir="ltr" ng-controller="SMUController"> <!-- <![endif]-->
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://nextweb.smu.edu.sg/research" />
+<link rel="shortcut icon" href="https://nextweb.smu.edu.sg/sites/all/themes/smu/images/smu_favicon.png" type="image/png" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Singapore Management University (SMU)" />
+  <title>
+    Research | Singapore Management University (SMU)  </title>
+  <style type="text/css" media="all">
+@import url("https://nextweb.smu.edu.sg/modules/system/system.base.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/modules/system/system.menus.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/modules/system/system.messages.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/modules/system/system.theme.css?pi5pc5");
+</style>
+<style type="text/css" media="all">
+@import url("https://nextweb.smu.edu.sg/modules/contextual/contextual.css?pi5pc5");
+</style>
+<style type="text/css" media="all">
+@import url("https://nextweb.smu.edu.sg/sites/all/modules/back_to_top/back_to_top.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/modules/adaptive_image/css/adaptive-image.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/modules/aggregator/aggregator.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/modules/ckeditor_accordion/css/ckeditor-accordion.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/modules/date/date_api/date.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/modules/field/theme/field.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/modules/node/node.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/modules/search/search.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/modules/user/user.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/modules/views/css/views.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/modules/ckeditor/css/ckeditor.css?pi5pc5");
+</style>
+<style type="text/css" media="all">
+@import url("https://nextweb.smu.edu.sg/sites/all/libraries/colorbox/example5/colorbox.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/modules/ctools/css/ctools.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/modules/facebook_pull/facebook_pull.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/modules/panels/css/panels.css?pi5pc5");
+</style>
+<link type="text/css" rel="stylesheet" href="https://nextweb.smu.edu.sg/sites/all/modules/simplemeta/css/simplemeta.css?pi5pc5" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/all/themes/smubase/css/banner.css?updated8nov122&amp;pi5pc5" media="all" />
+<style type="text/css" media="all">
+@import url("https://nextweb.smu.edu.sg/modules/shortcut/shortcut.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/modules/toolbar/toolbar.css?pi5pc5");
+</style>
+<link type="text/css" rel="stylesheet" href="/sites/all/libraries/masterslider/style/masterslider.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/all/libraries/masterslider/skins/default/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/all/libraries/masterslider/skins/black-1/style.css" media="all" />
+<style type="text/css" media="all">
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/smubase/css/new-header.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/smubase/packages/bootstrap/css/bootstrap.min.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/smubase/packages/bootstrap/css/bootstrap-theme.min.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/smubase/packages/font-awesome-4.1.0/css/font-awesome.min.css?pi5pc5");
+</style>
+<style type="text/css" media="all">
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/open_framework/css/open_framework.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/smubase/css/global.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/smubase/css/footer.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/smubase/css/responsive.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/smubase/css/feature.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/nextweb2/stylesheets/style.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/nextweb2/stylesheets/nextweb2.css?pi5pc5");
+</style>
+<style type="text/css" media="print">
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/open_framework/css/open_framework_print.css?pi5pc5");
+@import url("https://nextweb.smu.edu.sg/sites/all/themes/smubase/css/print.css?pi5pc5");
+</style>
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Oswald:300,600" media="all" />
+  <script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/libraries/respondjs/respond.min.js?pi5pc5"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.cookie = 'adaptive_image=' + Math.max(screen.width, screen.height) + '; path=/';
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/modules/jquery_update/replace/jquery/1.11/jquery.min.js?v=1.11.2"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/misc/drupal.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.effect.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/modules/views/js/views-contextual.js?pi5pc5"></script>
+<script type="text/javascript" src="/sites/all/libraries/angular/angular.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/modules/contextual/contextual.js?v=1.0"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/modules/back_to_top/back_to_top.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/modules/ckeditor_accordion/js/ckeditor-accordion.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/libraries/colorbox/jquery.colorbox-min.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/modules/colorbox/js/colorbox.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/modules/colorbox/js/colorbox_load.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/modules/smu/smusearch/smusearch.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/modules/simplemeta/js/simplemeta.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/misc/textarea.js?v=7.58"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/themes/smubase/packages/bootstrap/js/bootstrap.min.js?pi5pc5"></script>
+<script type="text/javascript" src="/sites/all/libraries/jquery-touchswipe/jquery.touchSwipe.min.js?pi5pc5"></script>
+<script type="text/javascript" src="/sites/all/libraries/jquery.easing/jquery.easing.1.3.js?pi5pc5"></script>
+<script type="text/javascript" src="/sites/all/libraries/jquery-loading-overlay/dist/loading-overlay.min.js?pi5pc5"></script>
+<script type="text/javascript" src="/sites/all/themes/nextweb2/package/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/modules/toolbar/toolbar.js?pi5pc5"></script>
+<script type="text/javascript" src="/sites/all/libraries/responsive-tab/responsive-tabs.js"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/themes/open_framework/js/open_framework.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/themes/open_framework/js/jquery.placeholder.min.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/themes/smubase/js/js.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/themes/smubase/js/mobilemenu.js?pi5pc5"></script>
+<script type="text/javascript" src="https://nextweb.smu.edu.sg/sites/all/themes/nextweb2/js/script.js?pi5pc5"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"nextweb2","theme_token":"5v-iODcMLJXlwQ8kzg0BsvhwduXenIzMw8U-64NUZD0","js":{"\/sites\/all\/libraries\/masterslider\/masterslider.min.js":1,"\/sites\/all\/themes\/smubase\/js\/masterslider-options-nextweb2.js":1,"sites\/all\/libraries\/respondjs\/respond.min.js":1,"0":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.11\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.effect.min.js":1,"sites\/all\/modules\/views\/js\/views-contextual.js":1,"\/sites\/all\/libraries\/angular\/angular.js":1,"modules\/contextual\/contextual.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/back_to_top\/back_to_top.js":1,"sites\/all\/modules\/ckeditor_accordion\/js\/ckeditor-accordion.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/smu\/smusearch\/smusearch.js":1,"sites\/all\/modules\/simplemeta\/js\/simplemeta.js":1,"misc\/textarea.js":1,"sites\/all\/themes\/smubase\/packages\/bootstrap\/js\/bootstrap.min.js":1,"\/sites\/all\/libraries\/jquery-touchswipe\/jquery.touchSwipe.min.js":1,"\/sites\/all\/libraries\/jquery.easing\/jquery.easing.1.3.js":1,"\/sites\/all\/libraries\/jquery-loading-overlay\/dist\/loading-overlay.min.js":1,"\/sites\/all\/themes\/nextweb2\/package\/jquery.touchSwipe.min.js":1,"modules\/toolbar\/toolbar.js":1,"\/sites\/all\/libraries\/responsive-tab\/responsive-tabs.js":1,"sites\/all\/themes\/open_framework\/js\/open_framework.js":1,"sites\/all\/themes\/open_framework\/js\/jquery.placeholder.min.js":1,"sites\/all\/themes\/smubase\/js\/js.js":1,"sites\/all\/themes\/smubase\/js\/mobilemenu.js":1,"sites\/all\/themes\/nextweb2\/js\/script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/contextual\/contextual.css":1,"sites\/all\/modules\/back_to_top\/back_to_top.css":1,"sites\/all\/modules\/adaptive_image\/css\/adaptive-image.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/ckeditor_accordion\/css\/ckeditor-accordion.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/libraries\/colorbox\/example5\/colorbox.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/facebook_pull\/facebook_pull.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/simplemeta\/css\/simplemeta.css":1,"\/sites\/all\/themes\/smubase\/css\/banner.css?updated8nov122":1,"modules\/shortcut\/shortcut.css":1,"modules\/toolbar\/toolbar.css":1,"\/sites\/all\/libraries\/masterslider\/style\/masterslider.css":1,"\/sites\/all\/libraries\/masterslider\/skins\/default\/style.css":1,"\/sites\/all\/libraries\/masterslider\/skins\/black-1\/style.css":1,"sites\/all\/themes\/smubase\/css\/new-header.css":1,"sites\/all\/themes\/smubase\/packages\/bootstrap\/css\/bootstrap.min.css":1,"sites\/all\/themes\/smubase\/packages\/bootstrap\/css\/bootstrap-theme.min.css":1,"sites\/all\/themes\/smubase\/packages\/font-awesome-4.1.0\/css\/font-awesome.min.css":1,"sites\/all\/themes\/open_framework\/css\/open_framework.css":1,"sites\/all\/themes\/smubase\/css\/global.css":1,"sites\/all\/themes\/smubase\/css\/footer.css":1,"sites\/all\/themes\/smubase\/css\/responsive.css":1,"sites\/all\/themes\/smubase\/css\/feature.css":1,"sites\/all\/themes\/nextweb2\/stylesheets\/style.css":1,"sites\/all\/themes\/nextweb2\/stylesheets\/nextweb2.css":1,"sites\/all\/themes\/open_framework\/css\/open_framework_print.css":1,"sites\/all\/themes\/smubase\/css\/print.css":1,"\/\/fonts.googleapis.com\/css?family=Open+Sans:400,400i,700|Oswald:300,600":1}},"back_to_top":{"back_to_top_prevent_on_mobile":0,"back_to_top_prevent_in_admin":0,"back_to_top_button_type":"image"},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"better_exposed_filters":{"views":{"nextweb2_research":{"displays":{"attachment_2":{"filters":[]},"research_landing":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/research":true},"tableHeaderOffset":"Drupal.toolbar.height"});
+//--><!]]>
+</script>
+
+  <link rel="stylesheet" href="/sites/all/themes/nextweb2/package/mega-menu/mega-menu.css?updated3rdjan2" />
+  <script src="/sites/all/themes/nextweb2/package/mega-menu/mega-menu.js?13julyupdates"></script>
+  <script src="/sites/all/libraries/readmorejs/readmore.js?readmore"></script>
+
+
+</head>
+
+<body class="html not-front logged-in no-sidebars page-research toolbar toolbar-drawer research- research sidebar-3col   content-first   show-breadcrumb    bootstrap-3 font-awesome-4"  >
+
+
+  <div id="toolbar" class="toolbar overlay-displace-top clearfix">
+  <div class="toolbar-menu clearfix">
+    <ul id="toolbar-home"><li class="home first last"><a href="/" title="Home"><span class="home-link">Home</span></a></li>
+</ul>    <ul id="toolbar-user"><li class="account first"><a href="/cms" title="User account">Hello <strong>hozeangoh</strong></a></li>
+<li class="logout last"><a href="/cms/logout?current=research">Log out</a></li>
+</ul>    <h2 class="element-invisible">Administrative toolbar</h2><ul id="toolbar-menu"><li class="menu-9805 path-manage-content first"><a href="/manage-content" id="toolbar-link-manage-content"><span class="icon"></span>All Published Content</a></li>
+<li class="menu-40486 path-admin-manage-trash"><a href="/admin/manage/trash" id="toolbar-link-admin-manage-trash"><span class="icon"></span>All Unpublished Content</a></li>
+<li class="menu-7317 path-https:--itsupport.smu.edu.sg-hc-en-us-sections-200562800-Internet-publishing-nextweb-"><a href="https://itsupport.smu.edu.sg/hc/en-us/sections/200562800-Internet-publishing-nextweb-" id="toolbar-link-https:--itsupport.smu.edu.sg-hc-en-us-sections-200562800-Internet-publishing-nextweb-"><span class="icon"></span>Help</a></li>
+<li class="menu-66841 path-admin-manage-content-byhr"><a href="/admin/manage/content/byhr" id="toolbar-link-admin-manage-content-byhr"><span class="icon"></span>Manage Content</a></li>
+<li class="menu-59506 path-admin-manage-faculty last"><a href="/admin/manage-faculty" id="toolbar-link-admin-manage-faculty"><span class="icon"></span>Manage Faculty</a></li>
+</ul>          <a href="/toolbar/toggle?destination=research" title="Hide shortcuts" class="toggle toggle-active">Hide shortcuts</a>      </div>
+
+  <div class="toolbar-drawer clearfix">
+    <div class="toolbar-shortcuts"><ul class="menu nav navbar-nav"><li class="first leaf"><a href="/node/add">Add content</a></li>
+<li class="leaf"><a href="/admin/content">All Content</a></li>
+<li class="leaf"><a href="/cms/me/imce">Manage File</a></li>
+<li class="leaf"><a href="/admin/manage/trash">Trash Bin</a></li>
+<li class="leaf"><a href="/manage-content">Manage Content</a></li>
+<li class="last leaf"><a href="/admin/dashboard/users%3Fname%3Dtracyooi%26mail%3D">Dashboard</a></li>
+</ul></div>  </div>
+</div>
+  <a href="#main" class="element-invisible element-focusable">Skip to content</a>
+<a href="#main-nav" class="element-invisible element-focusable" data-target=".nav-collapse" data-toggle="collapse">Skip to navigation</a>
+<!-- /#skipnav -->
+
+<!-- old header -->
+
+
+
+
+    
+     
+    <div id="header" class="clearfix transparent-site-header navbar-fixed-top">
+
+    
+                                        
+          <div id="header-one" class="header-one container-fluid">
+            <div class="container">           
+              <div class="no-padding-left text-right header-bar no-padding-right">
+                <!-- div class="smu-network cd-dropdown-wrapper pull-left"> <a class="cd-dropdown-trigger" href="#0">&nbsp;</a>
+                                </div -->              
+                                           
+                <div class="region region-header clearfix">
+  <div id="block-block-1386" class="clearfix block block-block contextual-links-region">       <div class="content">  <div class="social-menu hidden-sm hidden-xs">
+Info for: <a href="https://smu.edu.sg/programmes">Prospective Students</a> | <a href="https://smu.edu.sg/campus-life" target="_blank">Students</a> | <a href="https://alumni.smu.edu.sg" target="_blank">Alumni</a> | <a href="https://smu.edu.sg/contact/media-contacts">Media</a> | <a href="https://inet.smu.edu.sg" target="_blank">Faculty/Staff</a>
+</div>
+<div class="utility-menu  hidden-md hidden-lg">
+  <li class="utility-item connect"><a href="//nextweb.smu.edu.sg/" role="button" id="infofor-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info for <i class="fas fa fa-chevron-down"></i></a>
+    <div class="dropdown-menu connect-menu infofor-menu" aria-labelledby="infofor-menu">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <ul>
+          <li><a href="https://smu.edu.sg/programmes">Prospective Students</a></li>
+          <li><a href="https://smu.edu.sg/campus-life" target="_blank">Students</a></li>
+          <li><a href="https://alumni.smu.edu.sg" target="_blank">Alumni</a></li>
+          <li><a href="https://smu.edu.sg/contact/media-contacts">Media</a></li>
+          <li><a href="https://inet.smu.edu.sg" target="_blank">Faculty/Staff</a></li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</div> </div>
+</div></div>
+ <!-- /.region -->
+                                  
+                <div class="utility-menu">  
+  <li class="utility-item library"><a href="https://library.smu.edu.sg">SMU Libraries</a></li>
+  <li class="utility-item connect"><a href="#" role="button" id="connect-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connect <i class="fas fa fa-chevron-down"></i></a>
+    <div class="dropdown-menu connect-menu" aria-labelledby="connect-menu">
+      <div class="col-md-4 col-sm-4 col-xs-12 others connect-menu-block no-padding-left no-padding-right">
+        <div class="col-md-12 col-sm-12 col-xs-6 connect-menu-inner">
+          <ul>
+            <li><a href="https://www.smu.edu.sg/contact" target="_blank">Contact</a></li>
+            <li><a href="https://careers.smu.edu.sg/" target="_blank">Careers @ SMU</a></li>
+          </ul>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-6 connect-menu-inner">
+          <ul>
+            <li><a href="https://www.smu.edu.sg/career-services/employer-information/recruitment-of-smu-graduates" target="_blank">Hiring from SMU</a></li>
+            <li><a href="https://www.smu.edu.sg/about/smu-degree-diploma-certificate" target="_blank">Verify SMU Certs</a></li>
+          </ul>
+        </div>        
+      </div> 
+      <div class="col-md-8 col-sm-8 col-xs-12 connect-menu-block no-padding-left no-padding-right main-links">   
+        <div class="col-md-6 col-sm-6 col-xs-6 connect-menu-block-inner">
+          <ul>
+            <li><a href="https://email.smu.edu.sg/" target="_blank">Faculty/Staff Email</a></li>
+            <li><a href="https://live.smu.edu.sg/sso/" target="_blank">Student Email</a></li>
+            <li><a href="https://inet.smu.edu.sg/" target="_blank">iNet Intranet</a></li>
+            <li><a href="https://oasis.smu.edu.sg/" target="_blank">OASIS Intranet</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 connect-menu-block-inner">
+          <ul>
+            <li><a href="https://elearn.smu.edu.sg/" target="_blank">eLearn</a></li>
+            <li><a href="https://inet.smu.edu.sg/sites/extranet" target="_blank">SMU Extranet</a></li>
+            <li><a href="https://ontrac.smu.edu.sg/" target="_blank">OnTrac II</a></li>
+            <li><a href="https://www.google.com/a/smu.edu.sg/ServiceLogin" target="_blank">Google Apps</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix">
+      </div>
+    </div>
+  </li>
+</div>                     
+                  <div class="mobile-search-btns hidden-sm hidden-md hidden-lg">
+                    <button class="btn btn-default search-go" data-toggle="collapse" href="#mobile-search" role="button" aria-expanded="false" aria-controls="mobile-search">
+                      <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                     <button class="btn btn-default search-close btn-reset hidden" data-toggle="collapse" href="#mobile-search" role="button" aria-expanded="false" aria-controls="mobile-search">
+                      <span class="glyphicon glyphicon-remove">
+                          <span class="sr-only">Close</span>
+                        </span>
+                    </button>
+                  </div>                   
+                  <div class="full-search hidden-xs">  
+                    <div class="region region-search-box clearfix">
+  <div id="block-smusearch-smusearch-box" class="clearfix block block-smusearch contextual-links-region">       <div class="content"> <style>
+#smusearch_dropdown li{ padding-left:10px;}
+</style>
+<form class="smu-integrated-search" id="smu_integrated_search" role="search" method="post" action="">
+  <div class="input-group search-tf search-hide">
+    <input type="text" class="form-control search-tf-input" placeholder="Search..." id="keys" name="keys" autofocus="autofocus">
+
+    <div class="input-group-btn search-type-btn">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1" id="smusearch_cat" name="smusearch_cat"> <span><i class="fas fa fa-chevron-down"></i></span> <span class="sr-only">Toggle Dropdown</span> </button>
+      <ul id="smusearch_dropdown" class="dropdown-menu pull-right">
+        <li>
+          <input name="smusearch_cat_val" type="radio" value="web" checked="checked" id="search-web" class="radio-search">
+          <label for="search-web">This Site</label>
+        </li>
+                        <li class="divider"></li>
+        <li>
+          <input name="smusearch_cat_val" type="radio" value="people" id="search-people" class="radio-search">
+          <label for="search-people">People</label>
+        </li>
+              </ul>
+    </div>
+    <div class="input-group-btn search-btn">      
+      <!--<input type="hidden" id="smusearch_cat_val" name="smusearch_cat_val" />-->
+      <button type="submit" class="btn btn-default search-go"
+                     tabindex="-1" id="smusearch_submit" name="smusearch_submit"><span class="glyphicon glyphicon-search"></span> </button>
+										 <button type="reset" class="btn btn-default search-close btn-reset hidden-xs">
+                      <span class="glyphicon glyphicon-remove">
+                        <span class="sr-only">Close</span>
+                      </span>
+                    </button>
+    </div>
+
+    <!-- /btn-group -->
+  </div>
+
+  <!-- /input-group -->
+
+</form>
+ </div>
+</div></div>
+ <!-- /.region -->
+                                        
+                  </div>
+                                
+              </div>     
+            </div>
+          </div>
+           
+          <div id="mobile-search" class="collapse header-mobile-search container-fluid hidden-sm hidden-md hidden-lg">
+              <div class="region region-search-box clearfix">
+  <div class="region region-search-box clearfix">
+  <div id="block-smusearch-smusearch-box" class="clearfix block block-smusearch contextual-links-region">       <div class="content"> <style>
+#smusearch_dropdown li{ padding-left:10px;}
+</style>
+<form class="smu-integrated-search" id="smu_integrated_search" role="search" method="post" action="">
+  <div class="input-group search-tf search-hide">
+    <input type="text" class="form-control search-tf-input" placeholder="Search..." id="keys" name="keys" autofocus="autofocus">
+
+    <div class="input-group-btn search-type-btn">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1" id="smusearch_cat" name="smusearch_cat"> <span><i class="fas fa fa-chevron-down"></i></span> <span class="sr-only">Toggle Dropdown</span> </button>
+      <ul id="smusearch_dropdown" class="dropdown-menu pull-right">
+        <li>
+          <input name="smusearch_cat_val" type="radio" value="web" checked="checked" id="search-web" class="radio-search">
+          <label for="search-web">This Site</label>
+        </li>
+                        <li class="divider"></li>
+        <li>
+          <input name="smusearch_cat_val" type="radio" value="people" id="search-people" class="radio-search">
+          <label for="search-people">People</label>
+        </li>
+              </ul>
+    </div>
+    <div class="input-group-btn search-btn">      
+      <!--<input type="hidden" id="smusearch_cat_val" name="smusearch_cat_val" />-->
+      <button type="submit" class="btn btn-default search-go"
+                     tabindex="-1" id="smusearch_submit" name="smusearch_submit"><span class="glyphicon glyphicon-search"></span> </button>
+										 <button type="reset" class="btn btn-default search-close btn-reset hidden-xs">
+                      <span class="glyphicon glyphicon-remove">
+                        <span class="sr-only">Close</span>
+                      </span>
+                    </button>
+    </div>
+
+    <!-- /btn-group -->
+  </div>
+
+  <!-- /input-group -->
+
+</form>
+ </div>
+</div></div>
+ <!-- /.region -->
+</div>
+ <!-- /.region -->
+           
+          </div>
+             
+      <div id="header-two" class="clearfix header-two">
+          <div id="logo-search" class="container">
+          <nav role="navigation">
+                        <div class="navbar navbar-inverse transparent-nav navbar-static-top row" data-role="navigation">
+                          <div class="navbar-inner-cus">
+                  <div id="nav-logo">
+                                    <span class="smu-logo hidden-sm hidden-xs"><a href="http://www.smu.edu.sg" rel="home" title="Singapore Management University (SMU)" name="top"><img id="smulogo" class="color-logo" alt="Singapore Management University (SMU)" src="/sites/all/themes/smubase/smu_logo.svg?updated23" width="158" height="68"><img id="smulogo" class="white-logo hidden" alt="Singapore Management University (SMU)" src="/sites/all/themes/smubase/smu_logo_white.svg?updated23" width="158" height="68"></a></span><span class="smu-logo-mobile  hidden-md hidden-lg"><a href="http://www.smu.edu.sg" rel="home" title="Singapore Management University (SMU)" name="top"><img id="smulogo" alt="Singapore Management University (SMU)" src="/sites/all/themes/smubase/smu_logo_m.svg?update" width="32"  height="42"></a></span>
+                  <span id="logo"><a href="/" title="Home" rel="home"><img src="https://nextweb.smu.edu.sg/sites/all/themes/smubase/images/1px-blank.png" alt="Singapore Management University (SMU)" role="presentation" /></a> </span>
+
+                  <!--end logo-->
+                  <button type="button" class="navbar-toggle pull-right collapsed" data-toggle="collapse" data-target="#smu-navbar-collapse-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+
+
+                <div id="menu-search">
+                  <div class="navbar-right">  
+                       
+                       <div class="collapse navbar-collapse navbar-left" id="smu-navbar-collapse-nav">
+                          
+                          <div class="nav navbar-nav">
+                                                                                    <div class="region region-navigation clearfix">
+  <div id="block-menu-menu-menu-nextweb-2" class="clearfix block block-menu hidden-md hidden-lg hidden-sm contextual-links-region">     <h2 class="block-title">Menu: Nextweb 2</h2>
+      <div class="content"> <ul class="menu nav navbar-nav"><li class="first expanded dropdown"><a class="dropdown-toggle nolink" data-toggle="dropdown" data-target="#">About <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/about/overview">Overview</a></li>
+<li class="leaf"><a href="/about/vision-mission">Vision &amp; Mission</a></li>
+<li class="leaf"><a href="/about/facts">University Facts</a></li>
+<li class="leaf"><a href="/about/leadership">SMU Leadership</a></li>
+<li class="last leaf"><a href="/about/history">History</a></li>
+</ul></li>
+<li class="leaf"><a href="/programmes">Programmes</a></li>
+<li class="leaf"><a href="/schools-institutes">Schools &amp; Institutes</a></li>
+<li class="leaf active-trail"><a href="/research" class="active-trail active">Research</a></li>
+<li class="expanded dropdown"><a class="dropdown-toggle nolink" data-toggle="dropdown" data-target="#">Campus Life <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/campus-life">Overview</a></li>
+<li class="leaf"><a href="/campus-life/facilities-booking">Facilities &amp; Leasing</a></li>
+<li class="leaf"><a href="/campus-life/visiting-smu">Visiting SMU</a></li>
+<li class="leaf"><a href="/campus-life/campus-development">Campus Development</a></li>
+<li class="leaf"><a href="/about/financial/financial-assistance-schemes">Financial Matters</a></li>
+<li class="last leaf"><a href="https://www.smu.edu.sg/global/" target="_blank">International</a></li>
+</ul></li>
+<li class="last expanded dropdown"><a class="dropdown-toggle nolink" data-toggle="dropdown" data-target="#">Connect <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/contact/directory">Contact</a></li>
+<li class="leaf"><a href="/faculty">Faculty Directory</a></li>
+<li class="leaf"><a href="/contact/offices-staff-directory">Offices and Staff Directory</a></li>
+<li class="leaf"><a href="/contact/login">Login</a></li>
+<li class="leaf"><a href="https://careers.smu.edu.sg/">Careers @ SMU</a></li>
+<li class="leaf"><a href="https://alumni.smu.edu.sg/">Alumni</a></li>
+<li class="leaf"><a href="https://giving.smu.edu.sg/">Giving to SMU</a></li>
+<li class="leaf"><a href="/career-services/employer-information/recruitment-of-smu-graduates">Hiring from SMU</a></li>
+<li class="last leaf"><a href="https://eservices.smu.edu.sg/digitalcert/">Verify SMU Certs</a></li>
+</ul></li>
+</ul> </div>
+</div><div id="block-block-906" class="clearfix block block-block hidden-xs contextual-links-region">       <div class="content"> <!--start-->
+<div class="bootstrap_container">
+<nav class="navbar navbar-default w3_megamenu" role="navigation">
+  <div id="smu-mega-menu" class="navbar-right">
+    <ul class="nav navbar-nav">
+      <!-- Mega Menu 
+<li class="w3_megamenu-fw home"><a href="//nextweb.smu.edu.sg/">Home</a></li>-->
+<li class="w3_megamenu-fw about"><a href="//nextweb.smu.edu.sg/about/overview">About</a></li>
+<li class="w3_megamenu-fw programmes"><a href="//nextweb.smu.edu.sg/programmes">Programmes</a></li>
+<li class="w3_megamenu-fw schools-institutes"><a href="//nextweb.smu.edu.sg/schools-institutes">Schools & Institutes</a></li>
+<li class="w3_megamenu-fw research"><a href="//nextweb.smu.edu.sg/research">Research</a></li>
+      <li class="w3_megamenu-fw campus-life"><a href="//nextweb.smu.edu.sg/campus-life">Campus Life</a></li>
+      <!-- li class="dropdown w3_megamenu-fw"><a href="//nextweb.smu.edu.sg/contact" data-toggle="dropdown" class="dropdown-toggle">Connect <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li class="w3_megamenu-content container-fluid">
+            <div class="w3_megamenu-content-box col-md-12">
+              <div class="col-md-6 col-sm-6">
+                <h4 class="mega-menu-title"><a href="//nextweb.smu.edu.sg/contact">CONTACT</a></h4>
+                <p> <strong>SINGAPORE MANAGEMENT UNIVERSITY</strong><br />
+                  81 Victoria Street<br />
+                  Singapore 188065<br />
+                  <a href="mailto:enquiry@smu.edu.sg">enquiry@smu.edu.sg</a> </p>
+                <p><span class="icon_map"><a href="//nextweb.smu.edu.sg/contact/directory"><img src="//nextweb.smu.edu.sg/sites/all/themes/smu/images/icon_map.jpg" alt="smu map" /></a></span>&nbsp;&nbsp;<a href="//nextweb.smu.edu.sg/campus-life/visiting-smu/campus-map">View map </a>| <a href="//nextweb.smu.edu.sg/campus-life/visiting-smu/carpark-information">Carpark info</a></p>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <h4 class="mega-menu-title"><a href="//nextweb.smu.edu.sg/directory/faculty">FACULTY DIRECTORY</a></h4>
+                <h4 class="mega-menu-title"><a href="http://www.smu.edu.sg/contact/offices-staff-directory?updated">OFFICES & STAFF DIRECTORY</a></h4>
+                <h4 class="mega-menu-title"><a href="https://careers.smu.edu.sg/">CAREERS @ SMU</a></h4>
+                <h4 class="mega-menu-title"><a href="https://alumni.smu.edu.sg" target="_blank">ALUMNI</a></h4>
+                <h4 class="mega-menu-title"><a href="http://giving.smu.edu.sg/" target="_blank">GIVING TO SMU</a></h4>
+<h4 class="mega-menu-title"><a href="//nextweb.smu.edu.sg/career-services/employer-information/recruitment-of-smu-graduates">HIRING FROM SMU</a></h4>
+<h4 class="mega-menu-title"><a href="//nextweb.smu.edu.sg/about/smu-degree-diploma-certificate">VERIFY SMU CERTS</a></h4>
+              </div>
+              <div class="col-md-12 col-sm-12">
+                <h4 class="mega-menu-title"><a href="//nextweb.smu.edu.sg/contact/login">LOGIN</a></h4>
+<div class="col-md-6 col-sm-6">
+                  <div class="menuloginLeft">
+                    <ul class="menuLogin">
+                      <li class="menuBlue"><a href="https://email.smu.edu.sg/" target="_blank" title="Faculty/Staff Email" class="btn btn-md btn-primary">Faculty/Staff Email</a></li>
+                      <li class="menuBlue"><a href="https://live.smu.edu.sg/sso/" target="_blank" title="Student Email" class="btn btn-md btn-primary">Student Email</a></li>
+                      <li class="menuBlue"><a href="https://inet.smu.edu.sg" target="_blank" title="iNet - new eWise" class="btn btn-md btn-primary">iNet Intranet</a></li>
+                      <li class="menuBlue"><a href="https://oasis.smu.edu.sg" target="_blank" title="OASIS Intranet" class="btn btn-md btn-primary">OASIS Intranet</a></li>
+                    </ul>
+                  </div>
+</div>
+<div class="col-md-6 col-sm-6">
+                  <!--/menuLogin
+                  <div class="menuloginRight">
+                    <ul class="menuLogin">
+                      <li class="menuBlue"><a href="https://elearn.smu.edu.sg" target="_blank" title="eLearn" class="btn btn-md btn-primary">eLearn</a></li>
+                      <li class="menuBlue"><a href="https://inet.smu.edu.sg/sites/extranet" target="_blank" title="SMU Extranet" class="btn btn-md btn-primary">SMU Extranet</a></li>
+                      <li class="menuBlue"><a href="https://ontrac.smu.edu.sg" target="_blank" title="OnTrac II" class="btn btn-md btn-primary">OnTrac II</a></li>
+                      <li class="menuBlue"><a href="https://www.google.com/a/smu.edu.sg/ServiceLogin" target="_blank" title="Google Apps" class="btn btn-md btn-primary">Google Apps</a></li>
+                    </ul>
+                  </div>
+</div>
+                </div>
+            </div>
+            <!--end row 
+          </li -->
+        </ul>
+      </li>
+     
+      
+      <!-- end dropdown w3_megamenu-fw -->
+      
+    </ul>
+    <!-- end nav navbar-nav --> 
+    
+  </div>
+  <!-- end #navbar-collapse-1 --> 
+  
+</nav>
+<!-- end navbar navbar-default w3_megamenu --> 
+</div>
+<!--end --> 
+ </div>
+</div></div>
+ <!-- /.region -->
+                            
+                          </div>
+                          
+                    </div>
+                                      </div>
+              </div>
+               
+            </div> <!--navbar-inner-cuss-->
+            </div><!-- navbar-static-top-->
+
+          </nav>
+        </div>  <!-- container-->       
+    </div><!--end header two inline nav style-->
+    <!--end pce-->    
+     
+    </div>  <!-- /#header -->
+    <!--end inline nav check-->
+   <!--end $main_menu and search box -->
+
+
+
+<div id="main-top" class="clearfix main-top" ><div class="region region-main-top clearfix">
+  <div id="block-nodeblock-154416" class="clearfix block block-nodeblock contextual-links-region">     <div class="contextual-links-wrapper"><ul class="contextual-links"><li class="node-edit first last"><a href="/node/154416/edit?destination=research">Edit</a></li>
+</ul></div>  <div class="content"> <!-- masterslider -->
+
+<div class="master-slider ms-skin-default " id="masterslider_1">
+  
+  <!-- new slide -->
+    <div class="ms-slide" id="ms-slide-1">
+  
+    <img src="#" data-src="https://nextweb.smu.edu.sg/sites/default/files/research-banner_0.jpg"/>
+    <!-- slide text layer -->
+    <div class="ms-layer ms-caption " data-delay="10"
+     data-type          = "text"
+     data-effect        = "bottom(90)"
+     data-duration      = "800"
+     data-ease          = "easeOutQuart">
+             <style>
+.banner-content-container { top:220px; padding-left:0; }
+.banner-content h1.lead {
+font-size: 48px !important;
+line-height: 1.25em !important;
+text-shadow: rgba(28,28,28,1) 0 0 40px;
+text-transform: uppercase !important;
+}
+
+.banner-content h4.subtitle {
+text-shadow: rgba(28,28,28,1)0 0 30px;
+letter-spacing: 0.8px;
+line-height: 1em;
+}
+
+.banner-content p.description {
+font-size: 16px !important;
+line-height: 1.5em !important;
+text-shadow: rgba(28,28,28,1) 0 0 5px;
+}
+
+.banner-content {
+padding-bottom:0em !important;
+}
+
+@media only screen and (max-width: 767px) {
+.banner-content { padding-bottom: 12em !important; }
+a.cta { padding: 20px 30px !important; }
+
+.banner-content-container { top: 110px; }
+}
+</style>
+<div class="container">
+<div class="col-md-5 col-sm-11 col-xs-11 text-left banner-content-container">
+<div class="banner-content">
+<h1 class="lead">Research</h1>
+<h4 class="subtitle">Solutions for the Future</h4>
+<p class="description">Impact the way our world evolves.
+SMU researchers apply new knowledge and new perspectives to tackle the world's challenges.
+The outcome is research that improves business, government and society.</p>
+
+</div>
+</div>
+</div>                </div>
+    
+  </div>
+  <!-- end of slide -->
+
+  </div>
+<!-- end of masterslider -->
+ </div>
+</div></div>
+ <!-- /.region -->
+</div>
+<div id="main-upper">
+  <div class="container">
+    <div class="main-upper"><div class="region region-main-upper clearfix">
+  <div id="block-block-431" class="clearfix block block-block quick-links contextual-links-region">       <div class="content"> <div class="container-wrapper">
+<div class="container text-center">
+Quick Links:
+<ul>
+<li><a href="//nextweb.smu.edu.sg/publications" class="quick-links-link">Publications <i  class="fa fa-caret-right"></i></a></li>
+<li><a href="http://library.smu.edu.sg" target="_blank" class="quick-links-link">Library<i  class="fa fa-caret-right"></i></a></li>
+<li><a href="http://research.smu.edu.sg" class="quick-links-link">Office of Research & Tech Transfer <i  class="fa fa-caret-right"></i></a></li>
+<li><a href="//nextweb.smu.edu.sg/faculty" class="quick-links-link">Faculty Directory<i  class="fa fa-caret-right"></i></a></li>
+<li><a href="https://research.smu.edu.sg/smu-institutional-review-board" class="quick-links-link" alt="Institutional Review Board">IRB<i  class="fa fa-caret-right"></i></a></li>
+</ul>
+</div>
+</div> </div>
+</div></div>
+ <!-- /.region -->
+ </div>
+  </div>
+</div>
+<!-- title & breadcrumb-->
+<div id="main-header" class="main-header">
+  <div class="container">
+    <div id="main-header-content" class="main-header-content">
+	      <div class="breadcrumb"> <h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a></div> </div>
+            <div class="page-title">
+        <h1 class="title" id="page-title"> Research </h1>
+      </div>
+          </div>
+  </div>
+</div>
+<!-- title & breadcrumb-->
+<div id="main" class="clearfix main" role="main">
+  <div class="container">
+    <div id="main-content" class="main-content">
+    
+            <div id="content" class="content one-column">
+        <div id="content-wrapper" class="content-wrapper">
+          <div id="content-head" class="content-head">
+            <div class="clearfix clear-row">                                                                                   </div>
+          </div>
+                    <div id="content-upper" class="content-upper"> <div class="region region-content-upper clearfix">
+  <div id="block-block-1226" class="clearfix block block-block contextual-links-region">       <div class="content"> <style type="text/css">
+@media only screen and (min-width: 992px) {
+.sc-tab {
+width:19.7%;
+}
+.sc-tab.active {
+background-color:#f6f6f6;
+}
+.sc-tab.active a {
+background-color:transparent !important;
+}
+.sc-tab .pre-title {
+margin-bottom:5px;
+font-size:12px;
+}
+.sc-tab .sc-title {
+margin-top:0px;
+font-size:14px;
+}
+}
+</style>
+<div class="row">
+<div id="responsive-tab">
+    <ul class="nav nav-tabs responsive">	
+    <li class="no-padding sc-tab test-class active" data-tid="10151">
+        <a class="sc-tab-link deco-none red-class" href="#resp-tab1">
+        <p class="pre-title"><em>Interpreting</em></p>
+        <h4 class="sc-title text-uppercase">Economies & Financial Markets</h4></a>
+    </li>	
+    <li class="no-padding sc-tab test-class" data-tid="10176">
+        <a class="sc-tab-link" href="#resp-tab2">
+        <p class="pre-title"><em>Strengthening</em></p>
+        <h4 class="sc-title text-uppercase">Social Fabric & Quality of Life</h4></a>
+    </li>	
+    <li class="no-padding sc-tab" data-tid="10201">
+        <a class="sc-tab-link deco-none" href="#resp-tab3" >
+        <p class="pre-title"><em>Navigating</em></p>
+        <h4 class="sc-title text-uppercase">Boundaries & Borders</h4></a>
+    </li>
+    <li class="no-padding sc-tab" data-tid="10226">
+        <a class="sc-tab-link deco-none" href="#resp-tab4">
+        <p class="pre-title"><em>Managing</em></p>
+        <h4 class="sc-title text-uppercase">for Sustainability</h4></a>
+    </li>
+    <li class="no-padding sc-tab" data-tid="10251">
+        <a class="sc-tab-link deco-none" href="#resp-tab5">
+        <p class="pre-title"><em>Advancing</em></p>
+        <h4 class="sc-title text-uppercase">Innovation & Technology</h4></a>
+    </li>
+    </ul>
+    <div class="tab-content responsive" style="background-color:#f6f6f6;">	
+    <div class="tab-pane active text-left" id="resp-tab1">
+        <div class="col-md-12 sc-items" style="background-color:#f6f6f6;">
+            <div class="row text-center">
+<p>SC Tab 1</p>
+             </div>
+<div class="row">
+embed-responsive-4by3
+    <div class="embed-responsive embed-responsive-4by3">
+      <iframe  class="embed-responsive-item"src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402862/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1542013383&flashvars[playlistAPI.kpl0Id]=0_2x67wp9p"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+    </div>
+</div>
+<div class="row">
+ embed-responsive-16by9
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe  class="embed-responsive-item" src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402862/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1542013383&flashvars[playlistAPI.kpl0Id]=0_2x67wp9p"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+    </div>
+</div>
+<div class="fac-profile-row row" data-loaded="0"></div>
+        </div>
+    </div>	
+     <div class="tab-pane text-left" id="resp-tab2">
+        <div class="col-md-12 sc-items" style="background-color:#f6f6f6;">
+            <div class="row text-center">
+<p>SC Tab 2</p>
+             </div>
+             <div class="fac-profile-row row" data-loaded="0"></div>
+        </div>
+    </div>	
+     <div class="tab-pane text-left" id="resp-tab3">
+        <div class="col-md-12 sc-items" style="background-color:#f6f6f6;">
+            <div class="row text-center">
+<p>SC Tab 3</p>
+             </div>
+             <div class="fac-profile-row row" data-loaded="0"></div>
+        </div>
+    </div>	
+     <div class="tab-pane text-left" id="resp-tab4">
+        <div class="col-md-12 sc-items" style="background-color:#f6f6f6;">
+            <div class="row text-center">
+<p>SC Tab 4</p>
+             </div>
+             <div class="fac-profile-row row" data-loaded="0"></div>
+
+        </div>
+    </div>	
+     <div class="tab-pane text-left" id="resp-tab5">
+        <div class="col-md-12 sc-items" style="background-color:#f6f6f6;">
+            <div class="row text-center">
+<p>SC Tab 5</p>
+             </div>
+             <div class="fac-profile-row row" data-loaded="0"></div>
+
+        </div>
+    </div>	
+    </div>
+</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+jQuery( document ).ready(function() {
+	var scs= [];
+	var randomAoe = [];
+	var facultyProfiles = [];
+	jQuery.ajax({ 
+		url: "/api/scs2.json",
+		success: function( data ) {
+			if (data.length > 0) { 
+				scs = data;
+				var scIndexes = [];
+
+				while(scIndexes.length != 5){
+					var random = Math.floor(Math.random() * data.length);    
+					if(scIndexes.indexOf(random) == -1){
+						scIndexes.push(random);
+					}
+				}
+
+				scIndexes.forEach(element => {
+console.log(jQuery("li.sc-tab[data-tid='"+scs[element].tid+"']"));
+                    jQuery("li.sc-tab[data-tid='"+scs[element].tid+"']").attr("data-fac-count", scs[element].count);
+                    jQuery("li.sc-tab[data-tid='"+scs[element].tid+"']").attr("data-sc-name", scs[element].name);
+                });
+                
+                var thisTid = "10151";
+                var thisCount = jQuery("li.sc-tab[data-tid='"+thisTid+"']").attr("data-fac-count");
+                var thisScName = jQuery("li.sc-tab[data-tid='"+thisTid+"']").attr("data-sc-name");
+                jQuery.ajax({
+                    url: "/api/faculty-updated?limit=3&sc[]="+thisTid,
+                    jsonp: "callback",
+                    dataType: "jsonp",
+                    success: function(data){
+                        if(data){
+                            item = '<div class="item"><div class="row">';
+                            item += "<div class=\"col-md-12\"><h3 class=\"latest-aoe\">Latest Faculty Profiles in \"<span><a href=\"/faculty?filter[sc]=" + thisTid + "\">" + thisScName + "</a></span>\"</h3></div>";
+                            item += '<div class="col-md-12 faculty-profiles">';															
+            
+                            item += '</div>'
+                            item+= '</div></div>';
+          
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").empty();
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append(item);
+            
+                            facultyProfiles = data;
+            
+                            for (var i = 0; i < facultyProfiles.length; i++) {
+                                var facultyProfile = facultyProfiles[i];
+                                var facultyDiv = jQuery('<div></div>');
+                                facultyDiv.addClass("col-md-3 col-sm-6 col-xs-12 faculty-profile-item");
+                                var facultyDesignations = facultyProfile.designation.split(";");
+                                var facultyDesignation = "";
+                                if (facultyDesignations.length > 0) {
+                                    facultyDesignation = facultyDesignations[0];
+                                }
+                                var staffPhoto = jQuery('<div></div>');
+                                var facultyNameUrl = facultyProfile.node_title.split(' ').join('-');
+                                staffPhoto.addClass("no-padding col-md-3");
+                                staffPhoto.append("<a href=\"/faculty/profile/"+ facultyProfile.nid +"/"+ facultyNameUrl +"\"><img src=\"https://staffphoto.smu.edu.sg/s/"+facultyProfile.ntlogin+"/100x120\" class=\"faculty-photo img-responsive\"></a>");
+                                facultyDiv.append(staffPhoto);
+                                facultyDiv.append("<div class=\"col-md-9\"><h4 class=\"faculty-name\"><a href=\"/faculty/profile/"+facultyProfile.nid+"/"+ facultyNameUrl +"\">"+facultyProfile.node_title+"</a></h4><p>"+facultyDesignation+"</p></div>");		
+                                jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append(facultyDiv);
+                            }
+            
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append("<div class=\"col-md-3 col-sm-6 col-xs-12 faculty-profile-item text-center see-all-aoe\"><h4><a href=\"/faculty?filter[sc]="+thisTid+"\">See all " + thisCount + " faculties tackling this societal challenge</h4></div>");
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").attr("data-loaded", 1);
+                        }
+                    }
+                });                            
+			
+			} 
+		}
+    });
+
+    jQuery("li.sc-tab").click(function() {
+        var thisTid = jQuery(this).attr("data-tid");
+        var thisCount = jQuery(this).attr("data-fac-count");
+        var thisScName = jQuery(this).attr("data-sc-name");
+        var dataLoaded = jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").attr("data-loaded");
+        if (dataLoaded == 0) {
+            jQuery.ajax({
+                url: "/api/faculty-updated?limit=3&sc[]="+thisTid,
+                jsonp: "callback",
+                dataType: "jsonp",
+                success: function(data){
+                    if(data){
+                        item = '<div class="item"><div class="row">';
+                        item += "<div class=\"col-md-12\"><h3 class=\"latest-aoe\">Latest Faculty Profiles in \"<span><a href=\"/faculty?filter[sc]=" + thisTid + "\">" + thisScName + "</a></span>\"</h3></div>";
+                        item += '<div class="col-md-12 faculty-profiles">';															
+
+                        item += '</div>'
+                        item+= '</div></div>';
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").empty();
+                        jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append(item);
+
+                        facultyProfiles = data;
+
+                        for (var i = 0; i < facultyProfiles.length; i++) {
+                            var facultyProfile = facultyProfiles[i];
+                            var facultyDiv = jQuery('<div></div>');
+                            facultyDiv.addClass("col-md-3 col-sm-6 col-xs-12 faculty-profile-item");
+                            var facultyDesignations = facultyProfile.designation.split(";");
+                            var facultyDesignation = "";
+                            if (facultyDesignations.length > 0) {
+                                facultyDesignation = facultyDesignations[0];
+                            }
+                            var staffPhoto = jQuery('<div></div>');
+                            var facultyNameUrl = facultyProfile.node_title.split(' ').join('-');
+                            staffPhoto.addClass("no-padding col-md-3");
+                            staffPhoto.append("<a href=\"/faculty/profile/"+ facultyProfile.nid +"/"+ facultyNameUrl +"\"><img src=\"https://staffphoto.smu.edu.sg/s/"+facultyProfile.ntlogin+"/100x120\" class=\"faculty-photo img-responsive\"></a>");
+                            facultyDiv.append(staffPhoto);
+                            facultyDiv.append("<div class=\"col-md-9\"><h4 class=\"faculty-name\"><a href=\"/faculty/profile/"+facultyProfile.nid+"/"+ facultyNameUrl +"\">"+facultyProfile.node_title+"</a></h4><p>"+facultyDesignation+"</p></div>");		
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append(facultyDiv);
+                        }
+
+                        jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append("<div class=\"col-md-3 col-sm-6 col-xs-12 faculty-profile-item text-center see-all-aoe\"><h4><a href=\"/faculty?filter[sc]="+thisTid+"\">See all " + thisCount + " faculties tackling this societal challenge</h4></div>");
+                        jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").attr("data-loaded", 1);
+                    }
+                }
+            });        
+        }
+    });
+});
+</script> </div>
+</div></div>
+ <!-- /.region -->
+ </div>
+                              <div id="content-body" class="content-body"> <div class="region region-content clearfix">
+  <div id="block-system-main" class="clearfix block block-system">       <div class="content"> <div class="view view-nextweb2-research view-id-nextweb2_research view-display-id-research_landing view-dom-id-9c8726f9c0becc9716fe0f7aea5995ef">
+            <div class="view-header">
+      <div class="text-center">
+<h3>Latest Research and Insights</h3>
+<p>SMU has an emphasis on generating rigorous, high-impact, and relevant multi-
+<br />disciplinary research that addresses Asian issues of global relevance.</p><p>&nbsp;</p></div>
+    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="col-lg4 col-md-4 col-sm-6 col-xs-12">
+<div class="latest-article">
+<a href="https://research.smu.edu.sg/smu-smartcities-urbanmanagement" target="_blank">
+<div class="img-bg text-center"><img src="/sites/default/files/styles/large/public/smu/news/Cover.png?itok=w22XUG0h" class="img-responsive" /></div>
+<h3>SMU&#039;s research in Smart Cities &amp; Urban Management</h3>
+</a>
+<div class="caption"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-11-15T13:15:00+08:00">15 Nov 2018</span> | Asian Scientist</div>
+</div>
+</div></span>  </div>  
+  <div class="views-field views-field-view-1">        <span class="field-content"><div class="view view-nextweb2-research view-id-nextweb2_research view-display-id-attachment_2 view-dom-id-4bc141c9c99bef9ddea8589407d3924d">
+        
+  
+  
+      <div class="view-content">
+        <div>
+      
+  <div class="views-field views-field-body">        <div class="field-content"><div class="col-lg4 col-md-4 col-sm-6 col-xs-12">
+<div class="latest-article">
+<a href="https://research.smu.edu.sg/news/smuresearch/2018/nov/01/smu-researcher-wins-2018-acm-sigsoft-impact-paper-award" target="_blank">
+<div class="img-bg text-center"><img src="/sites/default/files/styles/large/public/smu/news/shutterstock_116443600.jpg?itok=ot-q-KD_" class="img-responsive" /></div>
+<h3>SMU researcher wins 2018 ACM SIGSOFT Impact Paper Award</h3>
+</a>
+<div class="caption"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-11-01T14:45:00+08:00">1 Nov 2018</span> | Asian Scientist, Faculty, Highlights, News, Press Release, Research, Research Disciplines, Information Systems</div>
+</div>
+</div></div>  </div>  </div>
+  <div>
+      
+  <div class="views-field views-field-body">        <div class="field-content"><div class="col-lg4 col-md-4 col-sm-6 col-xs-12">
+<div class="latest-article">
+<a href="https://research.smu.edu.sg/news/smuresearch/2018/oct/29/evidence-based-entrepreneurship-0" target="_blank">
+<div class="img-bg text-center"><img src="/sites/default/files/styles/large/public/smu/news/_CYR3608_1_edited_0.jpg?itok=9ce2x2QB" class="img-responsive" /></div>
+<h3>Evidence-based entrepreneurship</h3>
+</a>
+<div class="caption"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-10-29T10:00:00+08:00">29 Oct 2018</span> | Asian Scientist, Faculty, Highlights, News, Research, Research Disciplines, Business</div>
+</div>
+</div></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div> </div>
+</div></div>
+ <!-- /.region -->
+  </div>
+                                      </div>
+        <!-- /#content-wrap -->
+      </div>
+      <!-- /#content -->
+          </div>
+  </div>
+</div>
+<!-- /#main, /#main-wrapper -->
+
+<!--nextweb2 region-->
+<div id="full_width_2" class="full_width_2"><div class="region region-full-width-2 clearfix">
+  <div id="block-block-38" class="clearfix block block-block grey-block ortt-block contextual-links-region">
+  <div class="container"><!--added container here-->
+        <div class="content"> <style>
+a.cta-blue:hover {
+text-decoration: none !important;
+background-color: #151c55;
+}
+</style>
+<div class="row">
+<div class="col-md-offset-1 col-md-10 text-center">
+<div class="col-md-12"><h3><a href="https://research.smu.edu.sg" target="_blank" style="color:#333;">Office of Research & Tech Transfer</a></h3></div>
+<div class="col-md-12">
+<div class="col-md-4">
+<p><a href="https://inet.smu.edu.sg/sites/or/grants/" class="col-md-12 cta cta-blue" target="_blank">Grants & Opportunities <i class="fa fa-lock" aria-hidden="true"></i></a></p>
+</div>
+<div class="col-md-4">
+<p><a href="https://inet.smu.edu.sg/sites/or/tt" class="col-md-12 cta cta-blue" target="_blank">Tech Transfer  <i class="fa fa-lock" aria-hidden="true"></i></a></p>
+</div>
+<div class="col-md-4">
+<p><a href="https://research.smu.edu.sg/externalresearchgrants" class="col-md-12 cta cta-blue" target="_blank">External Grant Awards</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-offset-1 col-md-10 text-center">
+<div class="col-md-12"><h3>Publications</h3></div>
+<div class="col-md-12">
+<div class="col-md-4">
+<p><a href="https://casewriting.smu.edu.sg" class="col-md-12 cta cta-blue" target="_blank">Case Writing</a></p>
+</div>
+<div class="col-md-4">
+<p><a href="https://cmp.smu.edu.sg/perspectives" class="col-md-12 cta cta-blue" target="_blank">Perspectives@SMU</a></p>
+</div>
+<div class="col-md-4">
+<p><a href="https://research.smu.edu.sg/news/research-bulletin/2018" class="col-md-12 cta cta-blue" target="_blank">Research @ SMU</a></p>
+</div>
+<div class="col-md-4">
+<p><a href="https://cmp.smu.edu.sg/ami" class="col-md-12 cta cta-blue" target="_blank">Asian Management Insights</a></p>
+</div>
+<div class="col-md-4">
+<p><a href="https://cmp.smu.edu.sg/amb" class="col-md-12 cta cta-blue" target="_blank">Asian Management Briefs</a></p>
+</div>
+<div class="col-md-4">
+<p><a href="http://ink.library.smu.edu.sg/" class="col-md-12 cta cta-blue" target="_blank">SMU Ink</a></p>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+</div>
+ <!-- /.region -->
+ </div>
+<div id="full_width_3" class="full_width_3"><div class="region region-full-width-3 clearfix">
+  <div id="block-block-511" class="clearfix block block-block contextual-links-region">
+  <div class="container"><!--added container here-->
+        <div class="content"> <style>
+h3.white-txt {
+line-height:0 !important;
+}
+</style>
+
+<div class="row">
+<div class="col-md-4">
+<h2 class="block-title"><a href="https://library.smu.edu.sg" target="_blank" style="color:#fff;">Library</a> Collections</h2>
+<p>The <a href="https://library.smu.edu.sg" target="_blank"   style="color:#fff;">library</a> facilitates knowledge creation, discovery through its electronic search platform and <br />access to a wide array of research resources on and off campus. Library collections include:</p>
+
+
+<div class="library-stat">
+
+<div class="library-stat-row">
+<h3 class="white-txt" style="margin-top:30px;">420,000+</h3>
+<p class="white-txt">printed and electronic books</p>
+</div>
+
+<div class="library-stat-row">
+<h3 class="white-txt">180+</h3>
+<p class="white-txt">electronic databases</p>
+</div>
+
+<div class="library-stat-row">
+<h3 class="white-txt">80,000+</h3>
+<p class="white-txt">printed & electronic journals</p>
+</div>
+<div class="library-stat-row">
+<a href="https://www.smu.edu.sg/publications" target="_blank"><h3 class="white-txt">19,000+</h3>
+<p class="white-txt">SMU research publications</p></a>
+</div>
+<hr />
+<div class="quick-links">
+<div>Find out more:</div>
+<ul>
+<li><a href="http://library.smu.edu.sg" target="_blank" class="quick-links-link" target="_blank"><strong>SMU LIBRARIES<i  class="fa fa-caret-right"></i></strong></a></li>
+
+</ul>
+</div>
+
+</div>
+
+</div>
+<div class="col-md-8">
+<p>Watch real-time downloads from <strong><a href="http://ink.library.smu.edu.sg" target="_blank" style="color:#fff;">SMU Libraries’ Institutional Repository (InK)</a>:</strong></p>
+<div id="rdr-embed" data-width="100%" data-height="567" style="width=100%; border=0;"></div>
+
+<script> 
+   window.rdrAsync = function() { 
+     RDR.init({ 
+       mapContext: "1445438", 
+       datastreamHost: "datastream.bepress.com", 
+       datastreamPort: "443", 
+       datastreamStaticRoot: "//assets.bepress.com/current/", 
+       colorCode: "custom", 
+       customColor: "", 
+       customSaturation: "0", 
+       customLightness: "0", 
+       institution_title: "Singapore Management University", 
+       site_title: "Institutional Knowledge at Singapore Management University",  
+       site_link: "http://ink.library.smu.edu.sg", 
+       instCountryCode: "", 
+       instCity: "", 
+       instRegion: "", 
+       instCountry: "", 
+       origin: "https://nextweb.smu.edu.sg/", 
+       refreshRate: 3600000, 
+       homepageMap: 1, 
+       publicationMap: 0,  
+       embedMap: 1, 
+       largeMap: 1, 
+       zoom: 2, 
+       minZoom: 2, 
+       stats_host: "https://resources.bepress.com", 
+     }); 
+   }; 
+ </script> 
+ <script src="https://assets.bepress.com/current/shared/embed/rdr.js" async="true"></script>
+</div>
+</div> </div>
+</div>
+</div>
+</div>
+ <!-- /.region -->
+ </div>
+<div id="full_width_4" class="full_width_4"><div class="region region-full-width-4 clearfix">
+  <div id="block-block-161" class="clearfix block block-block dark-block contextual-links-region">
+  <div class="container"><!--added container here-->
+        <div class="content"> <div class="row">
+    <div class="col-md-8">
+<h3>Research Highlights</h3>
+        <!--<script src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/30942751/partner_id/1990051?autoembed=true&playerId=kaltura_player_1505460200&cache_st=1505460200&width=100%&height=320&flashvars[playlistAPI.autoInsert]=true&flashvars[playlistAPI.kpl0Name]=SMU%20Research%20A-Z&flashvars[playlistAPI.kpl0Url]=https%3A%2F%2Fwww.kaltura.com%2Findex.php%2Fpartnerservices2%2Fexecuteplaylist%3Fpartner_id%3D1990051%26subp_id%3D199005100%26format%3D8%26ks%3D%7Bks%7D%26playlist_id%3D0_bspy4lnx"></script>-->
+
+<iframe src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/30942891/partner_id/1990051/widget_id/0_zqpja15o?iframeembed=true&playerId=kaltura_player_5a65622508ab8&flashvars[playlistAPI.kpl0Id]=0_tedkwekv&flashvars[playlistAPI.autoContinue]=true&flashvars[playlistAPI.autoInsert]=true&flashvars[ks]=&flashvars[mediaProtocol]=rtmp&flashvars[streamerType]=rtmp&flashvars[streamerUrl]=rtmp://www.kaltura.com:1935&flashvars[rtmpFlavors]=1&flashvars[localizationCode]=en" width="740" height="330" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" title="Kaltura Player"></iframe>
+    </div>
+    <div class="col-md-4">
+<h3>Institutes, Centres, Labs & Initiatives</h3>
+    <p style="margin-top:15px;">Explore over 30 centres and institutes that are generating new knowledge all over campus.</p>
+    <p><a href="https://www.smu.edu.sg/schools-institutes" target="_blank" class="txt-gold">See full list of Institutes, Centres, Labs & Initiatives<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+
+    </div>
+</div>
+
+
+<!--<script src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/30942751/partner_id/1990051?autoembed=true&playerId=kaltura_player_1505460200&cache_st=1505460200&width=100%&height=320&flashvars[playlistAPI.autoInsert]=true&flashvars[playlistAPI.kpl0Name]=SMU%20Research%20A-Z&flashvars[playlistAPI.kpl0Url]=https%3A%2F%2Fwww.kaltura.com%2Findex.php%2Fpartnerservices2%2Fexecuteplaylist%3Fpartner_id%3D1990051%26subp_id%3D199005100%26format%3D8%26ks%3D%7Bks%7D%26playlist_id%3D0_bspy4lnx"></script>-->
+
+ </div>
+</div>
+</div>
+</div>
+ <!-- /.region -->
+ </div>
+<!--end nextweb 2 region-->
+
+<div id="footer" role="contentinfo">
+<div class="site-footer">
+
+<div id="footer_full_width_2" class="footer_full_width_2"><div class="region region-footer-full-width-2 clearfix">
+  <div id="block-block-1201" class="clearfix block block-block pre-footer-buttons contextual-links-region">       <div class="content"> <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 no-padding cta-programme"><a href="//nextweb.smu.edu.sg/programmes"><h2>Programmes</h2></a></div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 no-padding cta-careers"><a href="https://careers.smu.edu.sg/" target="_blank"><h2>Careers</h2></a></div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 no-padding cta-giving"><a href="https://giving.smu.edu.sg/advancement/why-give/how-give" target="_blank" onclick=”ga(‘send’, ‘event’, ‘Click CTA’, ‘Click Giving’, ‘Giving’);“><h2>Giving</h2></a></div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 no-padding cta-alumni"><a href="https://alumni.smu.edu.sg" target="_blank"><h2>Alumni</h2></a></div> </div>
+</div></div>
+ <!-- /.region -->
+ </div>
+<div id="footer-last" class="nextweb2-footer">
+<div class="container">
+ <div class="row"> 
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      <div id="content-col3-1" class=" content-col3"> <div class="region region-content-col3-1 clearfix">
+  <div id="block-block-70" class="clearfix block block-block contextual-links-region">     <h2 class="block-title">WHERE TO FIND US</h2>
+      <div class="content"> <style>
+.footer-link-animated {  transition: margin 200ms cubic-bezier(.215, .61, .355, 1); }
+.footer-link-animated:hover { margin-left:3px; }
+</style>
+
+     <p style="font-size:13px;color:#CBCBCB;">Administration Building<br />
+Singapore Management University<br>
+	81 Victoria Street<br>
+	Singapore 188065</p>
+<p><a href="//nextweb.smu.edu.sg/campus-life/visiting-smu/campus-map" class="footer-link-animated"><i class="fa fa-map"></i>&nbsp;&nbsp;Map & Directions</a></p>
+<div class="break">&nbsp;</div>
+<p><a href="//nextweb.smu.edu.sg/campus-life/visiting-smu/carpark-information" class="footer-link-animated"><i class="fa fa-car"></i>&nbsp;&nbsp;Carpark Info</a></p> </div>
+</div></div>
+ <!-- /.region -->
+ </div>
+    </div>
+             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      <div id="content-col3-2" class=" content-col3"> <div class="region region-content-col3-2 clearfix">
+  <div id="block-block-67" class="clearfix block block-block contextual-links-region">     <h2 class="block-title">GET IN TOUCH</h2>
+      <div class="content"> <style>
+.footer-link-animated {  transition: margin 200ms cubic-bezier(.215, .61, .355, 1); }
+.footer-link-animated:hover { margin-left:3px; }
+</style>
+
+<p><span style="color:#CBCBCB;">Email:</span> <a href="mailto:enquiry@smu.edu.sg" class="footer-link-animated">enquiry@smu.edu.sg</a><br />
+<span style="color:#CBCBCB;">Tel:</span> <a href="tel:+65 6828 0100" class="footer-link-animated">+65 6828 0100</a><br />
+<span style="color:#CBCBCB;">Fax:</span> +65 6828 0101</p>
+<div class="break">&nbsp;</div>
+<p><a href="https://www.smu.edu.sg/contact/offices-staff-directory?updated" class="footer-link-animated"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;Offices & Staff Directory</a></p>
+<p><a href="https://www.smu.edu.sg/directory/faculty" class="footer-link-animated"><i class="fa fa-address-card-o" aria-hidden="true"></i>&nbsp;&nbsp; Faculty Directory</a></p>
+<!-- p><a href="https://careers.smu.edu.sg"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;&nbsp;Careers</a></p -->
+<p><a href="https://library.smu.edu.sg" class="footer-link-animated"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;Library</a></p> </div>
+</div></div>
+ <!-- /.region -->
+ </div>
+    </div>
+    
+         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <div id="content-col3-3" class=" content-col3"> <div class="region region-content-col3-3 clearfix">
+  <div id="block-block-49" class="clearfix block block-block contextual-links-region">       <div class="content"> <div id="responsive-tab">
+<ul class="nav nav-tabs responsive">
+  <li class="tabname-class"><a class="collapsed" href="#explore1"><h2 class="block-title">Explore</h2></a></li>
+</ul>
+
+<div class="tab-content responsive">
+  <div class="tab-pane" id="explore1">
+   <p><a href="//nextweb.smu.edu.sg/" class="footer-link-animated">Home</a></p>
+<p><a href="//nextweb.smu.edu.sg/about/overview" class="footer-link-animated">About</a></p>
+<p><a href="//nextweb.smu.edu.sg/programmes" class="footer-link-animated">Programmes</a></p>
+<p><a href="//nextweb.smu.edu.sg/academics" class="footer-link-animated">Schools & Institutes</a></p>
+<p><a href="//nextweb.smu.edu.sg/research" class="footer-link-animated">Research</a></p>
+<p><a href="//nextweb.smu.edu.sg/campus-life" class="footer-link-animated">Campus Life</a></p>  
+<p><a href="//nextweb.smu.edu.sg/news" class="footer-link-animated">Newsroom</a></p>  
+  </div>
+<!--end tab-->
+</div>
+</div>
+
+ </div>
+</div></div>
+ <!-- /.region -->
+ </div>
+    </div>
+             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <div id="content-col3-4" class=" content-col3"> <div class="region region-content-col3-4 clearfix">
+  <div id="block-block-63" class="clearfix block block-block contextual-links-region">       <div class="content"> <style>
+div.twSearchWrap .twSearchHead { background-color: #fff !important; }
+#twSearchHead .twSearchHead { background-color: #fff !important; }
+
+.campus-life .recommendations h3, .txt-heading, .about-leadership h2.block-title { font-family: 'Open Sans', Calibri, Arial, sans-serif; }
+.campus-life .recommendations p { margin-bottom:0; line-height:1.5; }
+
+/**PAST EVENTS**/
+h3 a, h4 a { color: #102b72; }
+.past-event-img { float:left; margin-right:10px; }
+.past-event-title { margin-top:0; }
+.past-event-subtitle { color:#888; }
+.past-event-domain, .past-event-toggle { font-family: 'Open Sans', Calibri, Arial, sans-serif; }
+.past-event-toggle { font-size:14px; font-weight:bold; }
+
+
+@media (max-width:676px){
+.past-event-img { float:none; margin-right:0; }
+}
+
+/**DIRECTORIES**/
+.bef-select-as-links .form-type-bef-link { font-family: 'Open Sans',sans-serif; font-size: 14px; }
+.bef-select-as-links .form-type-bef-link a.active, .bef-select-as-links .form-type-bef-link a:hover { background: #102b72 !important; }
+
+.views-exposed-form label {
+font-weight: bold;
+font-family: 'Open Sans', Calibri, Arial, sans serif;
+font-size: 14px;
+margin-top: 5px;
+}
+
+h2.pane-title {
+    font-weight: bold;
+    font-family: 'Open Sans', Calibri, Arial, sans serif;
+    font-size: 16px;
+    margin-top: 5px;
+}
+/**PODCAST**/
+
+.isotope-grid .views-field-type, .isotope-grid .views-field-event-date {
+   font-family: 'Open Sans', Calibri, Arial, sans-serif;
+   letter-spacing: 0;
+   text-transform: none;
+   color: #888;
+}
+
+.podcast-count { color: #888; margin-left:15px; }
+.view-podcast .date-display-single {    display: block; }
+.podcast-last-updated .date-display-single { display:unset; }
+.date-display-single {
+   color: #888;
+   padding: 5px 0;
+}
+
+.pager li > a, .pager li > span { color:#fff; background-color: #102b72; }
+.pager li > a:hover { background-color: #081B4C }
+.btn-primary, .pager li > a, .pager li > span, .pager li > a:hover, .pager li:hover { border-radius: 0; }
+
+.views-field views-field-field-image img {
+   width: 265px !important;
+   height: 185px !important;
+}
+
+.s-box_wrap:hover { background: none repeat scroll 0 0 rgba(0,0,0,0) !important; }
+.s-box_wrap :hover, .s-box-wrap :hover { background: none repeat scroll 0 0 rgba(0,0,0,0) !important; }
+.btn-primary:active, .btn-primary.active, .btn-primary:hover { background-color:#081B4C !important; }
+
+.campus-life .wrap-boxes .item h5, .campus-life .main-banner h4.gold, .campus-life .wrap-content h4.gold, .campus-life .right-site-bar h4.gold { font-family: "Oswald",sans-serif; }
+#footer a { font-family: 'Open Sans', sans-serif; }
+.schools-institutes h3.iclis {
+margin: 1.5em 0em;
+font-size: 16px;
+}
+.schools-institutes .view-id-nextweb2_academics h3 { font-size: 16px; }
+
+h1.first-header, h3 { font-size: 21px; }
+.front #full_width_4 p.lead a { font-weight: normal; }
+.front #main .w-col h2 { font-size: 16px; letter-spacing: 0.8px; }
+#masterslider_5 .ms-caption h1 { font-size: 24px; }
+.front #full_width_5 .video-quotes .quote-list .quote-item h4 { font-size: 16px; }
+#header-two .navbar.transparent-nav .nav > li > a, #header-two .navbar.transparent-nav .nav > li > span { font-family: "Oswald",sans-serif; font-size: 14px; }
+.start-scrolling .header-two .navbar .nav > li > a, .start-scrolling .header-two .navbar .nav > li > span { font-family: "Oswald",sans-serif; font-size: 14px; }
+.front .block-smu-curated-search .ac-search .try-new { font-family: "Oswald",sans-serif;font-size: 18px; }
+
+.front .block-smu-curated-search .ac-search .btn-search {  font-family: "Oswald",sans-serif; }
+h4.mega-menu-title a { color: #102b72 !important; font-size: 14px; letter-spacing: 0.7px; }
+.front #full_width_3 .blue .item h1{ font-size: 42px; }
+.front #full_width_4 .news-tag { font-family: "Oswald",sans-serif; }
+#footer h2 { font-family: "Oswald",sans-serif; } 
+#footer #footer-last #responsive-tab .nav-tabs h2.block-title { font-family: "Oswald",sans-serif;  font-size: 16px; color: #ffffffb3;} 
+#footer h2.block-title { font-family: "Oswald",sans-serif; font-size: 16px; color: #ffffffb3;} 
+
+.quick-links .quick-links-link { font-size: 14px; letter-spacing: 0.5px; }
+#masterslider_1 .ms-caption .banner-content-container .banner-content .cta { font-family: "Oswald",sans-serif; font-size: 14px; letter-spacing: 0.5px; }
+/** .site-sidebar-first ul.menu li a, .site-sidebar-first ul.menu li span { font-family:'Open Sans',sans-serif; font-size: 14px; font-weight: normal; padding:10px; } **/
+.faculty.filters fieldset legend { font-family: "Oswald",sans-serif; font-size: 14px; }
+.faculty.filters fieldset legend, .faculty.filters fieldset.research-areas-filter .check-all { background: #fff; }
+
+.scroller-container .scroller .scroller-item .scroller-item-visual { font-family: "Oswald",sans-serif; font-size: 58px; } 
+
+@media print {
+/*FACULTY PROFILE*/
+  .photo-full { max-width: 300px!important; }
+
+  div.contact-info a:after{content:" (" attr(href) ") ";font-size:0.8em;font-weight:normal;text-decoration:underline; }
+  a.s-button { display: block; float: none!important; border:0px solid #000; }
+  a.s-button:after{content:" (" attr(href) ") ";font-size:0.8em;font-weight:normal; }
+  .FACLBTNMOD { height: auto; }
+
+  #block-block-1201, #back-to-faculty-directory { display: none; }
+
+/*HOMEPAGE*/
+   .ms-slide .ms-slide-bgcont img { height: 400px!important; width: auto!important; }
+   .form-group { display:none; }
+   #masterslider_5 .ms-caption { text-align:left; background: white; padding:0px !important; max-width:600px !important; overflow: visible !important; top: 400px !important; }
+   #masterslider_5 .ms-view { height: auto !important; width: 600px !important; overflow:visible !important; }
+   .ms-slide-layers { max-width: 600px !important; left: 0px !important; }
+
+  a:after{content:" (" attr(href) ") ";font-size:12px;font-weight:normal;}
+  a.link-30:after{content:" (" attr(href) ") "!important;font-size:12px;font-weight:normal;}
+  .front .block-smu-curated-search .ac-search .csearch-links li a:after{content:" (" attr(href) ") "!important;font-size:12px;font-weight:normal;}
+
+  .ms-layer.ms-caption h1 { text-transform: none !important; font-size: 24px !important; }
+  h1 { text-transform: none !important; font-size: 24px !important;  }
+  #block-block-1296, .embed-responsive, #block-block-1206 { display: none; }
+
+}
+
+</style>
+
+<div id="responsive-tab">
+<ul class="nav nav-tabs responsive">
+  <li class="tabname-class active"><a  href="#schools"><h2 class="block-title">Schools</h2></a></li>
+</ul>
+
+<div class="tab-content responsive">
+  <div class="tab-pane active" id="schools">
+<p><a href="http://accountancy.smu.edu.sg"  target="_blank" class="footer-link-animated">School of Accountancy</a></p>
+<p><a href="http://business.smu.edu.sg" target="_blank" class="footer-link-animated">Lee Kong Chian School of Business</a></p>
+<p><a href="http://economics.smu.edu.sg"  target="_blank" class="footer-link-animated">School of  Economics</a></p>
+<p><a href="http://sis.smu.edu.sg"  target="_blank" class="footer-link-animated">School of Information Systems</a></p>
+<p><a href="http://law.smu.edu.sg"  target="_blank" class="footer-link-animated">School of Law</a></p>
+<p><a href="http://socsc.smu.edu.sg"  target="_blank" class="footer-link-animated">School of Social Sciences</a></p>
+  </div>
+<!--end tab-->
+</div>
+</div>
+
+ </div>
+</div></div>
+ <!-- /.region -->
+ </div>
+    </div>
+    </div>
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-col3-footer-hr">
+    <hr />
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12  content-col3-footer-bottom">
+    <div id="copyright" class="pull-left">
+      <div class="footer-menu">
+      <a href="https://www.smu.edu.sg/terms-use" class="href"> Terms of Use</a> | 
+      <a href="https://www.smu.edu.sg/privacy-statement" class="href">Privacy Statement </a> | 
+      <a href="https://www.smu.edu.sg/personal-data-protection" class="href">Personal Data Statement </a> |
+      <a href="https://www.smu.edu.sg/form/contact-dpo" class="href">Contact Data Protection Officer </a> | 
+      <a href="https://goo.gl/forms/sFyabWz2ikMCw8YE3" target="_blank">Website Feedback</a>
+      </div>
+      <div class="footer-copyright">&copy; Copyright 2018 Singapore Management University. All Rights Reserved</div>
+    </div>
+    <div id="social-menu" class="pull-right">
+
+      <ul class="social-menu">
+          
+          <li class="facebook"><a target="_blank" class="smu-social-channels facebook" title="SMU on Facebook" href="http://facebook.com/sgsmu"><i class="fab fa-facebook-square"></i><span class="menu-item">Facebook</span></a></li>
+
+           <li class="instragram"><a target="_blank" class="smu-social-channels instragram" href="https://www.instagram.com/sgsmu"><i class="fab fa-instagram"></i><span class="menu-item">Instagram</span></a></li>
+           <li class="twitter"><a target="_blank" class="smu-social-channels twitter" title="SMU (@sgsmu) on Twitter" href="http://twitter.com/sgsmu"><i class="fab fa-twitter-square"></i><span class="menu-item">Twitter</span></a></li>
+
+           <li class="linkedin"><a target="_blank" class="smu-social-channels linkedin" title="SMU on LinkedIn" href="http://www.linkedin.com/company/singapore-management-university/"><i class="fab fa-linkedin"></i><span class="menu-item">LinkedIn</span></a></li>
+          <li class="youtube"><a target="_blank" class="smu-social-channels youtube" title="SMU on YouTube" href="http://www.youtube.com/smutubesg"><i class="fab fa-youtube-square"></i><span class="menu-item">YouTube</span></a></li>
+          <li class="soundcloud"><a target="_blank" class="smu-social-channels soundcloud" href="http://soundcloud.com/sgsmu"><i class="fab fa-soundcloud"></i><span class="menu-item">SoundCloud</span></a></li>
+          
+          <li class="itunesu"><a target="_blank" class="smu-social-channels itunesu" href="http://itunes.smu.edu.sg/"><i class="fa fa-graduation-cap"></i><span class="menu-item">ITunes U</span></a></li>
+
+          <li class="rss"><a target="_blank" class="smu-social-channels rss" href="http://www.smu.edu.sg/rss"><i class="fa fa-rss-square"></i><span class="menu-item">Rss</span></a></li>
+          <li class="smublog"><a target="_blank" class="smu-social-channels smublog" href="http://blog.smu.edu.sg/"><i class="fa fa-pen-square"></i><span class="menu-item">SMU Blog</span></a></li>
+          <li class="smumobile"><a target="_blank" class="smu-social-channels smumobile" href="http://m.smu.edu.sg/"><i class="fab fa-apple"></i><span class="menu-item">SMU Mobile</span></a></li>
+           <li class="smumobile"><a target="_blank" class="smu-social-channels smumobile" href="http://m.smu.edu.sg/"><i class="fab fa-android"></i><span class="menu-item">SMU Mobile</span></a></li>
+        </ul>
+    </div>
+</div>
+  </div><!--end footer bottom-->
+</div><!--end container-->
+</div><!--end footer last-->
+
+ </div>
+</div>
+<!-- /#footer -->
+  <div id="simplemeta-meta-form-ajax-wrapper"><form class="simplemeta-meta-form-ajax" action="/research" method="post" id="simplemeta-meta-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-title">
+  <label for="edit-title">Title </label>
+ <input type="text" id="edit-title" name="title" value="" size="60" maxlength="255" class="form-text" />
+</div>
+<div class="form-item form-type-textarea form-item-description">
+  <label for="edit-description">Description </label>
+ <div class="form-textarea-wrapper resizable"><textarea id="edit-description" name="description" cols="60" rows="5" class="form-textarea"></textarea></div>
+</div>
+<div class="form-item form-type-textfield form-item-keywords">
+  <label for="edit-keywords">Keywords </label>
+ <input type="text" id="edit-keywords" name="keywords" value="" size="60" maxlength="255" class="form-text" />
+</div>
+<input type="hidden" name="form_build_id" value="form-jRFKvV5IOuSJbhbovHYCic-o52GRdSFIk2T0ZEUCH0k" />
+<input type="hidden" name="form_token" value="nGEon-4lvAVHlOIgiwGSoLZKqYFSP4MK3M1Rd3oZJZM" />
+<input type="hidden" name="form_id" value="simplemeta_page_meta_form" />
+<div class="form-actions form-wrapper" id="edit-buttons"><input class="button-save form-submit" type="submit" id="edit-save" name="op" value="Save" /></div></div></form></div><script type="text/javascript" src="/sites/all/libraries/masterslider/masterslider.min.js"></script>
+<script type="text/javascript" src="/sites/all/themes/smubase/js/masterslider-options-nextweb2.js"></script>
+</body>
+
+</html>
