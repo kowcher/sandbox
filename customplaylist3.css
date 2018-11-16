@@ -16,10 +16,10 @@
 	text-transform: uppercase !important;
 }
 .playlistAPI .k-chapters-container .k-title-container .k-title{
-	font-family: Oswald, sans-serif !important;
+	font-family: Georgia, serif !important;
 }
 .playlistAPI .k-chapters-container .k-description-container {
-	font-family: Open Sans, Calibri, Arial, sans-serif !important;
+	font-family: "Open Sans", Calibri, Arial, sans-serif !important;
 }
 .playlistAPI .k-chapters-container .k-description {
 	display: block;
