@@ -11,13 +11,11 @@
 	height: 49px !important;
 }
 .playlistAPI .k-chapters-container .k-title-container {
-		font-family: 'Oswald', sans-serif !important;
-	font-weight: 600 !important;
 	text-transform: uppercase !important;
 }
 .playlistAPI .k-chapters-container .k-title-container .k-title{
 	font-family: 'Oswald', sans-serif !important;
-	font-weight: 600 !important;
+	font-weight: 300 !important;
 }
 .playlistAPI .k-chapters-container .k-description-container {
 	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
@@ -25,9 +23,7 @@
 	font-weight: 400 !important;
 }
 .playlistAPI .k-chapters-container .k-description {
-	display: block;
-	color: #888888;
-	font-size: 0.9em;
+	font-size: 1.1em !important;
 }
 .playlistAPI .k-chapters-container .k-duration {
 	color: white !important;
@@ -37,6 +33,10 @@
 	opacity: 1 !important;
 	color: #000000 !important;
 }
-
+.playlistAPI .k-chapters-container.k-horizontal .k-scroll.k-next {
+	color: #000000 !important;
 }
 
+.playlistAPI .k-chapters-container.k-horizontal .k-scroll.k-right {
+	color: #000000 !important;
+}
