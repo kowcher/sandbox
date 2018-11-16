@@ -10,6 +10,9 @@
 	width: 86px !important;
 	height: 48px !important;
 }
+.playlistAPI .k-chapters-container {
+	font: normal 13px "Oswald", Helvetica, Arial, sans-serif !important;
+}
 .playlistAPI .k-chapters-container .k-title-container .k-title{
 	font-family: 'Oswald', sans-serif !important;
 	font-weight: 300 !important;
