@@ -30,9 +30,11 @@
 	color: #000000 !important;
 }
 .playlistAPI .k-chapters-container.k-horizontal .k-scroll.k-next {
+	opacity: 1 !important;
 	color: #000000 !important;
 }
 
 .playlistAPI .k-chapters-container.k-horizontal .k-scroll.k-right {
+	opacity: 1 !important;
 	color: #000000 !important;
 }
