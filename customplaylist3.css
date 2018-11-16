@@ -11,8 +11,8 @@
 	height: 49px !important;
 }
 .playlistAPI .k-chapters-container .k-title-container {
-	font-size: 0.7em !important;
-	letter-spacing: 0.8px !important;
+	font-size: 0.8em !important;
+	letter-spacing: 0px !important;
 	text-transform: uppercase !important;
 }
 .playlistAPI .k-chapters-container .k-title-container .k-title{
@@ -31,6 +31,9 @@
 	text-shadow: 1px 1px black;
 }
 .playlistAPI .k-chapters-container .k-scroll {
-	opacity: 100 !important;
+	opacity: 1 !important;
+	color: #000000 !important;
+}
+
 }
 
