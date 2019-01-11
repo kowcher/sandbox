@@ -1,0 +1,927 @@
+<script src="//cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402632/partner_id/1990051"></script>
+
+<style type="text/css">
+@media only screen and (min-width: 992px) {
+.sc-tab {
+width:19.7%;
+}
+.sc-tab.active {
+background-color:#f0efe3;
+}
+.sc-tab.active a {
+background-color:transparent !important;
+}
+.sc-tab .pre-title {
+margin-bottom:5px;
+font-size:12px;
+}
+.sc-tab .sc-title {
+margin-top:0px;
+font-size:14px;
+}
+}
+.sc-title.mobile-title {
+display:inline-block;
+}
+.tab-icon {
+display:inline-block;
+margin:0 auto;
+height:40px;
+width:40px;
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center;
+}
+.sc-tab .tab-icon.icon-efm {
+  background-image:url('/sites/default/files/smu/nextweb2/sc-1-mono%402x_0.png');
+}
+.sc-tab:hover .tab-icon.icon-efm, .sc-tab.active .tab-icon.icon-efm {
+  background-image:url('/sites/default/files/smu/nextweb2/sc-1-duo%402x_0.png');
+}
+.sc-tab .tab-icon.icon-sfql {
+  background-image:url('/sites/default/files/smu/nextweb2/sc-2-mono%402x_0.png');
+}
+.sc-tab:hover .tab-icon.icon-sfql, .sc-tab.active .tab-icon.icon-sfql {
+  background-image:url('/sites/default/files/smu/nextweb2/sc-2-duo%402x_0.png');
+}
+.sc-tab .tab-icon.icon-bb {
+  background-image:url('/sites/default/files/smu/nextweb2/sc-3-mono%402x_0.png');
+}
+.sc-tab:hover .tab-icon.icon-bb, .sc-tab.active .tab-icon.icon-bb {
+  background-image:url('/sites/default/files/smu/nextweb2/sc-3-duo%402x_0.png');
+}
+.sc-tab .tab-icon.icon-s {
+  background-image:url('/sites/default/files/smu/nextweb2/sc-4-mono%402x_0.png');
+}
+.sc-tab:hover .tab-icon.icon-s, .sc-tab.active .tab-icon.icon-s {
+  background-image:url('/sites/default/files/smu/nextweb2/sc-4-duo%402x_0.png');
+}
+.sc-tab .tab-icon.icon-it {
+  background-image:url('/sites/default/files/smu/nextweb2/sc-5-mono%402x_0.png');
+}
+.sc-tab:hover .tab-icon.icon-it, .sc-tab.active .tab-icon.icon-it {
+  background-image:url('/sites/default/files/smu/nextweb2/sc-5-duo%402x_0.png');
+}
+.rsr-video {
+width: 60%;
+display: inline-block;
+position: relative;
+}
+.rsr-video .rsr-video-inner {
+margin-top: 56.25%;
+}
+.rsr-video .rsr-video-content {
+position:absolute;
+top:0;
+left: 0;
+right: 0;
+bottom:0;
+border:solid thin black;
+}
+.sc-div {
+    width:76%;
+}
+.sc-items ul {
+
+    margin-left: 0;
+    padding-left: 0;
+
+}
+.sc-items ul li {
+margin: 0 0 0.5em;
+padding: 0;
+display: block !important;
+}
+.sc-items li::before {
+    content: "\f105";
+    font-weight: bold;
+    font-size: 16px;
+    font-family: FontAwesome;
+    margin-right: 1em;
+
+}
+.article-item, .publication-item {
+    overflow: auto;
+min-height: 100px;
+}
+.article-item h5, .publication-item h5, .icli-item h5, .podcast-item h5 {
+    margin-top:0;
+    font-weight:bold;
+}
+.podcast-item {
+    overflow: auto;
+    margin: 1em 0;
+}
+.fac-profile-row .faculty-name {
+margin-top:0;
+}
+.sc-item-row, .fac-profile-row {
+overflow:auto;
+}
+</style>
+<div class="row">
+<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12 text-center">
+<h3>Our Research Tackles Societal Challenges</h3>
+<p>From Singapore, the strategic hub of Asia, SMU applies its knowledge and global perspective in an Asian context to bridge concepts and provide critical insights. SMU research aims to create significant impact by addressing these five societal challenges.</p>
+</div>
+<!-- p>To deal with issues that are strategically critical to Singapore, the region and the world, SMU identified five Societal Challenge areas where our research can be applied.</p> 
+<p>SMU first introduced the concept of university-level Areas of Excellence in 2012. This has enabled us to pursue larger inter- and multi-disciplinary research integrating education and practice.</p> 
+<p>By identifying these Societal Challenge Areas, SMU is scaling up its high-quality, multi-disciplinary research. This fosters collaboration amongst faculty, staff and students across disciplines to work on projects with meaningful impact to society.</p -->
+<p>&nbsp;</p>
+    <div id="responsive-tab">
+        <ul class="nav nav-tabs responsive">	
+        <li class="no-padding sc-tab test-class active" data-tid="10151">
+            <a class="sc-tab-link deco-none red-class" href="#resp-tab1">
+    <span class="tab-icon icon-efm"></span>
+    <h4 class="mobile-title sc-title text-uppercase hidden-sm hidden-md hidden-lg">Interpreting Economies & Financial Markets</h4>
+            <p class="pre-title hidden-xs"><em>Interpreting</em></p>
+            <h4 class="sc-title text-uppercase hidden-xs">Economies & Financial Markets</h4></a>
+        </li>	
+        <li class="no-padding sc-tab test-class" data-tid="10176">
+            <a class="sc-tab-link" href="#resp-tab2">
+<span class="tab-icon icon-sfql"></span>            
+    <h4 class="mobile-title sc-title text-uppercase hidden-sm hidden-md hidden-lg">Strengthening Social Fabric & Quality of Life</h4>
+            <p class="pre-title hidden-xs"><em>Strengthening</em></p>
+            <h4 class="sc-title text-uppercase hidden-xs">Social Fabric & Quality of Life</h4></a>
+        </li>	
+        <li class="no-padding sc-tab" data-tid="10201">
+            <a class="sc-tab-link deco-none" href="#resp-tab3" >
+    <span class="tab-icon icon-bb"></span>
+    <h4 class="mobile-title sc-title text-uppercase hidden-sm hidden-md hidden-lg">Navigating Boundaries & Borders</h4>
+            <p class="pre-title hidden-xs"><em>Navigating</em></p>
+            <h4 class="sc-title text-uppercase hidden-xs">Boundaries & Borders</h4></a>
+        </li>
+        <li class="no-padding sc-tab" data-tid="10226">
+            <a class="sc-tab-link deco-none" href="#resp-tab4">
+    <span class="tab-icon icon-s"></span>
+    <h4 class="mobile-title sc-title text-uppercase hidden-sm hidden-md hidden-lg">Managing for Sustainability</h4>
+            <p class="pre-title hidden-xs"><em>Managing</em></p>
+            <h4 class="sc-title text-uppercase hidden-xs">for Sustainability</h4></a>
+        </li>
+        <li class="no-padding sc-tab" data-tid="10251">
+            <a class="sc-tab-link deco-none" href="#resp-tab5">
+    <span class="tab-icon icon-it"></span>
+    <h4 class="mobile-title sc-title text-uppercase hidden-sm hidden-md hidden-lg">Advancing Innovation & Technology</h4>
+            <p class="pre-title hidden-xs"><em>Advancing</em></p>
+            <h4 class="sc-title text-uppercase hidden-xs">Innovation & Technology</h4></a>
+        </li>
+        </ul>
+        <div class="tab-content responsive" style="background-color:#f0efe3;">	
+            <div class="tab-pane active text-left" id="resp-tab1">
+                <!-- TAB 1 CONTENT START -->
+                <div class="col-md-12 sc-items" style="background-color:#f0efe3;">
+                    <div class="sc-item-row">
+                        <div class="col-md-12"><h4 class="text-center">Deluge of complex financial and economic data</h4></div>
+                        <div class="col-md-7">
+                            <p>The deluge of financial and economic data, and the surge of other types of big data adds complexity and untapped potential to the spheres of accounting, finance and economics. SMU has built up great research capabilities in these areas. Our researchers seek to understand and interpret economies, financial markets and the impact of regulations.
+                            </p>
+                        </div>
+                        <div class="col-md-5">
+                            <ul>
+                                <li>Economic Growth, Trade</li>
+                                <li>Financial Market Soundness, Change, Risk, Resiliency</li>
+                                <li>Financial Reporting, Financial Information Disclosure</li>
+                                <li>Regulatory Impacts</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sc-item-row">
+                    <hr class="sc-div" />
+                        <div class="col-md-7 col-sm-7 col-xs-12">
+                            <h3>VIDEOS</h3>
+                            <div class="embed-responsive embed-responsive-4by3 sc-video" id="sc-video-1">
+                            <iframe  class="embed-responsive-item" src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402632/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1547012864&flashvars[playlistAPI.kpl0Id]=0_dcycav9i&flashvars[IframeCustomPluginCss1]=https://kowcher.github.io/sandbox/customplaylist3.css&flashvars[thumbnailUrl]=https://i.imgur.com/E0YumW0.jpg"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+                            </div>
+<!-- Thumbnail v1 - https://i.imgur.com/BkTCDjK.jpg -->
+                            <hr />
+                            <h3>PODCASTS</h3>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/zombie-board-board-tenure-and-firm-performance"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/GettyImages-627864302%20board%20room.jpg?itok=YPfe_XMf" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/zombie-board-board-tenure-and-firm-performance"><h5>Zombie Board: Board tenure & firm performance</h5></a>
+                                <p class="podcast-item-txt">Assistant Professor Sterling Huang</p>
+                                <p class="podcast-item-txt">Aug 2018</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/zombie-board-board-tenure-and-firm-performance" class="btn btn-primary">Listen Now</a></p> 
+                                </div>                          
+                            </div>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/cash-rich-companies-more-meets-eye"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/iStock_000012201866_Medium.jpg?itok=VL4gBhzT" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/cash-rich-companies-more-meets-eye"><h5>Cash-rich companies: More than meets the eye</h5></a>
+                                <p class="podcast-item-txt"> Assistant Professor Yuanto Kusnadi </p>
+                                <p class="podcast-item-txt">May 2016</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/cash-rich-companies-more-meets-eye" class="btn btn-primary">Listen Now</a></p> 
+                                </div>  
+                            </div>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="hhttps://www.smu.edu.sg/podcast/singapores-monetary-policy-framework"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/iStock_000071609159_Medium.jpg?itok=cL69zMNT" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/singapores-monetary-policy-framework"><h5>Singapore’s Monetary Policy Framework</h5></a>
+                                <p class="podcast-item-txt">Assistant Professor Sterling Huang</p>
+                                <p class="podcast-item-txt">29 Oct 2018</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/singapores-monetary-policy-framework" class="btn btn-primary">Listen Now</a></p> 
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <h3>ARTICLES</h3>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smuresearch/2018/oct/29/unpacking-aggregate-what-big-picture-tells-us-about-markets"><h5>Unpacking the aggregate: what the big picture tells us about markets</h5></a>
+                                <p class="article-item-date">29 Oct 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smuresearch/2018/oct/29/unpacking-aggregate-what-big-picture-tells-us-about-markets"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/ccli_0_0.jpg?itok=Ac5J7c-d" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smuresearch/2018/sep/25/importance-being-efficient"><h5>The importance of being efficient</h5></a>
+                                <p class="article-item-date">25 Sep 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smuresearch/2018/sep/25/importance-being-efficient"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/_CYR5021_0.jpg?itok=5AMbzujs" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smuresearch/2018/may/31/saviour-or-villain-investing-bigger-picture"><h5>Saviour or villain? Investing in the bigger picture</h5></a>
+                                <p class="article-item-date">31 May 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smuresearch/2018/may/31/saviour-or-villain-investing-bigger-picture"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/DSC_0977.jpg?itok=VMcUNPi-" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>  
+                            <hr />
+                            <h3>PUBLICATIONS</h3>               
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/soe_research/2195/" class="publication-title"><h5>Does foreign direct investment lead to industrial agglomeration</h5></a>
+                                <p class="publication-author">Yi LU; Xuan LUO; Lianming ZHU</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/soe_research/2206/" class="publication-title"><h5>Geography, trade and power-law phenomena</h5></a>
+                                <p class="publication-author">Pao-Li CHANG; Wen-Tai HSU</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/soa_research/1553/" class="publication-title"><h5>Allocation of decision rights between the parent company and its subsidiaries</h5></a>
+                                <p class="publication-author">Yuanyuan LIU; Ting LUO; Heng YUE</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/soa_research/864/" class="publication-title"><h5>Executive compensation and cash contributions to defined benefit pension plans</h5></a>
+                                <p class="publication-author">Qiang CHENG; Laura SWENSON</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/lkcsb_research/5904/" class="publication-title"><h5>Public hedge funds</h5></a>
+                                <p class="publication-author">Lin SUN; Melvyn TEO</p>
+                            </div>                                                        
+                            <hr />
+                            <h3>INSTITUTES, CENTRES AND LABS</h3>
+                            <div class="icli-item">
+                            <a href="https://skbi.smu.edu.sg" target="_blank" class="icli-link"><h5>Sim Kee Boon Institute for Financial Economics</h5></a>
+                            </div>
+                        </div>
+                    </div>
+<hr class="sc-div" />
+                    <div class="fac-profile-row" data-loaded="0"></div>            
+                    <p>&nbsp;</p>
+                    <!-- TAB 1 CONTENT END -->
+              </div>
+            </div>	
+            <div class="tab-pane text-left" id="resp-tab2">
+                <!-- TAB 2 CONTENT START -->
+                <div class="col-md-12 sc-items" style="background-color:#f0efe3;">
+                    <div class="sc-item-row">
+<Div class="col-md-12"><h4 class="text-center">Fostering cohesion challenges confronting nations</h4></div>
+                        <div class="col-md-7">
+                            <p>The challenges confronting nations as they foster cohesion in the face of an ageing population, increasing levels of income inequality, and increasing levels of diversity in race, language, religion and social status are daunting. SMU researchers seek to provide insights into how communities and societies can co-exist together. </p>
+                            </div>
+                            <div class="col-md-5">
+                            <ul>
+                                <li>Fairness, Trust, Ethics</li>
+                                <li>Social Inclusion, Exclusion, Inequality</li>
+                                <li>Well Being of People, Groups, Organisations, Societies</li>
+                                <li>Successful Ageing of People, of Populations</li>
+                            </ul>
+                            </div>
+                        </div>
+                    <div class="sc-item-row">
+                    <hr class="sc-div" />
+                        <div class="col-md-7 col-sm-7 col-xs-12">
+                            <h3>VIDEOS</h3>
+                            <div class="embed-responsive embed-responsive-4by3 sc-video" id="sc-video-2">
+                            <iframe  class="embed-responsive-item" src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402632/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1547189522&flashvars[playlistAPI.kpl0Id]=0_66t0p85n&flashvars[IframeCustomPluginCss1]=https://kowcher.github.io/sandbox/customplaylist3.css&flashvars[thumbnailUrl]=https://i.imgur.com/S3AF1AJ.jpg"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+                            </div>
+                            <hr />
+                            <h3>PODCASTS</h3>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/impact-health-spending-health-outcomes"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/GettyImages-186875447.jpg?itok=wlXbuvbd" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/impact-health-spending-health-outcomes"><h5>Public or private health spending - which is better?</h5></a>
+                                <p class="podcast-item-txt">Associate Professor Tomoki Fujii </p>
+                                <p class="podcast-item-txt">Nov 2018</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/impact-health-spending-health-outcomes" class="btn btn-primary">Listen Now</a></p> 
+                                </div>     
+                            </div>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/downside-renewable-energy"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/GettyImages-526554952.jpg?itok=G3aTbyGV" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/downside-renewable-energy"><h5>Public cleanliness & our well-being</h5></a>
+                                <p class="podcast-item-txt">Assistant Professor Helen Zhou </p>
+                                <p class="podcast-item-txt">Nov 2017</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/downside-renewable-energy" class="btn btn-primary">Listen Now</a></p> 
+                                </div>   
+                            </div>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/using-mobile-computing-improve-quality-life-and-make-cities-run-more-efficiently"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/GettyImages-157771674.jpg?itok=UhMi-flC" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/using-mobile-computing-improve-quality-life-and-make-cities-run-more-efficiently"><h5>Using mobile computing to improve quality of life & make cities run more efficiently</h5></a>
+                                <p class="podcast-item-txt">Associate Professor Rajesh Balan </p>
+                                <p class="podcast-item-txt">May 2017</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/using-mobile-computing-improve-quality-life-and-make-cities-run-more-efficiently" class="btn btn-primary">Listen Now</a></p> 
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <h3>ARTICLES</h3>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smu%20research/2018/sep/25/strengthening-lifes-shock-absorbers"><h5>Strengthening life's shock absorbers</h5></a>
+                                <p class="article-item-date">25 Sep 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smu%20research/2018/sep/25/strengthening-lifes-shock-absorbers"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/DSC_1333.jpg?itok=hX5ap8-J" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smuresearch/2018/sep/03/exposing-discrimination-promoting-diversity"><h5>Exposing discrimination, promoting diversity</h5></a>
+                                <p class="article-item-date">3 Sep 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smuresearch/2018/sep/03/exposing-discrimination-promoting-diversity"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/_CYR3667_1edited.jpg?itok=rZxKdc2N" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smuresearch/2018/sep/03/changing-lands-changing-lives"><h5>Changing lands, changing lives</h5></a>
+                                <p class="article-item-date">3 Sep 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smuresearch/2018/sep/03/changing-lands-changing-lives"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/DSC_1218.jpg?itok=b65RIruC" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>  
+                            <hr />
+                            <h3>PUBLICATIONS</h3>               
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/soss_research/2702/" class="publication-title"><h5>Effects of cultural tightness–looseness and social network density on expression of positive and negative emotions: A large-scale study of impression management by Facebook users</h5></a>
+                                <p class="publication-author">Pan LIU; David CHAN; Lin QIU; William TOV; Victor Joo Chuan TONG</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/soss_research/2703/" class="publication-title"><h5>Religious urbanism in Singapore: Competition, commercialism and compromise in the search for space</h5></a>
+                                <p class="publication-author">Orlando WOODS</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/soa_research/1553/" class="publication-title"><h5>Allocation of decision rights between the parent company and its subsidiaries</h5></a>
+                                <p class="publication-author">Lily KONG; Orlando WOODS</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/soss_research/2453/" class="publication-title"><h5>Cultural differences in subjective well-being: How and why</h5></a>
+                                <p class="publication-author">William TOV; Ze Ling NAI</p>
+                            </div>                                                       
+                            <hr />
+                            <h3>INSTITUTES, CENTRES AND LABS</h3>
+                            <div class="icli-item">
+                                <a href="https://bsi.smu.edu.sg" target="_blank" class="icli-link"><h5>Behavioural Sciences Institute</h5></a>
+                            </div>
+                            <div class="icli-item">
+                                <a href="https://crea.smu.edu.sg" target="_blank" class="icli-link"><h5>Centre for Research on the Economics of Ageing</h5></a>
+                            </div>                            
+                            <div class="icli-item">
+                                <a href="https://lcsi.smu.edu.sg" target="_blank" class="icli-link"><h5>Lien Centre for Social Innovation</h5></a>
+                            </div>
+                            <div class="icli-item">
+                                <a href="https://icity.smu.edu.sg" target="_blank" class="icli-link"><h5>SMU-TCS iCity Lab</h5></a>
+                            </div>
+                        </div>
+                    </div>
+<hr class="sc-div" />
+                    <div class="fac-profile-row" data-loaded="0"></div>
+                    <p>&nbsp;</p>
+                    <!-- TAB 2 CONTENT END -->            
+                </div>
+            </div>	
+            <div class="tab-pane text-left" id="resp-tab3">
+                <!-- TAB 3 CONTENT START -->
+                <div class="col-md-12 sc-items" style="background-color:#f0efe3;">
+                    <div class="sc-item-row">
+<Div class="col-md-12"><h4 class="text-center">Converging personal and cultural boundaries</h4></div>
+                        <div class="col-md-7">
+                            <p>The blurring of personal and cultural boundaries, and geographic borders is a new reality in today's world. Another challenging phenomenon is the convergence of personal, organisational, social and political relationships involving competition, co-operation and conflict. SMU researchers seek to understand this evolving landscape.</p>
+                            </div>
+                            <div class="col-md-5">
+                            <ul>
+                                <li>Trans-border Issues for Politics, Law, Trade, Investment, Commerce</li>
+                                <li>Managing and Collaborating Across Boundaries, Borders</li>
+                                <li>Leadership Effectiveness Across Boundaries, Borders</li>
+                                <li>Cultures and Cross Cultural Differences</li>
+                            </ul>
+                            </div>
+                            <p>&nbsp;</p>
+                    </div>
+                    <div class="sc-item-row">
+                    <hr class="sc-div" />
+                        <div class="col-md-7 col-sm-7 col-xs-12">
+                            <h3>VIDEOS</h3>
+                            <div class="embed-responsive embed-responsive-4by3 sc-video" id="sc-video-3">
+                            <iframe  class="embed-responsive-item" src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402632/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1547189595&flashvars[playlistAPI.kpl0Id]=0_3p5kx1lz&flashvars[IframeCustomPluginCss1]=https://kowcher.github.io/sandbox/customplaylist3.css&flashvars[thumbnailUrl]=https://i.imgur.com/3ihUrn4.jpg"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+                            </div>
+                            <hr />
+                            <h3>PODCASTS</h3>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/speaking-truth-power-effect-candid-feedback"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/GettyImages-642715278.jpg?itok=y0TOP3ej" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/speaking-truth-power-effect-candid-feedback"><h5>Speaking truth to power: the effect of candid feedback</h5></a>
+                                <p class="podcast-item-txt">Associate Professor Michael Ramsay Bashshur</p>
+                                <p class="podcast-item-txt">Sep 2018</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/speaking-truth-power-effect-candid-feedback" class="btn btn-primary">Listen Now</a></p> 
+                                </div>    
+                            </div>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/impact-language-corporate-future-orientation"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/thumbnail%20image_language%20and%20corporate%20future%20orientation.jpg?itok=qgxFksF0" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/impact-language-corporate-future-orientation"><h5>The impact of language on corporate future orientation</h5></a>
+                                <p class="podcast-item-txt">Assistant Professor Liang Hao</p>
+                                <p class="podcast-item-txt">Sep 2018</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/impact-language-corporate-future-orientation" class="btn btn-primary">Listen Now</a></p> 
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <h3>ARTICLES</h3>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smuresearch/2018/sep/25/regulatory-frameworks-impact-squeeze-out-outcomes-minority-shareholders-study-says"><h5>Regulatory frameworks impact squeeze-out outcomes for minority shareholders, study says</h5></a>
+                                <p class="article-item-date">25 Sep 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smuresearch/2018/sep/25/regulatory-frameworks-impact-squeeze-out-outcomes-minority-shareholders-study-says"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/1.jpg?itok=xbZUCQhO" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smuresearch/2018/aug/02/when-beliefs-cross-borders"><h5>When beliefs cross borders</h5></a>
+                                <p class="article-item-date">2 Aug 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smuresearch/2018/aug/02/when-beliefs-cross-borders"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/DSC_1189_edited.jpg?itok=1Y64juX_" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div> 
+                            <hr />
+                            <h3>PUBLICATIONS</h3>               
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/lkcsb_research/5825/" class="publication-title"><h5>Affective boundaries of scope insensitivity</h5></a>
+                                <p class="publication-author">Hannah H. CHANG; Michel Tuan PHAM</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/sol_research/2805/" class="publication-title"><h5>ASEAN financial integration and the Belt and Road Initiative: Legal challenges and opportunities for China in Southeast Asia</h5></a>
+                                <p class="publication-author">Christopher C. H. CHEN</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/sol_research/2733/" class="publication-title"><h5>Digital or trade? The contrasting approaches of China and US to digital trade</h5></a>
+                                <p class="publication-author">Henry S. GAO</p>
+                            </div>                                                     
+                            <hr />
+                            <h3>INSTITUTES, CENTRES AND LABS</h3>
+                            <div class="icli-item">
+                                <a href="https://cebcla.smu.edu.sg" target="_blank" class="icli-link"><h5>Centre for Cross Border Commercial Law in Asia/h5></a>
+                            </div>
+                            <div class="icli-item">
+                                <a href="https://iti.smu.edu.sg" target="_blank" class="icli-link"><h5>International Trading Institute</h5></a>
+                            </div>
+                        </div>
+                    </div>
+<hr class="sc-div" />
+                    <div class="fac-profile-row" data-loaded="0"></div>
+                    <p>&nbsp;</p>
+                    <!-- TAB 3 CONTENT END -->                   
+                </div>
+            </div>	
+            <div class="tab-pane text-left" id="resp-tab4">
+                <!-- TAB 4 CONTENT START -->
+                <div class="col-md-12 sc-items" style="background-color:#f0efe3;">
+                    <div class="sc-item-row">
+<div class="col-md-12"><h4 class="text-center">Unsustainable practices threaten our future generations</h4></div>
+                        <div class="col-md-7">
+                            <p>Unsustainable practices in production and consumption today jeopardise and constrain options for future generations. SMU researchers seek evidence-based approaches to trade-off analysis, decision-making, and management at the level of firms, industries, communities and entire economies to foster sustainability.</p>
+                            </div>
+                            <div class="col-md-5">
+                            <ul>
+                                <li>Sustainable Business and Economies</li>
+                                <li>Sustainable and Liveable Cities</li>
+                                <li>Sustainable Resource Management</li>
+                                <li>Finance and Value Assessment for Sustainability</li>
+                            </ul>
+                            </div>
+                                                        <p>&nbsp;</p>
+                    </div>
+                    <div class="sc-item-row">
+                    <hr class="sc-div" />
+                        <div class="col-md-7 col-sm-7 col-xs-12">
+                            <h3>VIDEOS</h3>
+                            <div class="embed-responsive embed-responsive-4by3 sc-video" id="sc-video-4">
+                            <iframe  class="embed-responsive-item" src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402632/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1547189629&flashvars[playlistAPI.kpl0Id]=0_pyx8lqsu&flashvars[IframeCustomPluginCss1]=https://kowcher.github.io/sandbox/customplaylist3.css&flashvars[thumbnailUrl]=https://i.imgur.com/tm3Vmhh.jpg"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+                            </div>
+<!-- Thumbnail v2 https://i.imgur.com/Ki3tsvG.jpg-->
+                            <hr />
+                            <h3>PODCASTS</h3>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/downside-renewable-energy"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/GettyImages-526554952.jpg?itok=G3aTbyGV" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/downside-renewable-energy"><h5>The downside of renewable energy</h5></a>
+                                <p class="podcast-item-txt">Assistant Professor Helen Zhou</p>
+                                <p class="podcast-item-txt">Nov 2017</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/downside-renewable-energy" class="btn btn-primary">Listen Now</a></p> 
+                                </div>    
+                            </div>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/crop-planning-sustainable-agriculture"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/sustainable%20agriculture.jps_.jpg?itok=EVBhx-2o" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/crop-planning-sustainable-agriculture"><h5>Crop planning in sustainable agriculture</h5></a>
+                                <p class="podcast-item-txt">Associate Professor Onur Boyabatli</p>
+                                <p class="podcast-item-txt">May 2017</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/crop-planning-sustainable-agriculture" class="btn btn-primary">Listen Now</a></p> 
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <h3>ARTICLES</h3>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smuresearch/2017/aug/30/deep-dive-water-management-reform"><h5>A deep dive into water management reform</h5></a>
+                                <p class="article-item-date">30 Aug 2017</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smuresearch/2017/aug/30/deep-dive-water-management-reform"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/CYRF2712-2edited.jpg?itok=xZTIuVPk" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>
+                            <hr />
+                            <h3>PUBLICATIONS</h3>               
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/soss_research/2667/" class="publication-title"><h5>Collaborative governance for the sustainable development goals</h5></a>
+                                <p class="publication-author">Ann FLORINI; Markus PAULI</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/lkcsb_research/4935/" class="publication-title"><h5>Geography, trade and power-law phenomena</h5></a>
+                                <p class="publication-author">Onur BOYABATLI; Javad NASIRY; Yangfang Helen ZHOU</p>
+                            </div>                                                       
+                            <hr />
+                            <h3>INSTITUTES, CENTRES AND LABS</h3>
+                            <div class="icli-item">
+                                <a href="https://bfi.smu.edu.sg" target="_blank" class="icli-link"><h5>Business Families Institute</h5></a>
+                            </div>
+                            <div class="icli-item">
+                                <a href="https://unicen.smu.edu.sg" target="_blank" class="icli-link"><h5>Fujitsu-SMU Urban Computing & Engineering Corp. Lab</h5></a>
+                            </div>                            
+                        </div>
+                    </div>
+<hr class="sc-div" />
+                    <div class="fac-profile-row" data-loaded="0"></div>
+                    <p>&nbsp;</p>
+                    <!-- TAB 4 CONTENT END -->                   
+                </div>
+            </div>	
+            <div class="tab-pane text-left" id="resp-tab5">
+                <!-- TAB 5 CONTENT START -->
+                <div class="col-md-12 sc-items" style="background-color:#f0efe3;">
+                    <div class="sc-item-row">
+<div class="col-md-12"><h4 class="text-center">Technology is a critical enabler for progress</h4></div>
+                        <div class="col-md-7">
+
+                            <p>Innovation and entrepreneurship are necessary to ensure economically viable ways of doing things. SMU researchers apply technology that emphasise methods and systems for advanced analytics, artificial intelligence, and their applications to create meaningful impact on business, government and society in Asia and beyond.</p>
+</div>
+<div class="col-md-5">
+                            <ul>
+                                <li>Management of Innovation, Entrepreneurship, Change</li>
+                                <li>Analytics for Insight</li>
+                                <li>Automated Intelligence, Augmented Intelligence</li>
+                                <li>Smart, Safe and Secure Cities</li>
+                            </ul>
+              
+</div>                     <p>&nbsp;</p>
+                    </div>
+                    <div class="sc-item-row">
+                    <hr class="sc-div" />
+                        <div class="col-md-7 col-sm-7 col-xs-12">
+                            <h3>VIDEOS</h3>
+                            <div class="embed-responsive embed-responsive-4by3 sc-video" id="sc-video-5">
+                            <iframe  class="embed-responsive-item" src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402632/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1547189649&flashvars[playlistAPI.kpl0Id]=0_nfus6cx8&flashvars[playlistAPI.iframeHTML5Css]=https://kowcher.github.io/sandbox/customplaylist.css&flashvars[playlistAPI.onPageCss1]=https://kowcher.github.io/sandbox/customplaylist.css&flashvars[thumbnailUrl]=https://i.imgur.com/qizHFJy.jpg&flashvars[playlistAPI.mediaItemHeight]=100&flashvars[playlistAPI.templatePath]=https://kowcher.github.io/sandbox/customplaylist.tmpl.html&flashvars[playlistAPI.MinClips]=4&flashvars[kpl0Name]=Advancing Innovation & Technology"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+                            </div>
+                            <hr />
+                            <h3>PODCASTS</h3>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/making-sound-decisions-through-data-analytics"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/GettyImages-937862316.jpg?itok=-dvIN1WT" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/making-sound-decisions-through-data-analytics"><h5>Making sound decisions through data analytics</h5></a>
+                                <p class="podcast-item-txt">Associate Professor Manoj Thulasidas</p>
+                                <p class="podcast-item-txt">Nov 2018</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/making-sound-decisions-through-data-analytics" class="btn btn-primary">Listen Now</a></p> 
+                                </div>   
+                            </div>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/ai-safety-and-security"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/GettyImages-958007714.jpg?itok=hGx4B9lO" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/ai-safety-and-security"><h5>A.I. for safety and security</h5></a>
+                                <p class="podcast-item-txt">Associate Professor Pradeep Varakantham </p>
+                                <p class="podcast-item-txt">Nov 2018</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/ai-safety-and-security" class="btn btn-primary">Listen Now</a></p> 
+                                </div>   
+                            </div>
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/should-sharing-hacking-knowledge-be-discouraged"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/gettyimages-817486228-170667a.jpg?itok=6QHVENQV" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/should-sharing-hacking-knowledge-be-discouraged"><h5>Should the sharing of hacking knowledge be discouraged?</h5></a>
+                                <p class="podcast-item-txt">Assistant Professor Wang Qiuhong </p>
+                                <p class="podcast-item-txt">Nov 2018</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/should-sharing-hacking-knowledge-be-discouraged" class="btn btn-primary">Listen Now</a></p> 
+                                </div>   
+                            </div>                             
+                            <div class="podcast-item">
+                                <div class="no-padding-left col-md-3 col-sm-3 col-xs-3">
+                                <a href="https://www.smu.edu.sg/podcast/ai-our-urban-environments"><img src="https://www.smu.edu.sg/sites/default/files/styles/podcast_small/public/540226428-170667a.jpg?itok=ZGC33VwL" class="podcast-item-img img-responsive"></a>
+                                </div>                              
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                <a class="podcast-item-title" href="https://www.smu.edu.sg/podcast/ai-our-urban-environments"><h5>AI in our urban environments</h5></a>
+                                <p class="podcast-item-txt">Assistant Professor Akshat Kumar </p>
+                                <p class="podcast-item-txt">Aug 2018</p>
+                                <p><a href="https://www.smu.edu.sg/podcast/ai-our-urban-environments" class="btn btn-primary">Listen Now</a></p> 
+                                </div>   
+                            </div>                           
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <h3>ARTICLES</h3>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smuresearch/2018/jul/30/school%E2%80%99s-%E2%80%93-machines-students"><h5>School's in – with machines as students</h5></a>
+                                <p class="article-item-date">30 Jul 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smuresearch/2018/jul/30/school%E2%80%99s-%E2%80%93-machines-students"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/_CYR0258edited_0.jpg?itok=uGrC_hql" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/smuresearch/2018/sep/25/levelling-real-life-game-cybersecurity"><h5>Levelling up in the real-life game of cybersecurity</h5></a>
+                                <p class="article-item-date">25 Sep 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/smuresearch/2018/sep/25/levelling-real-life-game-cybersecurity"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/Associate%20Prof%20Ding%20Xuhua.jpg?itok=SiPuXtxM" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>
+                            <div class="article-item">
+                                <div class="no-padding-left col-md-8 col-sm-8 col-xs-8">
+                                <a class="article-item-title" href="https://research.smu.edu.sg/news/2018/jun/05/smu-school-law-awarded-significant-research-grant-address-governance-ai-and-data"><h5>SMU School of Law awarded significant research grant to address governance of AI and data use</h5></a>
+                                <p class="article-item-date">5 Jun 2018</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                <a href="https://research.smu.edu.sg/news/2018/jun/05/smu-school-law-awarded-significant-research-grant-address-governance-ai-and-data"><img src="https://research.smu.edu.sg/sites/research.smu.edu.sg/files/styles/large/public/SMU%20School%20of%20Law_1.jpg?itok=NLx6nixq" class="article-item-img img-responsive"></a>
+                                </div>
+                            </div>  
+                            <hr />
+                            <h3>PUBLICATIONS</h3>               
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/sis_research/4153/" class="publication-title"><h5>When Human cognitive modeling meets PINs: User-independent inter-keystroke timing attacks</h5></a>
+                                <p class="publication-author">Ximing LIU; Yingjiu LI; Robert H. DENG; Bing CHANG; Shujun LI</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/sis_research/4118/" class="publication-title"><h5>A driver guidance system for taxis in Singapore</h5></a>
+                                <p class="publication-author">Shashi Shekhar JHA; Shih-Fen CHENG; Meghna LOWALEKAR; Nicholas WONG; Rishikeshan RAJENDRAM; Pradeep VARAKANTHAM; Nghia Troung TROUNG; Firmansyah BIN ABD RAHMAN</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/sis_research/3998/" class="publication-title"><h5>Face detection using deep learning: An improved faster RCNN approach</h5></a>
+                                <p class="publication-author">Xudong SUN; Pengcheng WU; Steven C. H. HOI</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/sis_research/4083/" class="publication-title"><h5>Online deep learning: Learning deep neural networks on the fly</h5></a>
+                                <p class="publication-author">Doyen SAHOO; Hong Quang PHAM; Jing LU; Steven C. H. HOI</p>
+                            </div>
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/sis_research/4094/" class="publication-title"><h5>Technology-enabled medication adherence for seniors living in the community: Experiences, lessons, and the road ahead</h5></a>
+                                <p class="publication-author">Hwee Xian TAN; Hwee-Pink TAN; Huiguang LIANG</p>
+                            </div> 
+                            <div class="publication-item">
+                                <a href="https://ink.library.smu.edu.sg/sis_research/3968/" class="publication-title"><h5>Understanding the effects of taxi ride-sharing: A case study of Singapore</h5></a>
+                                <p class="publication-author">Yazhe WANG; Baihua ZHENG; Ee peng LIM</p>
+                            </div>                                                                                    
+                            <hr />
+                            <h3>INSTITUTES, CENTRES AND LABS</h3>
+                            <div class="icli-item">
+                                <a href="https://caidg.smu.edu.sg" target="_blank" class="icli-link"><h5>Centre for AI & Data Governance</h5></a>
+                            </div>
+                            <div class="icli-item">
+                                <a href="https://dslab.smu.edu.sg" target="_blank" class="icli-link"><h5>DHL-SMU Analytics Lab</h5></a>
+                            </div>
+                            <div class="icli-item">
+                                <a href="https://iie.smu.edu.sg" target="_blank" class="icli-link"><h5>Institute of Innovation & Entrepreneurship</h5></a>
+                            </div>
+                            <div class="icli-item">
+                                <a href="https://livelabs.smu.edu.sg" target="_blank" class="icli-link"><h5>LiveLabs Urban Lifestyle Innovation Platform</h5></a>
+                            </div>
+                            <div class="icli-item">
+                                <a href="https://larc.smu.edu.sg" target="_blank" class="icli-link"><h5>Living Analytics Research Centre</h5></a>
+                            </div>
+                            <div class="icli-item">
+                                <a href="https://smc.smu.edu.sg" target="_blank" class="icli-link"><h5>Secure Mobile Centre</h5></a>
+                            </div>
+                            <div class="icli-item">
+                                <a href="https://icity.smu.edu.sg" target="_blank" class="icli-link"><h5>SMU-TCS iCity Labs</h5></a>
+                            </div>                                                                                                                                                                        
+                        </div>
+                    </div>
+<hr class="sc-div" />
+                    <div class="fac-profile-row" data-loaded="0"></div>
+                    <p>&nbsp;</p>
+                    <!-- TAB 5 CONTENT END -->                               
+                </div>
+            </div>	
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+jQuery( document ).ready(function() {
+kWidget.addReadyCallback( function( playerId ){
+
+	var kdp = document.getElementById( "sc-video-1");
+jQuery('.sc-tab-link').click(function(){
+		// Seek to 30 seconds from the start of the video
+		kdp.sendNotification("doStop");
+	});
+});
+	var scs= [];
+	var randomAoe = [];
+	var facultyProfiles = [];
+	jQuery.ajax({ 
+		url: "/api/scs2.json",
+		success: function( data ) {
+			if (data.length > 0) { 
+				scs = data;
+				var scIndexes = [];
+
+				while(scIndexes.length != 5){
+					var random = Math.floor(Math.random() * data.length);    
+					if(scIndexes.indexOf(random) == -1){
+						scIndexes.push(random);
+					}
+				}
+
+				scIndexes.forEach(element => {
+console.log(jQuery("li.sc-tab[data-tid='"+scs[element].tid+"']"));
+                    jQuery("li.sc-tab[data-tid='"+scs[element].tid+"']").attr("data-fac-count", scs[element].count);
+                    jQuery("li.sc-tab[data-tid='"+scs[element].tid+"']").attr("data-sc-name", scs[element].name);
+                });
+                
+                var thisTid = "10151";
+                var thisCount = jQuery("li.sc-tab[data-tid='"+thisTid+"']").attr("data-fac-count");
+                var thisScName = jQuery("li.sc-tab[data-tid='"+thisTid+"']").attr("data-sc-name");
+                jQuery.ajax({
+                    url: "/api/faculty-updated?limit=3&sc[]="+thisTid,
+                    jsonp: "callback",
+                    dataType: "jsonp",
+                    success: function(data){
+                        if(data){
+                            item = '<div class="item"><div class="sc-row">';
+                            item += "<div class=\"col-md-12\"><h3 class=\"latest-aoe text-center\">FACULTY MEMBERS</h3></div>";
+                            item += '<div class="col-md-12 faculty-profiles">';															
+            
+                            item += '</div>'
+                            item+= '</div></div>';
+          
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").empty();
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append(item);
+            
+                            facultyProfiles = data;
+            
+                            for (var i = 0; i < facultyProfiles.length; i++) {
+                                var facultyProfile = facultyProfiles[i];
+                                var facultyDiv = jQuery('<div></div>');
+                                facultyDiv.addClass("col-md-3 col-sm-6 col-xs-12 faculty-profile-item");
+                                var facultyDesignations = facultyProfile.designation.split(";");
+                                var facultyDesignation = "";
+                                if (facultyDesignations.length > 0) {
+                                    facultyDesignation = facultyDesignations[0];
+                                }
+                                var staffPhoto = jQuery('<div></div>');
+                                var facultyNameUrl = facultyProfile.node_title.split(' ').join('-');
+                                staffPhoto.addClass("no-padding col-md-3");
+                                staffPhoto.append("<a href=\"/faculty/profile/"+ facultyProfile.nid +"/"+ facultyNameUrl +"\"><img src=\"https://staffphoto.smu.edu.sg/s/"+facultyProfile.ntlogin+"/100x120\" class=\"faculty-photo img-responsive\"></a>");
+                                facultyDiv.append(staffPhoto);
+                                facultyDiv.append("<div class=\"col-md-9\"><h4 class=\"faculty-name\"><a href=\"/faculty/profile/"+facultyProfile.nid+"/"+ facultyNameUrl +"\">"+facultyProfile.node_title+"</a></h4><p>"+facultyDesignation+"</p></div>");		
+                                jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append(facultyDiv);
+                            }
+            
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append("<div class=\"col-md-3 col-sm-6 col-xs-12 faculty-profile-item text-left see-all-aoe\"><p><strong><a href=\"/faculty?filter[sc]="+thisTid+"\">See all " + thisCount + " faculty members tackling this societal challenge</strong></p></div>");
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").attr("data-loaded", 1);
+                        }
+                    }
+                });                            
+			
+			} 
+		}
+    });
+    jQuery(".banner-content .sc-tab-1").click(function() {
+    jQuery(".sc-tab.sc-tab-1 a").trigger("click");
+});
+    jQuery(".banner-content .sc-tab-2").click(function() {
+    jQuery(".sc-tab.sc-tab-2 a").trigger("click");
+});
+    jQuery(".banner-content .sc-tab-3").click(function() {
+    jQuery(".sc-tab.sc-tab-3 a").trigger("click");
+});
+    jQuery(".banner-content .sc-tab-4").click(function() {
+    jQuery(".sc-tab.sc-tab-4 a").trigger("click");
+});
+    jQuery(".banner-content .sc-tab-5").click(function() {
+    jQuery(".sc-tab.sc-tab-5 a").trigger("click");
+});
+    jQuery(".banner-content .sc-tab-6").click(function() {
+    jQuery(".sc-tab.sc-tab-6 a").trigger("click");
+});
+    jQuery("li.sc-tab").click(function() {
+        var thisTid = jQuery(this).attr("data-tid");
+        var thisCount = jQuery(this).attr("data-fac-count");
+        var thisScName = jQuery(this).attr("data-sc-name");
+        var dataLoaded = jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").attr("data-loaded");
+        if (dataLoaded == 0) {
+            jQuery.ajax({
+                url: "/api/faculty-updated?limit=3&sc[]="+thisTid,
+                jsonp: "callback",
+                dataType: "jsonp",
+                success: function(data){
+                    if(data){
+                        item = '<div class="item"><div class="sc-row">';
+                        item += "<div class=\"col-md-12\"><h3 class=\"latest-aoe text-center\">FACULTY MEMBERS</h3></div>";
+                        item += '<div class="col-md-12 faculty-profiles">';															
+
+                        item += '</div>'
+                        item+= '</div></div>';
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").empty();
+                        jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append(item);
+
+                        facultyProfiles = data;
+
+                        for (var i = 0; i < facultyProfiles.length; i++) {
+                            var facultyProfile = facultyProfiles[i];
+                            var facultyDiv = jQuery('<div></div>');
+                            facultyDiv.addClass("col-md-3 col-sm-6 col-xs-12 faculty-profile-item");
+                            var facultyDesignations = facultyProfile.designation.split(";");
+                            var facultyDesignation = "";
+                            if (facultyDesignations.length > 0) {
+                                facultyDesignation = facultyDesignations[0];
+                            }
+                            var staffPhoto = jQuery('<div></div>');
+                            var facultyNameUrl = facultyProfile.node_title.split(' ').join('-');
+                            staffPhoto.addClass("no-padding col-md-3");
+                            staffPhoto.append("<a href=\"/faculty/profile/"+ facultyProfile.nid +"/"+ facultyNameUrl +"\"><img src=\"https://staffphoto.smu.edu.sg/s/"+facultyProfile.ntlogin+"/100x120\" class=\"faculty-photo img-responsive\"></a>");
+                            facultyDiv.append(staffPhoto);
+                            facultyDiv.append("<div class=\"col-md-9\"><h4 class=\"faculty-name\"><a href=\"/faculty/profile/"+facultyProfile.nid+"/"+ facultyNameUrl +"\">"+facultyProfile.node_title+"</a></h4><p>"+facultyDesignation+"</p></div>");		
+                            jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append(facultyDiv);
+                        }
+
+                        jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").append("<div class=\"col-md-3 col-sm-6 col-xs-12 faculty-profile-item text-left see-all-aoe\"><p><strong><a href=\"/faculty?filter[sc]="+thisTid+"\">See all " + thisCount + " faculty members tackling this societal challenge</strong></p></div>");
+                        jQuery(jQuery("li.sc-tab[data-tid='"+thisTid+"'] a").attr("href")).find("div.fac-profile-row").attr("data-loaded", 1);
+                    }
+                }
+            });        
+        }
+    });
+});
+</script>
