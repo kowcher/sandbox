@@ -1,51 +1,10 @@
 <ul>
-    <% for ( var i = 0; i < mediaList.length; i++ ) { %>
-    <%var mediaItem =  mediaList[i];%>
-    <li class="chapterBox mediaBox" data-mediaBox-index="<%=i%>">
-        <% if (meta.layout == "hotizontal") { %> style="width: <%= mediaItem.width %>px " <% } %>
-        <% if (i > 0) { %>
-        <!--div class="chapterDivider"
-            <% if (meta.layout == "hotizontal") { %> style="height: <%= mediaItem.thumbnail.height %>px " <% } %> >
-        </div-->
-        <% } %>
-        <div class="chapterBoxInner" >
-            <% if( meta.includeThumbnail) { %>
-	        <div class="thumbnailHolder">
-            <img class="k-thumb" alt="Thumbnail for <%=mediaItem.title%>" data-mediaBox-index="<%=i%>" src="<%=mediaItem.thumbnail.url%>"
-                 style="width:<%=mediaItem.thumbnail.width%>px;
-                 height: <%=mediaItem.thumbnail.height%>px"/>
-	        </div>
-            <% } %>
-            <span class="k-title-container" title="<%=mediaItem.title%>">
-                <% if( meta.includeChapterStartTime) { %>
-                <span class="k-start-time">
-                    <span><%=mediaItem.startTimeDisplay%></span>
-                </span>
-                <% } %>
-                <% if( meta.includeItemNumberPattern) { %>
-                <span class="itemNumber"><%=mediaItem.itemNumber%></span>
-                <% } %>
-                <%
-                var chapterTitle = mediaItem.title;
-	            %>
-                <span class="k-title" title="<%=chapterTitle%>"><%=chapterTitle%></span>
-            </span>
-            <%
-            var itemDesc = mediaItem.description;
-            %>
-	        <div class="k-description-container">
-                <span class="k-description" title="<%=itemDesc%>"><%=itemDesc%></span>
-	        </div>
-            <% if( meta.includeMediaItemDuration) { %>
-            <span class="k-duration">
-                <!--div class="icon-time"></div-->
-                <span><%=mediaItem.durationDisplay%></span>
-            </span>
-		     <div class="k-views-container">
-                <span class="k-views" title="<%=views%>">Views: <%=views%></span>
-	        </div>
-            <% } %>
-        </div>
-    </li>
-    <% } %>
+ <% for ( var i = 0; i < mediaList.length; i++ ) { %> <%var mediaItem = mediaList[i];%>
+<% if (meta.layout == "hotizontal") { %> style="width: <%= mediaItem.width %>px " <% } %> <% if (i > 0) { %> <% } %>
+<% if( meta.includeThumbnail) { %>
+Thumbnail for <%=mediaItem.title%>
+<% } %> <% if( meta.includeChapterStartTime) { %> <%=mediaItem.startTimeDisplay%> <% } %> <% if( meta.includeItemNumberPattern) { %> <%=mediaItem.itemNumber%> <% } %> <% var chapterTitle = mediaItem.title; %> <%=chapterTitle%> <% var views = mediaItem.views; %>
+views: <%=views%>
+<% if( meta.includeMediaItemDuration) { %> <%=mediaItem.durationDisplay%> <% } %>
+<% } %>
 </ul>
