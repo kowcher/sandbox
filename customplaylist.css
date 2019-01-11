@@ -10,8 +10,8 @@
 }
 .playlistAPI .k-thumb {
 	float: left !important;
-	width: 86px !important;
-	height: 49px !important;
+	width: 120px !important;
+	height: 68.37px !important;
 }
 .playlistAPI .k-chapters-container .k-duration {
 	float: left !important;
@@ -31,5 +31,5 @@
 	color: #8A704C;
 }
 .playlistAPI .k-scroll .k-next {
-	opacity: 50 !important;
+	opacity: 100 !important;
 }
