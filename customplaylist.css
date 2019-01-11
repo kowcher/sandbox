@@ -6,12 +6,12 @@
 }
 */
 .playlistAPI .chapterBox{
-	height: 100px !important;
+	height: 90px !important;
 }
 .playlistAPI .k-thumb {
 	float: left !important;
-	width: 100px !important;
-	height: 56.97px !important;
+	width: 130px !important;
+	height: 74px !important;
 }
 .playlistAPI .k-chapters-container .k-duration {
 	float: left !important;
