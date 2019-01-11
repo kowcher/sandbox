@@ -12,9 +12,8 @@
 	float: none !important;
 	width: 130px !important;
 	height: 74px !important;
-	margin-top:0px !important;
-	margin-left:0px !important;
-	margin-right:0px !important;
+	margin:0px !important;
+display: block !important;
 	
 }
 .playlistAPI .k-chapters-container .k-duration {
