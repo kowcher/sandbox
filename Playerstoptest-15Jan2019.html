@@ -3,12 +3,15 @@
 <head>
 	<title>Test playlist</title>
 	<meta charset="UTF-8" />
+	
+	
 
 </head>
 <body>
 
+	<script type="text/javascript" src="//cdn.embed.ly/player-0.0.10.min.js"></script>
  <div class="embed-responsive embed-responsive-4by3 sc-video" id="sc-video-1">
-                            <iframe  class="embed-responsive-item" src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402632/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1547012864&flashvars[playlistAPI.kpl0Id]=0_dcycav9i&flashvars[IframeCustomPluginCss1]=https://kowcher.github.io/sandbox/customplaylist3.css&flashvars[thumbnailUrl]=https://i.imgur.com/E0YumW0.jpg"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0" style="width:600px;height:375px;border:none;"></iframe>
+                            <iframe  class="embed-responsive-item" id="sc01" src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402632/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1547012864&flashvars[playlistAPI.kpl0Id]=0_dcycav9i&flashvars[IframeCustomPluginCss1]=https://kowcher.github.io/sandbox/customplaylist3.css&flashvars[thumbnailUrl]=https://i.imgur.com/E0YumW0.jpg"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0" style="width:600px;height:375px;border:none;"></iframe>
                             </div>
                             
                              <div class="embed-responsive embed-responsive-4by3 sc-video" id="sc-video-2" height="400" width="800">
@@ -26,5 +29,18 @@
                             <div class="embed-responsive embed-responsive-4by3 sc-video" id="sc-video-5" height="400" width="800">
                             <iframe  class="embed-responsive-item" src="https://cdnapisec.kaltura.com/p/1990051/sp/199005100/embedIframeJs/uiconf_id/43402632/partner_id/1990051?iframeembed=true&playerId=kaltura_player_1547189649&flashvars[playlistAPI.kpl0Id]=0_nfus6cx8&flashvars[IframeCustomPluginCss1]=https://kowcher.github.io/sandbox/customplaylist3.css&flashvars[thumbnailUrl]=https://i.imgur.com/qizHFJy.jpg"  " allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0" style="width:600px;height:375px;border:none;"></iframe>
                             </div>
+<hr>
+
+<script type="text/javascript">
+	var player = new playerjs.Player( document.getElementById('sc01') );
+	//listen to play start
+	player.on(playerjs.Events.PLAY, function(
+		console.log('play');
+	));
+	// call play to start playback: 
+	$('#play-btn').click(function(){
+		player.play();
+	})
+</script>
 
 </body>
