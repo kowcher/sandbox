@@ -67,6 +67,18 @@
       </div>
     </div>
   </div>
+  
+  <script type="text/javascript">
+	var player = new playerjs.Player( document.getElementById('sc01') );
+	//listen to play start
+	player.on(playerjs.Events.PLAY, function(
+		console.log('play');
+	));
+	// call play to start playback: 
+	$('#play-btn').click(function(){
+		player.play();
+	})
+</script>
 			      
 
 			      <script src="http://cdn.embed.ly/jquery.embedly-3.1.1.min.js"></script>
