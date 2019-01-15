@@ -77,5 +77,52 @@
     $.embedly.defaults.key = '3ee528c9eb4b4908b268ce1ace120c92';
     $(document).foundation();
   </script>
+										 
+										 <script> 
+	var player = new playerjs.Player( document.getElementById('sc01') );
+	var supportedMethods = [ 'play', 'pause', 'getPaused', 'mute', 
+		'unmute', 'getMuted', 'setVolume .5', 'getVolume', 'getDuration', 
+		'setCurrentTime 10s', 'getCurrentTime', 'setLoop true', 'getLoop'
+	];
+	var supportedEvents = ['progress', 'timeupdate', 'play', 'pause', 'ended', 'seeked', 'error'];
+	$('#methods').text('Loading ...');
+	player.on('ready', function(){
+		$('#methods').empty();
+		$.each(supportedMethods, function(inx, method){
+			$('#methods').append( 
+				$('<button>').addClass('btn btn-default').attr('href', '#').text( method ).click(function(){
+					// special case: 
+					if( method == 'setCurrentTime 10s'){
+						player.setCurrentTime('10')
+						return;
+					}
+					if( method == 'setVolume .5'){
+						player.setVolume('.5')
+						return;
+					}
+					if( method == 'setLoop true'){
+						player.setLoop( true );
+						return;
+					}
+					player[method](function(value){
+						// if there is a callback alert it
+						alert(value);
+					});
+				}),
+				$('<span>').html('&nbsp')
+			);
+		});
+		// triger ready right away ( we add bindings after ready)
+		$('#log').prepend("ready:\n");
+		// handle events:
+		$.each(supportedEvents, function(inx, eventName){
+			player.on(eventName, function(data){
+				var dataString = ( data ) ? JSON.stringify( data ) : "";
+				$('#log').prepend( eventName + ": " + dataString + "\n" );
+			})
+		});
+		
+	});
+</script>
 
 </body>
