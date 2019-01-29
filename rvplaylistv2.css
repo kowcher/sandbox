@@ -12,7 +12,7 @@
 	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
 	font-size: 0.9em !important;
 }
-.playlistAPI .ul .li::before {
+.playlistAPI li::before {
   list-style-type: none !important;
-	content: normal !important;
+	content: "ABC" !important;
 }
