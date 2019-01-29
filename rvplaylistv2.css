@@ -41,7 +41,7 @@
 	content: "ABC3" !important;
 }
 
-.playlistAPI .onpageplaylist .k-vertical .li .ul .chapterbox .mediabox ::before {
+.playlistAPI .onpageplaylist .k-vertical ::before {
   list-style-type: none4 !important;
 	content: "ABC4" !important;
 }
