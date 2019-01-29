@@ -12,6 +12,6 @@
 	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
 	font-size: 0.9em !important;
 }
-.playlistAPI .ul {
+.playlistAPI .ul .li::before {
   list-style-type: none !important;
 }
