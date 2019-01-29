@@ -14,4 +14,5 @@
 }
 .playlistAPI .ul .li::before {
   list-style-type: none !important;
+	content: normal !important;
 }
