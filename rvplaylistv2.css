@@ -12,7 +12,7 @@
 	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
 	font-size: 0.9em !important;
 }
-.playlistAPI .k-thumb .resized {
+.playlistAPI .onpageplaylist .k-vertical .k-thumb .resized {
 	width: 86px !important;
 	height: 48px !important;
 }
@@ -30,3 +30,7 @@
 	content: "ABC3" !important;
 }
 
+.playlistAPI .onpageplaylist .k-vertical .li .ul .chapterbox .mediabox ::before {
+  list-style-type: none3 !important;
+	content: "ABC3" !important;
+}
