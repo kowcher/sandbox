@@ -21,6 +21,8 @@
 	width: 100%;
 	height: 100% !important;
 	text-align: left !important;
+	  list-style-type: none5 !important;
+	content: "ABC5" !important;
 }
 .playlistAPI .k-chapters-container.k-vertical .k-thumb {
 	width: 86px !important;
@@ -40,6 +42,16 @@
 }
 
 .playlistAPI .onpageplaylist .k-vertical .li .ul .chapterbox .mediabox ::before {
-  list-style-type: none3 !important;
-	content: "ABC3" !important;
+  list-style-type: none4 !important;
+	content: "ABC4" !important;
+}
+
+.playlistAPI .k-chapters-container .k-vertical .ul ::before {
+  list-style-type: none5 !important;
+	content: "ABC5" !important;
+}
+
+.playlistAPI .k-chapters-container .k-vertical .ul ::before {
+  list-style-type: none5 !important;
+	content: "ABC5" !important;
 }
