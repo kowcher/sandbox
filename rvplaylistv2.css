@@ -24,7 +24,7 @@
 	  list-style-type: none5 !important;
 	content: "ABC5" !important;
 }
-.playlistAPI .k-chapters-container.k-vertical .k-thumb {
+.playlistAPI .k-chapters-container .k-vertical .k-thumb {
 	width: 86px !important;
 	height: 48px !important;
 }
@@ -58,4 +58,9 @@
 .playlistAPI li::before {
   list-style-type: none6 !important;
 	content: "ABC6" !important;
+}
+
+.onpagePlaylistInterface .k-chapters-container .k-vertical .k-thumb  {
+	width: 86px !important;
+	height: 48px !important;
 }
