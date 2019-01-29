@@ -12,6 +12,11 @@
 	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
 	font-size: 0.9em !important;
 }
+.playlistAPI .k-thumb .resized {
+	width: 86px !important;
+	height: 48px !important;
+}
+
 .playlistAPI .chapterbox .mediabox li::before {
   list-style-type: none1 !important;
 	content: "ABC1" !important;
