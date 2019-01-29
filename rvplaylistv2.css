@@ -13,7 +13,7 @@
 	font-size: 0.9em !important;
 }
 .onpagePlaylistInterface {
-	font: normal 13px "Myriad Web Pro Regular", Helvetica, Arial, sans-serif !important;
+	font: normal 20px "Myriad Web Pro Regular", Helvetica, Arial, sans-serif !important;
 	background-color: #2d2d2d !important;
 	color: #ffffff !important;
 	overflow: hidden !important;
@@ -21,46 +21,30 @@
 	width: 100%;
 	height: 100% !important;
 	text-align: left !important;
-	  list-style-type: none5 !important;
-	content: "ABC5" !important;
 }
-.playlistAPI .k-chapters-container .k-vertical .k-thumb {
+.onpagePlaylistInterface .playlistAPI .k-thumb {
 	width: 86px !important;
 	height: 48px !important;
 }
-.playlistAPI .chapterbox .mediabox li::before {
+.onpagePlaylistInterface .playlistAPI .chapterbox .mediabox li::before {
   list-style-type: none1 !important;
 	content: "ABC1" !important;
 }
-.playlistAPI .chapterbox .mediabox .active li::before {
-  list-style-type: none2 !important;
-	content: "ABC2" !important;
-}
-.playlistAPI .sc-item-row .li .ul .chapterbox .mediabox .active ::before {
-  list-style-type: none3 !important;
-	content: "ABC3" !important;
-}
-
-.playlistAPI .onpageplaylist .k-vertical ::before {
+.onpagePlaylistInterface .playlistAPI .k-vertical li::before {
   list-style-type: none4 !important;
 	content: "ABC4" !important;
 }
 
-.playlistAPI .k-chapters-container .k-vertical .ul ::before {
+.onpagePlaylistInterface .playlistAPI .k-chapters-container .k-vertical .ul li::before {
   list-style-type: none5 !important;
 	content: "ABC5" !important;
 }
 
-.playlistAPI .k-chapters-container .k-vertical .ul ::before {
+.onpagePlaylistInterface .playlistAPI .k-chapters-container .k-vertical .ul ::before {
   list-style-type: none5 !important;
 	content: "ABC5" !important;
 }
-.playlistAPI li::before {
+.onpagePlaylistInterface .playlistAPI  li::before {
   list-style-type: none6 !important;
 	content: "ABC6" !important;
-}
-
-.onpagePlaylistInterface .k-chapters-container .k-vertical .k-thumb  {
-	width: 86px !important;
-	height: 48px !important;
 }
