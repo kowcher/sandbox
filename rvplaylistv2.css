@@ -20,7 +20,7 @@
   list-style-type: none2 !important;
 	content: "ABC2" !important;
 }
-.playlistAPI .li .ul .chapterbox .mediabox .active ::before {
+.playlistAPI .sc-item-row .li .ul .chapterbox .mediabox .active ::before {
   list-style-type: none3 !important;
 	content: "ABC3" !important;
 }
