@@ -22,15 +22,10 @@
 	height: 100% !important;
 	text-align: left !important;
 }
-.playlistAPI .k-chapters-container.k-vertical .chapterBox .k-thumb {
+.playlistAPI .k-chapters-container.k-vertical .k-thumb {
 	width: 86px !important;
 	height: 48px !important;
 }
-.playlistAPI .onpageplaylist .k-vertical .k-thumb .resized {
-	width: 86px !important;
-	height: 48px !important;
-}
-
 .playlistAPI .chapterbox .mediabox li::before {
   list-style-type: none1 !important;
 	content: "ABC1" !important;
