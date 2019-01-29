@@ -12,7 +12,15 @@
 	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
 	font-size: 0.9em !important;
 }
-.playlistAPI li::before {
+.playlistAPI .chapterbox .mediabox li::before {
+  list-style-type: none !important;
+	content: "ABC" !important;
+}
+.playlistAPI .chapterbox .mediabox .active li::before {
+  list-style-type: none !important;
+	content: "ABC" !important;
+}
+.playlistAPI .li .ul .chapterbox .mediabox .active ::before {
   list-style-type: none !important;
 	content: "ABC" !important;
 }
