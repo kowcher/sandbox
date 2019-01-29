@@ -20,7 +20,7 @@
   list-style-type: none !important;
 	content: "ABC" !important;
 }
-.playlistAPI .li .chapterbox .mediabox ::before {
+.playlistAPI .ul .li .chapterbox .mediabox ::before {
   list-style-type: none !important;
 	content: "ABC" !important;
 }
