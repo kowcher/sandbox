@@ -48,6 +48,15 @@
   list-style-type: none6 !important;
 	content: "ABC6" !important;
 }
-.onpagePlaylistInterface .k-description.container {
+.onpagePlaylistInterface .k-chapters-container .k-description.container {
+	height: 200px !important;
+}
+.playlistAPI .k-chapters-container .k-description-container {
 	height: 50px !important;
+	position: absolute;
+	padding-left: 100px;
+	padding-top: 5px;
+	overflow: hidden;
+	word-wrap: break-word;
+	line-height: 13px;
 }
