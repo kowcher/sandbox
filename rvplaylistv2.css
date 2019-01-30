@@ -48,3 +48,6 @@
   list-style-type: none6 !important;
 	content: "ABC6" !important;
 }
+.onpagePlaylistInterface .k-description.container {
+	height: 50px !important;
+}
