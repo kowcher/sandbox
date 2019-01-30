@@ -2,13 +2,13 @@
 	width: 86px !important;
 	height: 48px !important;
 }
-.playlistAPI .k-chapters-container {
+.onpagePlaylistInterface .playlistAPI .k-chapters-container {
 	font-family: 'Oswald', sans-serif !important;
 }
-.playlistAPI .k-chapters-container .k-title-container .k-title{
+.onpagePlaylistInterface .playlistAPI .k-chapters-container .k-title-container .k-title{
 	font-family: 'Oswald', sans-serif !important;
 }
-.playlistAPI .k-chapters-container .k-description {
+.onpagePlaylistInterface .playlistAPI .k-chapters-container .k-description {
 	font-family: 'Open Sans', Calibri, Arial, sans-serif !important;
 	font-size: 0.9em !important;
 }
