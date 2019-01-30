@@ -1,3 +1,7 @@
+.onpagePlaylistInterface .k-vertical{
+	font-size: 2em !important;
+}
+
 .playlistAPI .k-thumb {
 	width: 86px !important;
 	height: 48px !important;
@@ -22,6 +26,7 @@
 	height: 100% !important;
 	text-align: left !important;
 }
+
 .onpagePlaylistInterface .playlistAPI .k-thumb {
 	width: 86px !important;
 	height: 48px !important;
