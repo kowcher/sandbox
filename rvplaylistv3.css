@@ -75,6 +75,8 @@
 	margin-top: 3px;
 	overflow: hidden;
 	/*border: 1px solid #cacaca;*/
+	width: 86px !important;
+	height: 48px !important;
 }
 
 .playlistAPI .k-chapters-container .chapterBoxInner {
